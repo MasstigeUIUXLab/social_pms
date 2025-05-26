@@ -617,14 +617,14 @@
                         .info-value {
                             height: 100%;
                             flex-grow: 1;
-                            padding: 0 16px;
+                            padding: 0 10px;
                             display: flex;
                             align-items: center;
                             flex-wrap: wrap;
                             border: 1px solid #d6dfed;
                             border-left: none;
                             border-radius: 0 8px 8px 0;
-                            font-size: 17px;
+                            font-size: 16px;
                             color: #1d1d1d;
                             line-height: 1.2;
                         }
@@ -640,12 +640,12 @@
                 display: flex;
                 justify-content: right;
                 margin-bottom: 12px;
-                height: 48px;
+                height: 40px;
                 gap: 8px;
 
                 button {
                     position: relative;
-                    padding: 0 20px;
+                    padding: 0 12px;
                     height: 100%;
                     display: flex;
                     align-items: center;
@@ -653,7 +653,7 @@
                     border-radius: 8px;
                     gap: 6px;
                     border: 1px solid #c6c6c6;
-                    font-size: 17px;
+                    font-size: 16px;
                     color: #717171;
                     transition: 0.3s;
 
