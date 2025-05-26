@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<meta name="title" content="한국사회적기업진흥원" />
+<meta name="keywords" content="" />
+<meta name="author" content="Masstige" />
+<meta name="description" content="" />
+<meta name="Robots" content="index, follow" />
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="한국사회적기업진흥원" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="한국사회적기업진흥원" />
+<meta property="og:url" content="" />
+<meta property="og:description" content="" />
+<!-- Twitter -->
+<meta name="twitter:image" content="" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:title" content="한국사회적기업진흥원" />
+<!-- Naver Webmaster Tool -->
+<meta name="naver-site-verification" content="" />
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="" />
+<link rel="image_src" href="#" />
+<!-- 대표 이미지 -->
+<link rel="shortcut icon" href="#" />
+<!-- 파비콘 -->
+<link rel="canonical" href="#" />
+<!-- 대표 URL -->
+<!-- XEIcon -->
+<link rel="stylesheet" href="../assets/fonts/icons/xeicon/xeicon.css" />
+<!-- Masstige Custom Icon for Board Template -->
+<link rel="stylesheet" href="../assets/fonts/icons/icomoon/masstige-icons.css" />
+<!-- Google Material Icons -->
+<link rel="stylesheet" href="../assets/fonts/icons/material/material-icons.css" />
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="../assets/fonts/icons/bootstrap/bootstrap-icons.min.css" />
+<!-- Stylesheet -->
+<link rel="stylesheet" href="../assets/css/common.css" />
+<link rel="stylesheet" href="../assets/css/sub.css" />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov.min.css" />
+<script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
+<script src="../assets/js/lib/jquery-migrate-1.4.1.min.js"></script>
+<script src="../assets/js/lib/jquery-ui.min.js"></script>
+<script src="../assets/js/lib/popper.min.js"></script>
+<script src="../assets/js/lib/bootstrap.min.js"></script>
+<script src="../assets/js/lib/slick.min.js"></script>
+<script src="../assets/js/lib/wow.min.js"></script>
+<script src="../assets/js/lib/aos.min.js"></script>
+<script src="../assets/js/lib/jquery.magnific-popup.min.js"></script>
+<script src="../assets/js/lib/easings.min.js"></script>
+<script src="../assets/js/lib/swiper.min.js"></script>
+<script src="../assets/js/lib/jquery.scrollbar.min.js"></script>
+<script src="../assets/js/lib/jquery.mCustomScrollbar.min.js"></script>
+<script src="../assets/js/custom/nav_active-1.1.6.masstige.min.js"></script>
+<script src="../assets/js/custom/tab-1.1.0.masstige.js"></script>
+<script src="../assets/js/custom/resizingCheck-1.0.0.masstige.js"></script>
+<script src="../assets/js/custom/nav_drop-1.0.1.masstige.min.js"></script>
+<script src="../assets/js/custom/scroll_track-1.0.1.masstige.min.js"></script>
+<!-- [D] 03-13 누락된 공통 js 파일 링크 -->
+<script src="../assets/js/common.js"></script>
+<!-- 데이터피커 -->
+<script src="../assets/js/lib/moment.min.js"></script>
+<script src="../assets/js/lib/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="../assets/css/daterangepicker.css" />
+<!-- // -->
+<title></title>
+</head>
+
+<!-- [D] 03-11 윈도우 팝업일 경우 .sub-body에 .popup-window가 기본 형태 -->
+<body class="sub-body popup-window">
+    <div class="popup-container">
+        <button type="button" class="popup-window-close" onclick="window.close()">
+            <span class="sr-only">닫기</span>
+        </button>
+        <form action="">
+            <div class="form-inner">
+                <div class="popup-title">보완요청 작성</div>
+                <div class="bx">
+                    <div class="input-list flex-column">
+                        <div class="input-bx w-180">
+                            <h3>지표</h3>
+                            <select name="" id="">
+                                <option value="" selected>14. 혁신노력도</option>
+                                <option value="">기타</option>
+                                <option value="">기타</option>
+                                <option value="">기타</option>
+                            </select>
+                        </div>
+                        <div class="input-bx w-100 mt-3">
+		                    <h3>보완요청 내용</h3>
+		                    <textarea id="dmndCnArea" name="dmndCnArea" rows="2"></textarea>
+		                </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end mt-3">
+                    <button type="button" class="btn-1 fill-black" id="saveBtn" style="margin-right:5px;">보관함에 저장</button>
+                    <button type="button" class="btn-1 fill-black" id="resetBtn">초기화</button>
+                </div>
+                <div class="popup-title mt-5">보관함</div>
+                <div class="table-bx">
+                    <table class="border-none">
+                        <colgroup>
+                            <col style="width: 36px" />
+                            <col style="width: 185px" />
+                            <col style="width: auto" />
+                            <col style="width: 73px" />
+                            <col style="width: 127px" />
+                            <col style="width: 63px" />
+                            <col style="width: 56px" />
+                            <col style="width: 56px" />
+                        </colgroup>
+                        <thead class="">
+                            <tr>
+                                <th class="text-center">No</th>
+                                <th class="text-center">지표</th>
+                                <th class="text-center">보완요청 내용</th>
+                                <th class="text-center">상태</th>
+                                <th class="text-center">등록일시</th>
+                                <th class="text-center">등록자</th>
+                                <th class="text-center">수정</th>
+                                <th class="text-center">삭제</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-top">
+                            <tr>
+                                <td class="text-center padding-0 fs-12">2</td>
+                                <td class="text-center padding-hr-8 fs-12">2. 사회적성과 관리체계 구축 여부</td>
+                                <td class="text-left fs-12">2024년 급여대장 누락</td>
+                                <td class="text-center padding-hr-8 fs-12">임시저장</td>
+                                <td class="text-center padding-hr-8 fs-12">2024-10-27 12:31</td>
+                                <td class="text-center padding-hr-8 fs-12">홍길동</td>
+                                <td class="text-center">
+                                    <button type="button" class="edit-btn">
+                                        <img src="../assets/images/sub/icon_edit.svg" alt="" />
+                                    </button>
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="trash-btn">
+                                        <img src="../assets/images/sub/icon_delete.svg" alt="" />
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center padding-0 fs-12">1</td>
+                                <td class="text-center padding-hr-8 fs-12">2. 사회적성과 관리체계 구축 여부</td>
+                                <td class="text-left fs-12">2024년 급여대장 누락</td>
+                                <td class="text-center padding-hr-8 fs-12">임시저장</td>
+                                <td class="text-center padding-hr-8 fs-12">2024-10-27 12:31</td>
+                                <td class="text-center padding-hr-8 fs-12">홍길동</td>
+                                <td class="text-center">
+                                    <button type="button" class="edit-btn">
+                                        <img src="../assets/images/sub/icon_edit.svg" alt="" />
+                                    </button>
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="trash-btn">
+                                        <img src="../assets/images/sub/icon_delete.svg" alt="" />
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="popup-title mt-5">보관함에 저장된 요청사항은 [보완요청 전송]시 기업담당자에게 전달됩니다.</div>
+                <div class="input-list">
+                    <div class="input-bx w-180">
+                        <h3>보완마감일</h3>
+                        <input type="text" name="datetimes" class="input-date" />
+                        <!-- <div class="inner-input-bx">
+        <input type="date" value="2025-01-01">
+        <input type="date" value="2025-01-01">
+        </div> -->
+                    </div>
+                </div>
+                <div class="popup-btn-bx">
+                    <a href="javascript:void(0);" class="btn-2 fill-blue">
+                        <span>보완요청 전송</span>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<meta name="title" content="한국사회적기업진흥원" />
+<meta name="keywords" content="" />
+<meta name="author" content="Masstige" />
+<meta name="description" content="" />
+<meta name="Robots" content="index, follow" />
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="한국사회적기업진흥원" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="한국사회적기업진흥원" />
+<meta property="og:url" content="" />
+<meta property="og:description" content="" />
+<!-- Twitter -->
+<meta name="twitter:image" content="" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:title" content="한국사회적기업진흥원" />
+<!-- Naver Webmaster Tool -->
+<meta name="naver-site-verification" content="" />
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="" />
+<link rel="image_src" href="#" />
+<!-- 대표 이미지 -->
+<link rel="shortcut icon" href="#" />
+<!-- 파비콘 -->
+<link rel="canonical" href="#" />
+<!-- 대표 URL -->
+<!-- XEIcon -->
+<link rel="stylesheet" href="../assets/fonts/icons/xeicon/xeicon.css" />
+<!-- Masstige Custom Icon for Board Template -->
+<link rel="stylesheet" href="../assets/fonts/icons/icomoon/masstige-icons.css" />
+<!-- Google Material Icons -->
+<link rel="stylesheet" href="../assets/fonts/icons/material/material-icons.css" />
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="../assets/fonts/icons/bootstrap/bootstrap-icons.min.css" />
+<!-- Stylesheet -->
+<link rel="stylesheet" href="../assets/css/common.css" />
+<link rel="stylesheet" href="../assets/css/sub.css" />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov.min.css" />
+<script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
+<script src="../assets/js/lib/jquery-migrate-1.4.1.min.js"></script>
+<script src="../assets/js/lib/jquery-ui.min.js"></script>
+<script src="../assets/js/lib/popper.min.js"></script>
+<script src="../assets/js/lib/bootstrap.min.js"></script>
+<script src="../assets/js/lib/slick.min.js"></script>
+<script src="../assets/js/lib/wow.min.js"></script>
+<script src="../assets/js/lib/aos.min.js"></script>
+<script src="../assets/js/lib/jquery.magnific-popup.min.js"></script>
+<script src="../assets/js/lib/easings.min.js"></script>
+<script src="../assets/js/lib/swiper.min.js"></script>
+<script src="../assets/js/lib/jquery.scrollbar.min.js"></script>
+<script src="../assets/js/lib/jquery.mCustomScrollbar.min.js"></script>
+<script src="../assets/js/custom/nav_active-1.1.6.masstige.min.js"></script>
+<script src="../assets/js/custom/tab-1.1.0.masstige.js"></script>
+<script src="../assets/js/custom/resizingCheck-1.0.0.masstige.js"></script>
+<script src="../assets/js/custom/nav_drop-1.0.1.masstige.min.js"></script>
+<script src="../assets/js/custom/scroll_track-1.0.1.masstige.min.js"></script>
+<!-- [D] 03-13 누락된 공통 js 파일 링크 -->
+<script src="../assets/js/common.js"></script>
+<!-- 데이터피커 -->
+<script src="../assets/js/lib/moment.min.js"></script>
+<script src="../assets/js/lib/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="../assets/css/daterangepicker.css" />
+<!-- // -->
+<title></title>
+</head>
+
+<!-- [D] 03-11 윈도우 팝업일 경우 .sub-body에 .popup-window가 기본 형태 -->
+<body class="sub-body popup-window">
+    <div class="popup-container">
+        <button type="button" class="popup-window-close" onclick="window.close()">
+            <span class="sr-only">닫기</span>
+        </button>
+        <form action="">
+            <div class="form-inner">
+                <div class="popup-title">
+                    <p>영업성과 등급판정</p>
+                    <div class="btn-bx">
+                        <button type="button" class="btn-1 fill-lightBlue">임시저장</button>
+                        <!-- 임시 함수입니다. 1 : 통과 / 2 : 재검토 -->
+                        <button type="button" onclick="showPopup(1)" class="btn-1 fill-red">등급판정 완료</button>
+                    </div>
+                </div>
+
+                <div class="table-bx">
+                    <div class="table-text mb-3">
+                        <p>&lt;검토 내용&gt;</p>
+                        <div class="btn-bx">
+                            <p>(단위 : 원), %</p>
+                        </div>
+                    </div>
+                    <table>
+                        <colgroup>
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                        </colgroup>
+                        <thead class="padding-vr-16">
+                            <tr>
+                                <th>2024년도 영업이익 (A)</th>
+                                <th>2023년도 영업이익 (B)</th>
+                                <th>영업이익 성장률 [((A-B) / B) x 100%]</th>
+                            </tr>
+                        </thead>
+                        <tbody class="padding-vr-16">
+                            <tr>
+                                <td class="border-top border-right h-36">
+                                    <div class="inner-textarea-bx">
+                                        <div class="inner-textarea">
+                                            <textarea name="" id=""></textarea>
+                                            <p>(원)</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="border-top border-right h-36">
+                                    <div class="inner-textarea-bx">
+                                        <div class="inner-textarea">
+                                            <textarea name="" id=""></textarea>
+                                            <p>(원)</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="border-top border-right h-36">
+                                    <div class="inner-textarea-bx">
+                                        <div class="inner-textarea">
+                                            <textarea name="" id="" disabled></textarea>
+                                            <p>(%)</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-bx mt-5">
+                    <div class="table-text mb-3">
+                        <p>&lt;영업이익 동종업종 분포&gt;</p>
+                    </div>
+                    <table>
+                        <colgroup>
+                            <col style="width: 200px" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                        </colgroup>
+                        <thead class="padding-vr-16 border-top-none">
+                            <tr>
+                                <th>업종분류</th>
+                                <th>
+                                    미제출 등<br />
+                                    확인되지 않음
+                                </th>
+                                <th>
+                                    0%<br />
+                                    20% 미만
+                                </th>
+                                <th>
+                                    40% 이상<br />
+                                    60% 미만
+                                </th>
+                                <th>
+                                    60% 이상<br />
+                                    100%
+                                </th>
+                                <th>중위값</th>
+                            </tr>
+                        </thead>
+                        <tbody class="padding-vr-16">
+                            <tr>
+                                <td class="color-black text-center border-right border-top">보건업 및 사회복지서비스업(Q)</td>
+                                <td class="text-right border-right border-top padding-hr-8 fs-12"></td>
+                                <td class="text-right border-right border-top padding-hr-8 fs-12">-67,244,376 미만</td>
+                                <td class="text-right border-right border-top padding-hr-8 fs-12">
+                                    -67,244,376 이상<br />
+                                    0 미만
+                                </td>
+                                <td class="text-right border-right border-top padding-hr-8">0 이상</td>
+                                <td class="text-right border-top"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="subject-name fw-600 text-center">영업이익 측정 점수</td>
+                                <td class="h-36">
+                                    <select name="" id="">
+                                        <option value="" selected>1점</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-bx mt-5">
+                    <div class="table-text mb-3">
+                        <p>&lt;영업이익 성장률 동종업종 분포&gt;</p>
+                    </div>
+                    <table>
+                        <colgroup>
+                            <col style="width: 200px" />
+                            <col style="width: 195px" />
+                            <col style="width: 195px" />
+                            <col style="width: calc(195px - 95px)" />
+                            <col style="width: 95px" />
+                        </colgroup>
+                        <thead class="padding-vr-16 border-top-none">
+                            <tr>
+                                <th>업종 분류</th>
+                                <th>20% 미만</th>
+                                <th>
+                                    20% 이상<br />
+                                    60% 미만
+                                </th>
+                                <th colspan="2">
+                                    60% 이상<br />
+                                    100%
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="padding-vr-16">
+                            <tr>
+                                <td class="color-black text-center border-top border-right">보건업 및 사회복지서비스업(Q)</td>
+                                <td class="border-top border-right text-center"></td>
+                                <td class="border-top border-right text-center"></td>
+                                <td colspan="2" class="border-top border-right text-center"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="subject-name fw-600 text-center">영업이익 성장률 측정 점수</td>
+                                <td class="h-36">
+                                    <select name="" id="">
+                                        <option value="" selected>1점</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-bx mt-5">
+                    <table class="">
+                        <colgroup>
+                            <col style="width: 160px" />
+                            <col style="width: auto" />
+                            <col style="width: 94px" />
+                        </colgroup>
+                        <thead class="padding-vr-16 border-top-none">
+                            <tr>
+                                <th class="border-right" colspan="2">측정 점수 결과</th>
+                                <th class="h-36">
+                                    <select name="" id="" disabled>
+                                        <option value="" selected>5점</option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="padding-vr-16">
+                            <tr>
+                                <td class="subject-name border-top fw-600 text-center">근거 자료</td>
+                                <td colspan="2" class="border-top h-36">
+                                    <div class="inner-textarea-bx">
+                                        <div class="inner-textarea">
+                                            <!-- [D] 03-20 특정 textarea 스크롤 늘어나게(.fixable) / 최소 라인 수(rows="숫자") -->
+                                            <textarea name="" id="" class="fixable" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="subject-name border-top fw-600 text-center">조사자 총괄의견</td>
+                                <td colspan="2" class="border-top h-36">
+                                    <div class="inner-textarea-bx">
+                                        <div class="inner-textarea">
+                                            <textarea name="" id="" class="fixable" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-bx mt-5">
+                    <table class="">
+                        <colgroup>
+                            <col style="width: 160px" />
+                            <col style="width: 80px" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                            <col style="width: auto" />
+                        </colgroup>
+                        <thead class="padding-vr-16 border-top-none">
+                            <tr>
+                                <th colspan="6" class="">측정기준</th>
+                            </tr>
+                            <tr>
+                                <th rowspan="2" class="border-top border-right">구분</th>
+                                <th rowspan="2" class="border-top border-right">배점</th>
+                                <th colspan="4" class="border-top padding-vr-4">평가점수 확인</th>
+                            </tr>
+                            <tr>
+                                <th class="border-top border-right padding-vr-4">A</th>
+                                <th class="border-top border-right padding-vr-4">B</th>
+                                <th class="border-top border-right padding-vr-4">C</th>
+                                <th class="border-top border-right padding-vr-4">D</th>
+                            </tr>
+                        </thead>
+                        <tbody class="padding-vr-16">
+                            <tr>
+                                <td class="border-top subject-name fw-600 text-center border-right">영업이익</td>
+                                <td class="border-top subject-name fw-600 text-center border-right">3점</td>
+                                <td class="border-top text-center border-right">3</td>
+                                <td class="border-top text-center border-right">2</td>
+                                <td class="border-top text-center border-right">1</td>
+                                <td class="border-top text-center border-right">-</td>
+                            </tr>
+                            <tr>
+                                <td class="subject-name fw-600 text-center border-right">영업이익 성장률</td>
+                                <td class="subject-name fw-600 text-center border-right">2점</td>
+                                <td class="text-center border-right">2</td>
+                                <td class="text-center border-right">1</td>
+                                <td class="text-center border-right">-</td>
+                                <td class="text-center border-right">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="popup-depth">
+                    <!-- 서류검토 전체 완료 시 -->
+                    <div id="confirmPopup" class="pre-review-popup">
+                        <div class="popup-bg" onclick="hidePopup(1)"></div>
+                        <div class="popup-container">
+                            <button type="button" class="popup-close" onclick="hidePopup(1)">
+                                <span class="xi-close"></span>
+                            </button>
+                            <div class="img-bx">
+                                <img src="../assets/images/common/popup_question.png" alt="선택기업의 SVI 서류검토를 완료하시겠습니까?" />
+                            </div>
+                            <div class="popup-text">확인된 내용으로 등급판정을 완료합니다 계속 진행할까요?</div>
+                            <div class="popup-btn-bx">
+                                <button type="button" class="popup-close fill-white" onclick="hidePopup(1)">취소</button>
+                                <button type="button" class="fill-blue">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- popup -->
+
+                    <!-- popup -->
+                    <!-- 서류 검토 전체 미완료 시 -->
+                    <div id="checkPopup" class="pre-review-popup">
+                        <div class="popup-bg" onclick="hidePopup(2)"></div>
+                        <div class="popup-container">
+                            <button type="button" class="popup-close" onclick="hidePopup(2)">
+                                <span class="xi-close"></span>
+                            </button>
+                            <div class="img-bx">
+                                <img src="../assets/images/common/popup_notice.png" alt="lack" />
+                            </div>
+                            <div class="popup-text">
+                                등급판정을 하기전에<br />
+                                검토내용/근거자료/총괄의견 입력을<br />
+                                확인해주시기 바랍니다.
+                            </div>
+                            <div class="popup-btn-bx">
+                                <button type="button" onclick="hidePopup(2)" class="popup-close fill-black">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- popup -->
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

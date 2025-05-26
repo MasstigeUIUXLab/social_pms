@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<meta name="title" content="한국사회적기업진흥원" />
+<meta name="keywords" content="" />
+<meta name="author" content="Masstige" />
+<meta name="description" content="" />
+<meta name="Robots" content="index, follow" />
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="한국사회적기업진흥원" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="한국사회적기업진흥원" />
+<meta property="og:url" content="" />
+<meta property="og:description" content="" />
+<!-- Twitter -->
+<meta name="twitter:image" content="" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:title" content="한국사회적기업진흥원" />
+<!-- Naver Webmaster Tool -->
+<meta name="naver-site-verification" content="" />
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="" />
+<link rel="image_src" href="#" />
+<!-- 대표 이미지 -->
+<link rel="shortcut icon" href="#" />
+<!-- 파비콘 -->
+<link rel="canonical" href="#" />
+<!-- 대표 URL -->
+<!-- XEIcon -->
+<link rel="stylesheet" href="../assets/fonts/icons/xeicon/xeicon.css" />
+<!-- Masstige Custom Icon for Board Template -->
+<link rel="stylesheet" href="../assets/fonts/icons/icomoon/masstige-icons.css" />
+<!-- Google Material Icons -->
+<link rel="stylesheet" href="../assets/fonts/icons/material/material-icons.css" />
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="../assets/fonts/icons/bootstrap/bootstrap-icons.min.css" />
+<!-- Stylesheet -->
+<link rel="stylesheet" href="../assets/css/common.css" />
+<link rel="stylesheet" href="../assets/css/sub.css" />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov.min.css" />
+<script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
+<script src="../assets/js/lib/jquery-migrate-1.4.1.min.js"></script>
+<script src="../assets/js/lib/jquery-ui.min.js"></script>
+<script src="../assets/js/lib/popper.min.js"></script>
+<script src="../assets/js/lib/bootstrap.min.js"></script>
+<script src="../assets/js/lib/slick.min.js"></script>
+<script src="../assets/js/lib/wow.min.js"></script>
+<script src="../assets/js/lib/aos.min.js"></script>
+<script src="../assets/js/lib/jquery.magnific-popup.min.js"></script>
+<script src="../assets/js/lib/easings.min.js"></script>
+<script src="../assets/js/lib/swiper.min.js"></script>
+<script src="../assets/js/lib/jquery.scrollbar.min.js"></script>
+<script src="../assets/js/lib/jquery.mCustomScrollbar.min.js"></script>
+<script src="../assets/js/custom/nav_active-1.1.6.masstige.min.js"></script>
+<script src="../assets/js/custom/tab-1.1.0.masstige.js"></script>
+<script src="../assets/js/custom/resizingCheck-1.0.0.masstige.js"></script>
+<script src="../assets/js/custom/nav_drop-1.0.1.masstige.min.js"></script>
+<script src="../assets/js/custom/scroll_track-1.0.1.masstige.min.js"></script>
+<!-- [D] 03-13 누락된 공통 js 파일 링크 -->
+<script src="../assets/js/common.js"></script>
+<!-- 데이터피커 -->
+<script src="../assets/js/lib/moment.min.js"></script>
+<script src="../assets/js/lib/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="../assets/css/daterangepicker.css" />
+<!-- // -->
+<title></title>
+</head>
+
+<!-- [D] 03-11 윈도우 팝업일 경우 .sub-body에 .popup-window가 기본 형태 -->
+<body class="sub-body popup-window">
+    <div class="popup-container">
+        <button type="button" class="popup-window-close" onclick="window.close()">
+            <span class="sr-only">닫기</span>
+        </button>
+        <form action="">
+            <div class="form-inner">
+                <div class="popup-title">
+                    <p>행정처분 신규/상세조회</p>
+                </div>
+
+                <div class="tab-bx">
+                    <div class="tab-header">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);" data-tab1-num="1" class="active"> 기본정보 </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" data-tab1-num="2"> 변경이력</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-body">
+                        <div class="tab-content active" data-tab1-num="1">
+                            <!-- 기본정보 -->
+                            <div class="table-bx">
+                                <p class="table-text mb-3">기본정보</p>
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 150px">
+                                        <col style="width: calc( 50% - 150px )">
+                                        <col style="width: 150px">
+                                        <col style="width: calc( 50% - 150px )">
+                                    </colgroup>
+                                    <tbody class="border-top">
+                                        <tr>
+                                            <td class="subject-name fw-600">
+                                                <span> 기업명 </span>
+                                            </td>
+                                            <td class="pa8">
+                                                <span id="coCoEntInfoMngHistPopup_entNm" name="entNm">특허법인 인큐브</span>
+                                            </td>
+                                            <td class="subject-name fw-600">
+                                                <span> 대표자 </span>
+                                            </td>
+                                            <td class="pa8">
+                                                <span id="coCoEntInfoMngHistPopup_rprsvNm" name="rprsvNm">김진구</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="subject-name fw-600">
+                                                <span> 설립일 </span>
+                                            </td>
+                                            <td class="pa8">
+                                                <span id="coCoEntInfoMngHistPopup_fndnYmd" name="fndnYmd">2017-03-21</span>
+                                            </td>
+                                            <td class="subject-name fw-600">
+                                                <span> 소재지 </span>
+                                            </td>
+                                            <td class="pa8">
+                                                <span id="coCoEntInfoMngHistPopup_entAddrDaddr" name="entAddrDaddr">서울특별시 관악구 관악로 1</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="subject-name fw-600">
+                                                <span> 회사 연락처 </span>
+                                            </td>
+                                            <td class="pa8">
+                                                <span id="coCoEntInfoMngHistPopup_telno" name="telno">010-4687-3297</span>
+                                            </td>
+                                            <td class="subject-name fw-600">
+                                                <span> 대표자 연락처 </span>
+                                            </td>
+                                            <td class="pa8">
+                                                <span id="coCoEntInfoMngHistPopup_rprsTelno" name="rprsTelno">010-0000-0000</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="subject-name fw-600">
+                                                <span> 관할고용노동관서 </span>
+                                            </td>
+                                            <td class="pa8" colspan="3">
+                                                <span id="coCoEntInfoMngHistPopup_competAuthoritNm" name="competAuthoritNm">고용노동부 대전지방고용노동청 대전청 대전고용센터</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //기본정보 -->
+                        
+                            <!-- 운영현황 -->
+                            <div class="table-bx">
+                                <p class="table-text mb-3">운영현황</p>
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 6.5%">
+                                        <col style="width: 14.5%">
+                                        <col style="width: 6.5%">
+                                        <col style="width: 14.5%">
+                                        <col style="width: 14.5%">
+                                        <col style="width: 14.5%">
+                                        <col style="width: 14.5%">
+                                        <col style="width: 14.5%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="border-right">년도</th>
+                                            <th class="border-right">매출액</th>
+                                            <th class="border-right">구분</th>
+                                            <th class="border-right">총인원</th>
+                                            <th class="border-right">자체 고용 근로자 수</th>
+                                            <th class="border-right">재정지원사업 참여 근로자 수</th>
+                                            <th class="border-right">취약계층 총인원</th>
+                                            <th>취약계층 자체 고용 근로자수</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border-right border-top text-center">2024</td>
+                                            <td class="border-right border-top text-center">314,292,714</td>
+                                            <td class="border-right border-top text-center">인증</td>
+                                            <td class="border-right border-top text-center">11</td>
+                                            <td class="border-right border-top text-center">11</td>
+                                            <td class="border-right border-top text-center">0</td>
+                                            <td class="border-right border-top text-center">5</td>
+                                            <td class="border-top text-center">5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- // 운영현황 -->
+
+                            <!-- 인·지정 정보 -->
+                            <div class="table-bx">
+                                <p class="table-text mb-3">인·지정 정보</p>
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 6.5%">
+                                        <col style="width: 31.16%">
+                                        <col style="width: 31.16%">
+                                        <col style="width: 31.16%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="border-right">구분</th>
+                                            <th class="border-right">지정번호</th>
+                                            <th class="border-right">유형</th>
+                                            <th>기간</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border-right border-top text-center">텍스트</td>
+                                            <td class="border-right border-top text-center">텍스트</td>
+                                            <td class="border-right border-top text-center">지정</td>
+                                            <td class="border-top text-center">0000.00.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- // 인·지정 정보 -->
+
+                            <!-- 재정지원 -->
+                            <div class="table-bx">
+                                <p class="table-text mb-3">재정지원</p>
+                                <ul class="cont_tab4 mb10">
+                                    <li>
+                                        <a href="#" class="on">일자리</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">사업개발비</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">전문인력</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">사회보험료</a>
+                                    </li>
+                                </ul>
+                                <div class="tab_area">
+                                    <div class="tab_cont_wrap mt15" id="">
+                                        <div id="" class="tab_box tab_open">
+                                            <!-- tab 1 일자리 -->
+                                            <div class="table-bx">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width: 33.33%">
+                                                        <col style="width: 33.33%">
+                                                        <col style="width: 33.33%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="border-right">지급일자</th>
+                                                            <th class="border-right">지원급총액</th>
+                                                            <th>대상인원수</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="border-right border-top text-center">0000.00.00</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-top text-center">텍스트</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="border-right border-top text-center">0000.00.00</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-top text-center">텍스트</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div id="" class="tab_box">
+                                            <!-- tab 2 사업개발비 -->
+                                            <div class="table-bx">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width: 16.66%">
+                                                        <col style="width: 16.66%">
+                                                        <col style="width: 16.66%">
+                                                        <col style="width: 16.66%">
+                                                        <col style="width: 16.66%">
+                                                        <col style="width: 16.66%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="border-right">회차</th>
+                                                            <th class="border-right">총 지급액</th>
+                                                            <th class="border-right">국비</th>
+                                                            <th class="border-right">시도비</th>
+                                                            <th class="border-right">시군구비</th>
+                                                            <th>자부담비</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-top text-center">텍스트</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-top text-center">텍스트</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div id="" class="tab_box">
+                                            <!-- tab 3 전문인력 -->
+                                            <div class="table-bx">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width: 33.33%">
+                                                        <col style="width: 33.33%">
+                                                        <col style="width: 33.33%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="border-right">지급일자</th>
+                                                            <th class="border-right">지원급총액</th>
+                                                            <th>대상인원수</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="border-right border-top text-center">0000.00.00</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-top text-center">텍스트</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="border-right border-top text-center">0000.00.00</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-top text-center">텍스트</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div id="" class="tab_box">
+                                            <!-- tab 4 사회보험료 -->
+                                            <div class="table-bx">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width: 20%">
+                                                        <col style="width: 20%">
+                                                        <col style="width: 20%">
+                                                        <col style="width: 20%">
+                                                        <col style="width: 20%">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="border-right">지급년월</th>
+                                                            <th class="border-right">인원수</th>
+                                                            <th class="border-right">금액</th>
+                                                            <th class="border-right">누적금액</th>
+                                                            <th>지급기간</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-top text-center">텍스트</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-right border-top text-center">텍스트</td>
+                                                            <td class="border-top text-center">텍스트</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //재정지원 -->
+                        
+                            <!-- 사업참여내역 -->
+                            <div class="table-bx">
+                                <p class="table-text mb-3">사업참여내역</p>
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 6.5%">
+                                        <col style="width: 31.16%">
+                                        <col style="width: 31.16%">
+                                        <col style="width: 31.16%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="border-right">항목</th>
+                                            <th class="border-right">지원연도</th>
+                                            <th class="border-right">금액</th>
+                                            <th>비고</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border-right border-top text-center">성장지원</td>
+                                            <td class="border-right border-top text-center">2023</td>
+                                            <td class="border-right border-top text-center">텍스트</td>
+                                            <td class="border-top text-center">텍스트</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-right border-top text-center">성장지원</td>
+                                            <td class="border-right border-top text-center">2023</td>
+                                            <td class="border-right border-top text-center">텍스트</td>
+                                            <td class="border-top text-center">텍스트</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- // 사업참여내역 -->
+
+                            <!-- SVI 측정결과 -->
+                            <div class="table-bx">
+                                <p class="table-text mb-3">SVI 측정결과</p>
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 25%">
+                                        <col style="width: 25%">
+                                        <col style="width: 25%">
+                                        <col style="width: 25%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="border-right">측정연도</th>
+                                            <th class="border-right">측정점수</th>
+                                            <th class="border-right">측정등급</th>
+                                            <th>비고</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border-right border-top text-center">텍스트</td>
+                                            <td class="border-right border-top text-center">텍스트</td>
+                                            <td class="border-right border-top text-center">텍스트</td>
+                                            <td class="border-top text-center">텍스트</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-right border-top text-center">텍스트</td>
+                                            <td class="border-right border-top text-center">텍스트</td>
+                                            <td class="border-right border-top text-center">텍스트</td>
+                                            <td class="border-top text-center">텍스트</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- // SVI 측정결과 -->
+
+                            <!-- 행정조치 -->
+                            <div class="table-bx">
+                                <p class="table-text mb-3">행정조치</p>
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 6.5%">
+                                        <col style="width: 6.5%">
+                                        <col style="width: 87%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="border-right">년도</th>
+                                            <th class="border-right">내용</th>
+                                            <th>비고</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border-right border-top text-center">2019 </td>
+                                            <td class="border-right border-top text-center">주의</td>
+                                            <td class="border-top text-center">2018년 당기순이익에 대해 2019년 2/3 재투자</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-right border-top text-center">2018 </td>
+                                            <td class="border-right border-top text-center">경고</td>
+                                            <td class="border-top text-center">근로자와 법적 소송으로 다투고 있으며 사정이 있다고 하지만 지침 상 임금 체불이 확인되면 행정처분(경고)하도록 규정하고 있어 형평성 차원에서 참작할 여지가 없음.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- // 행정조치 -->
+
+                             <!-- 기타사항 -->
+                            <div class="table-bx">
+                                <p class="table-text mb-3">기타사항</p>
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 6.5%">
+                                        <col style="width: 93.5%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="border-right">년도</th>
+                                            <th>비고</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border-right border-top text-center" colspan="2">조회된 자료가 존재하지 않습니다</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- // 기타사항 -->
+                        </div>
+                        <div class="tab-content" data-tab1-num="2">
+                            <!-- 변경이력 -->
+                            <div class="table-bx">
+                                <p class="table-text mb-3">변경이력</p>
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 6.5%">
+                                        <col style="width: 18.7%">
+                                        <col style="width: 18.7%">
+                                        <col style="width: 18.7%">
+                                        <col style="width: 18.7%">
+                                        <col style="width: 18.7%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="border-right">순번</th>
+                                            <th class="border-right">구분</th>
+                                            <th class="border-right">변경전</th>
+                                            <th class="border-right">변경후</th>
+                                            <th class="border-right">변경일</th>
+                                            <th class="border-right">변경자명</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border-right border-top text-center">3    </td>
+                                            <td class="border-right border-top text-center">소재지 변경</td>
+                                            <td class="border-right border-top text-center">서울특별시 동작구</td>
+                                            <td class="border-right border-top text-center">서울특별시 종로구</td>
+                                            <td class="border-right border-top text-center">2024-11-09</td>
+                                            <td class="border-top text-center">홍길동</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- // 변경이력 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
