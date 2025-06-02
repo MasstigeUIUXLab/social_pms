@@ -41034,13 +41034,15 @@ header > .container .nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 36px;
   margin-right: 75px;
   height: 100%;
 }
 header > .container .nav li {
+  position: relative;
   height: 100%;
 }
 header > .container .nav li .link {
@@ -41076,6 +41078,36 @@ header > .container .nav li .link:hover, header > .container .nav li .link.activ
 }
 header > .container .nav li .link:hover::before, header > .container .nav li .link.active::before {
   width: 100%;
+}
+header > .container .nav .btn_gnb_toggle {
+  display: block;
+  width: 48px;
+  height: 100%;
+  margin-right: auto;
+  background: url(../images/common/icon_menu_toggle.svg) no-repeat center/24px;
+}
+header > .container .nav .btn_gnb_toggle.active + .menu-box {
+  display: block;
+}
+header > .container .nav .menu-box {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: -21px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid #CED6DF;
+  background: #FFF;
+}
+header > .container .nav .menu-box li {
+  height: auto;
+}
+header > .container .nav .menu-box li a {
+  padding: 8px 0;
+}
+header > .container .nav .menu-box li .link:before {
+  display: none;
 }
 header > .container .user-profile-bx {
   display: -webkit-box;
@@ -48110,9 +48142,9 @@ input[readonly][type=time],
 input[readonly][type=url],
 input[readonly][type=week],
 select[readonly] {
-  background-color: #e4e4e4 !important;
-  border: 1px solid #c6c6c6 !important;
-  color: #8E8E8E !important;
+  background-color: #f0f0f0 !important;
+  border: 1px solid #8E8E8E !important;
+  color: #1D1D1D !important;
   opacity: 1;
   pointer-events: none;
 }
@@ -48131,7 +48163,7 @@ input[readonly][type=time],
 input[readonly][type=url],
 input[readonly][type=week],
 select[readonly] {
-  color: #717171 !important;
+  color: #1D1D1D !important;
 }
 
 textarea {
@@ -48414,9 +48446,9 @@ input[type=radio] {
 input[type=checkbox]:disabled, input[type=checkbox][readonly],
 input[type=radio]:disabled,
 input[type=radio][readonly] {
-  background-color: #e4e4e4 !important;
-  border: 1px solid #c6c6c6 !important;
-  color: #8E8E8E;
+  background-color: #f0f0f0 !important;
+  border: 1px solid #8E8E8E !important;
+  color: #1d1d1d;
   opacity: 1;
   pointer-events: none;
 }
@@ -52508,13 +52540,11 @@ input[type=number] {
 }
 
 .icon_required {
-  display: inline-block;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  margin: 0px 2px 0;
+  position: absolute;
+  top: -1px;
+  left: -9px;
   font-style: normal;
   color: #CC2129;
-  vertical-align: top;
   line-height: 1;
 }
 

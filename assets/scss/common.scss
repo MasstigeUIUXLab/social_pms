@@ -1223,13 +1223,12 @@ input[type='number'] {
 }
 
 .icon_required{
-  display: inline-block;
-  align-self: flex-start;
-  margin: 0px 2px 0;
+  position: absolute;
+  top: -1px;
+  left: -9px;
   font-style: normal;
   color: #CC2129;
-  vertical-align: top;
-  line-height: 1
+  line-height: 1;
 }
 
 .inner-input-bx {

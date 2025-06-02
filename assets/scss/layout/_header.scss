@@ -21,12 +21,14 @@ header {
     .nav {
       flex-grow: 1;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      align-items: center;   
+      justify-content: flex-start;
+      gap: 36px;
       margin-right: 75px;
       height: 100%;
 
       li {
+        position: relative;
         height: 100%;
 
         .link {
@@ -59,6 +61,42 @@ header {
             &::before {
               width: 100%;
             }
+          }
+        }
+      }
+
+      .btn_gnb_toggle{
+        display: block;
+        width: 48px;
+        height: 100%;
+        margin-right: auto;
+        background: url(../images/common/icon_menu_toggle.svg) no-repeat center / 24px;
+
+        &.active + .menu-box{
+          display: block;
+        }
+      }
+
+      .menu-box{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: -21px;
+        padding: 12px 20px;
+        border-radius: 8px;
+        border: 1px solid #CED6DF;
+        background: #FFF;
+
+        li{
+          height: auto;
+
+          a{
+            padding: 8px 0;
+          }
+
+          .link:before{
+            display: none;
           }
         }
       }

@@ -318,6 +318,18 @@ $(document).ready(function () {
     once: true,
   });
 
+  $(document).on('mouseenter', '.btn_gnb_toggle', function () {
+    $(this).next().show();
+  }).on('mouseleave', '.btn_gnb_toggle', function () {
+    $(this).next().hide();
+  });
+
+  $(document).on('mouseenter', '.menu-box', function () {
+    $(this).show();
+  }).on('mouseleave', '.menu-box', function () {
+    $(this).hide();
+  });
+
   // top banner
   if ($('.top-banner').length) {
     $('body').addClass('top-banner-open');
