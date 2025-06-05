@@ -41020,7 +41020,7 @@ header > .container {
   background: #fff;
 }
 header > .container .logo-bx {
-  margin-right: 45px;
+  margin-right: 24px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -41037,8 +41037,8 @@ header > .container .nav {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  gap: 36px;
-  margin-right: 75px;
+  gap: 22px;
+  margin-right: auto;
   height: 100%;
 }
 header > .container .nav li {
@@ -41054,7 +41054,7 @@ header > .container .nav li .link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   color: #222;
   letter-spacing: -0.64px;
@@ -41081,10 +41081,12 @@ header > .container .nav li .link:hover::before, header > .container .nav li .li
 }
 header > .container .nav .btn_gnb_toggle {
   display: block;
-  width: 48px;
   height: 100%;
+  font-size: 15px;
+  padding-right: 32px;
   margin-right: auto;
-  background: url(../images/common/icon_menu_toggle.svg) no-repeat center/24px;
+  background: url(../images/common/icon_menu_toggle.svg) no-repeat right center/24px;
+  color: #222;
 }
 header > .container .nav .btn_gnb_toggle.active + .menu-box {
   display: block;
@@ -41117,7 +41119,7 @@ header > .container .user-profile-bx {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
-  margin-right: 16px;
+  margin-right: 12px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -48208,7 +48210,7 @@ select::-ms-expand {
 
 input.input-date,
 input.input-type-date {
-  padding: 0 36px 0 10px !important;
+  padding: 0 36px 0 4px !important;
   background-image: url(../../assets/images/common/icon_date.svg);
   background-repeat: no-repeat;
   background-position: calc(100% - 12px) center;

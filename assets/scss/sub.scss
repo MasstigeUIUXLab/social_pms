@@ -248,6 +248,7 @@
 
     .filter-bx {
         position: relative;
+        height: 75px;
         /* overflow: hidden; */
 
         form{
@@ -265,6 +266,9 @@
         }
 
         .form-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
             display: flex;
             align-items: flex-start;
             /* flex-wrap: wrap; */
@@ -292,7 +296,7 @@
                         color: #435C73;
                         line-height: 1.375;
                         margin-bottom: 8px;
-                        display: none;
+                        display: none !important;
                     }
 
                     &:nth-child(1n + 5){
@@ -307,12 +311,12 @@
 
                 .input-bx:nth-child(1n + 5){
                     visibility: visible;
-                    display: block;
+                    display: flex;
                 }
 
                 &.off-hidden{
                     visibility: visible !important;
-                    display: block;
+                    display: flex;
                 }
 
                 .circle-open-btn {
@@ -1833,18 +1837,16 @@
                     .filter-bx {
                         .form-inner {
                             position: relative;
-                            height: 112px;
                             border: 1px solid #ced6df;
                             border-radius: 20px;
             
                             .input-bx{
                                 h3{
-                                    display: block;
+                                    display: none !important;
                                 }
                             }
             
                             .filter-control-bx{
-                                min-height: 63px;
                                 vertical-align: bottom;
                                 align-items: flex-end;
                             }
@@ -1857,23 +1859,23 @@
                     }
                 }
 
-                &.lg{
-                    .filter-bx {
-                        .form-inner {
-                            height: 112px;
+                // &.lg{
+                //     .filter-bx {
+                //         .form-inner {
+                //             height: 112px;
 
-                            .input-bx{
-                                h3{
-                                    display: block;
-                                }
-                            }
+                //             .input-bx{
+                //                 h3{
+                //                     display: block;
+                //                 }
+                //             }
                             
-                            .filter-control-bx{
-                                min-height: 88px;
-                            }
-                        }
-                    }
-                }
+                //             .filter-control-bx{
+                //                 min-height: 88px;
+                //             }
+                //         }
+                //     }
+                // }
 
                 /* .filter-bx {
           .form-inner {
@@ -2687,28 +2689,26 @@
         border: 0;
 
         .filter-bx {
-            height: 112px;
+            height: auto;
 
             .form-inner {
+                height: auto;
                 position: relative;
-                height: 112px;
                 border: 1px solid #ced6df;
                 border-radius: 0 0 12px 12px;
 
-                .input-list{
-                    // height: 112px;
-                    height: auto;
-                    padding: 20px;
-                }
-
                 .input-bx{
                     &:not(.type-circle-btn){
-                        height: 70px;
                         width: calc( (100% - 48px)/5 );
                     }
 
                     h3{
-                        display: block;
+                        display: none !important;
+                    }
+
+                    &:nth-child(1n+5){
+                        visibility: visible;
+                        display: flex;
                     }
                 }
 
