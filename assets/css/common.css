@@ -41086,6 +41086,7 @@ header > .container .nav .btn_gnb_toggle {
   padding-right: 32px;
   margin-right: auto;
   background: url(../images/common/icon_menu_toggle.svg) no-repeat right center/24px;
+  font-weight: 500;
   color: #222;
 }
 header > .container .nav .btn_gnb_toggle.active + .menu-box {

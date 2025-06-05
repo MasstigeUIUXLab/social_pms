@@ -73,8 +73,9 @@ header {
         padding-right: 32px;
         margin-right: auto;
         background: url(../images/common/icon_menu_toggle.svg) no-repeat right center / 24px;
+        font-weight: 500;
         color: #222;
-        
+
         &.active + .menu-box{
           display: block;
         }
