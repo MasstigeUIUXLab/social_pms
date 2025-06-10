@@ -1485,7 +1485,16 @@
         justify-content: center;
         padding: 12px 0 0;
         background: #fff;
-        overflow: hidden;
+        // overflow: hidden;
+
+        &:after{
+            content:'';
+            position: absolute;
+            top: 100%;
+            height: 4px;
+            width: 100%;
+            background: #2D78E8;
+        }
 
         .container {
             display: flex;
@@ -1513,35 +1522,39 @@
             .open-page-list {
                 flex-grow: 1;
                 display: flex;
-                align-items: center;
+                align-items: flex-end;
                 justify-content: flex-start;
+                position: relative;
                 overflow-y: hidden;
                 overflow-x: auto;
 
                 li {
-                    height: 40px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     position: relative;
                     padding: 0;
-                    background: #e8e8e8;
-                    border-radius: 4px 4px 0 0;
                     overflow: hidden;
 
                     a {
                         display: inline-block;
+                        height: 28px;
+                        background-color: #e8e8e8;
                         padding: 0 28px 0 12px;
-                        font-size: 16px;
+                        border-radius: 4px 4px 0 0;
                         font-weight: 400;
-                        line-height: 40px;
+                        font-size: 12px;
+                        line-height: 28px;
                         letter-spacing: -0.32px;
                         color: #191919;
                         white-space: nowrap;
 
                         &.active{
+                            height: 40px;
                             background-color: #2D78E8;
                             font-weight: 600;
+                            font-size: 16px;
+                            line-height: 40px;
                             color: #fff;
 
                             & + button{
@@ -1553,16 +1566,16 @@
                     > button {
                         display: flex;
                         align-items: center;
-                        width: 12px;
-                        height: 12px;
+                        width: 10px;
+                        height: 11px;
                         margin-right: 4px;
-                        background: url(../images/sub/icon_page_close.svg) no-repeat center / 9px auto;
+                        background: url(../images/sub/icon_page_close.svg) no-repeat center / 10px auto;
                     }
 
                     .btn-page-close{
                         position: absolute;
                         top: 50%;
-                        right: 0;
+                        right: 4px;
                         transform: translateY(-50%);
                     }
 
@@ -1595,10 +1608,15 @@
         }
 
         &.normal{
+            overflow: hidden;
             height: 52px;
             padding: 6px 24px;
             border-bottom: 1px dashed #CAD6EA;
 
+            &:after{
+                display: none;
+            }
+          
             .container {
                 gap: 0;
                 padding: 0 13px;
@@ -1627,7 +1645,7 @@
                   display: flex;
                   align-items: center;
                   gap: 4px;
-          
+
                   li {
                     height: 24px;
                     display: flex;
@@ -1649,6 +1667,8 @@
                       display: flex;
                       align-items: center;
                       width: 12px;
+                        height: auto;
+                        background: none;
                     }
                   }
                 }
@@ -1672,7 +1692,7 @@
                     color: #fff;
                   }
                 }
-              }
+            }
         }
         
     }
