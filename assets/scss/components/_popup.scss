@@ -576,6 +576,8 @@
     }
 
     .popup-header {
+        padding-bottom: 12px;
+
         .txt-bx {
             h2 {
                 font-family: "GmarketSans";
@@ -639,7 +641,6 @@
             .checkList-button-bx {
                 display: flex;
                 justify-content: right;
-                margin-bottom: 12px;
                 height: 40px;
                 gap: 8px;
 
@@ -697,6 +698,10 @@
                         opacity: 0;
                     }
                 }
+            }
+
+            & > * + *{
+                margin-top: 12px;
             }
         }
     }
@@ -906,10 +911,21 @@
 
     &-lg {
         .popup-container {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
             padding: 70px 67px 50px;
+            height: 100vh;
 
-            @include mdq-max(xl) {
-                padding: 70px 40px 50px;
+            .popup-header{
+                flex: 0 0 auto;
+            }
+
+            .popup-content{
+                flex: 1;
+                margin-right: -67px;
+                padding-right: 67px;
+                overflow-y: auto;
             }
 
             .table-bx {
@@ -930,6 +946,15 @@
                             }
                         }
                     }
+                }
+            }
+
+            @include mdq-max(xl) {
+                padding: 70px 40px 50px;
+
+                .popup-content{
+                    margin-right: -40px;
+                    padding-right: 40px;
                 }
             }
         }

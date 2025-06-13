@@ -543,14 +543,26 @@
                                                     <h3 class="d-block">기업명</h3>
                                                     <input type="text" placeholder="기업명" />
                                                 </div>
+                                                
+                                                <!-- [D] 06-13 추가 -->
                                                 <div class="input-bx">
+                                                    <div class="input-area flex-wrap">
+                                                        <button class="btn-1 w-auto fill-blue" id="brRprtRange1WeekBtn" data-period="7">일주일</button>
+                                                        <button class="btn-1 w-auto fill-blue" id="brRprtRange1MBtn" data-period="30">1개월</button>
+                                                        <button class="btn-1 w-auto fill-blue" id="brRprtRange3MBtn" data-period="90">3개월</button>
+                                                        <button class="btn-1 w-auto fill-blue" id="brRprtRange6MBtn" data-period="180">6개월</button>
+                                                    </div>
+								                </div>
+                                                <!-- // -->
+
+                                                <!-- <div class="input-bx">
                                                     <h3 class="d-block">진행상태</h3>
                                                     <select name="" id="">
                                                         <option value="">1차승인</option>
                                                         <option value="">선택</option>
                                                         <option value="">선택</option>
                                                     </select>
-                                                </div>
+                                                </div> -->
                                                 <div class="input-bx divide-2">
                                                     <h3 class="d-block">관할고용노동관서</h3>
                                                     <div class="input-area">
@@ -654,6 +666,14 @@
                                 <div class="list">
                                     <div class="list-info">
                                         <p><strong>사업보고서 검토 목록</strong> (총 <span>345</span>건)</p>
+                                        
+                                        <!-- [D] 06-13 추가 -->
+                                        <div class="input-bx">
+                                            <label><span>조회일자</span></label>
+                                            <input type="text" name="clsInqYmd" id="clsInqYmd" readonly="">
+                                        </div>
+                                        <!-- // -->
+
                                         <div class="btn-bx">
                                             <!-- [D] 06-02 목록영역 내 기본 버튼 -->
                                             <button type="button" class="btn-1 fill-blue">신규</button>

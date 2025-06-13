@@ -303,15 +303,25 @@
                         visibility: hidden;
                         display: none;
                     }
+
+                    &:not(.type-circle-btn){
+                        
+                    }
                 }
             }
 
             &.on {
                 height: auto !important;
 
-                .input-bx:nth-child(1n + 5){
-                    visibility: visible;
-                    display: flex;
+                .input-bx{
+                    &:nth-child(1n + 5){
+                        visibility: visible;
+                        display: flex;
+                    }
+
+                    &:not(.type-circle-btn){
+                        height: auto;
+                    }
                 }
 
                 &.off-hidden{
@@ -574,6 +584,11 @@
                 width: 40% !important;
             }
         }
+
+        .input-area{
+            gap: 4px;
+            min-height: 34px;
+        }
     }
 
     .filter-control-bx {
@@ -661,6 +676,20 @@
 
             & > span{
                 font-size: 14px;
+            }
+
+            .input-bx{
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                font-size: 14px;
+
+                h3 {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #435C73;
+                    line-height: 1.375;
+                }
             }
 
             .btn-bx {
@@ -1804,6 +1833,10 @@
 
                     .input-area{
                         gap: 12px;
+
+                        &.flex-wrap{
+                            gap: 6px;
+                        }
                     }
                 }
 

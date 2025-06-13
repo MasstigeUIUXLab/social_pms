@@ -861,9 +861,9 @@ $(document).ready(function () {
     }, 300);
 
     /* 콘텐츠 영역 좌우 확대 */
-    /*$(document).on("click", ".toggle-btn", function () {
+    $(document).on("click", ".toggle-btn", function () {
         toggleBtn($(this));
-    });*/
+    });
 
     $(document).on("click", "[data-toggle='toggle-btn']", function () {
         toggleBtn($(this));

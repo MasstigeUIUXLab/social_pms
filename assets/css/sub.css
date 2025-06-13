@@ -427,6 +427,9 @@
   display: -ms-flexbox;
   display: flex;
 }
+.sub-body .filter-bx .form-inner.on .input-bx:not(.type-circle-btn) {
+  height: auto;
+}
 .sub-body .filter-bx .form-inner.on.off-hidden {
   visibility: visible !important;
   display: -webkit-box;
@@ -565,6 +568,10 @@
 .sub-body .input-bx select.w-auto {
   width: 40% !important;
 }
+.sub-body .input-bx .input-area {
+  gap: 4px;
+  min-height: 34px;
+}
 .sub-body .filter-control-bx {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -675,6 +682,22 @@
 }
 .sub-body .list-info > span {
   font-size: 14px;
+}
+.sub-body .list-info .input-bx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+.sub-body .list-info .input-bx h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #435C73;
+  line-height: 1.375;
 }
 .sub-body .list-info .btn-bx a, .sub-body .list-info .btn-bx button {
   display: -webkit-inline-box;
@@ -1855,6 +1878,9 @@
 }
 .sub-body .content-bx > .half.on .filter-bx .form-inner .input-area {
   gap: 12px;
+}
+.sub-body .content-bx > .half.on .filter-bx .form-inner .input-area.flex-wrap {
+  gap: 6px;
 }
 .sub-body .content-bx > .half.on .table-bx > table tr > *.subject-name {
   word-break: keep-all;
