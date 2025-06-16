@@ -305,7 +305,12 @@
                     }
 
                     &:not(.type-circle-btn){
-                        
+                        max-height: 34px;
+                        justify-content: center;
+                    }
+
+                    .input-area{
+                        min-height: unset;
                     }
                 }
             }
@@ -319,8 +324,14 @@
                         display: flex;
                     }
 
-                    &:not(.type-circle-btn){
+                    &:not(.type-circle-btn){    
                         height: auto;
+                        max-height: 100%;
+                        justify-content: flex-start;
+                    }
+
+                    .input-area{
+                        min-height: 34px;
                     }
                 }
 

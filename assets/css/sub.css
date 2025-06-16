@@ -418,6 +418,15 @@
   visibility: hidden;
   display: none;
 }
+.sub-body .filter-bx .form-inner .input-list .input-bx:not(.type-circle-btn) {
+  max-height: 34px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.sub-body .filter-bx .form-inner .input-list .input-bx .input-area {
+  min-height: unset;
+}
 .sub-body .filter-bx .form-inner.on {
   height: auto !important;
 }
@@ -429,6 +438,13 @@
 }
 .sub-body .filter-bx .form-inner.on .input-bx:not(.type-circle-btn) {
   height: auto;
+  max-height: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.sub-body .filter-bx .form-inner.on .input-bx .input-area {
+  min-height: 34px;
 }
 .sub-body .filter-bx .form-inner.on.off-hidden {
   visibility: visible !important;
