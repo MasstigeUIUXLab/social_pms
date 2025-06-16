@@ -44235,7 +44235,7 @@ header .side-nav .open-page {
 .popup-window .popup-content .table-bx table tbody tr td:last-child {
   border-right: none;
 }
-.popup-window-lg .popup-container {
+.popup-window-lg > .popup-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44247,12 +44247,12 @@ header .side-nav .open-page {
   padding: 70px 67px 50px;
   height: 100vh;
 }
-.popup-window-lg .popup-container .popup-header {
+.popup-window-lg > .popup-container .popup-header {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
 }
-.popup-window-lg .popup-container .popup-content {
+.popup-window-lg > .popup-container .popup-content {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -44260,23 +44260,23 @@ header .side-nav .open-page {
   padding-right: 67px;
   overflow-y: auto;
 }
-.popup-window-lg .popup-container .table-bx table thead tr th {
+.popup-window-lg > .popup-container .table-bx table thead tr th {
   font-size: 15px !important;
 }
-.popup-window-lg .popup-container .table-bx table tbody tr td, .popup-window-lg .popup-container .table-bx table tbody tr th {
+.popup-window-lg > .popup-container .table-bx table tbody tr td, .popup-window-lg > .popup-container .table-bx table tbody tr th {
   font-size: 14px !important;
   color: #2d2d2d;
 }
-.popup-window-lg .popup-container .table-bx table tbody tr td.td-tit, .popup-window-lg .popup-container .table-bx table tbody tr td .td-tit, .popup-window-lg .popup-container .table-bx table tbody tr th.td-tit, .popup-window-lg .popup-container .table-bx table tbody tr th .td-tit {
+.popup-window-lg > .popup-container .table-bx table tbody tr td.td-tit, .popup-window-lg > .popup-container .table-bx table tbody tr td .td-tit, .popup-window-lg > .popup-container .table-bx table tbody tr th.td-tit, .popup-window-lg > .popup-container .table-bx table tbody tr th .td-tit {
   font-size: 16px;
   font-weight: 700;
   color: #2779C6;
 }
 @media all and (max-width: 1200px) {
-  .popup-window-lg .popup-container {
+  .popup-window-lg > .popup-container {
     padding: 70px 40px 50px;
   }
-  .popup-window-lg .popup-container .popup-content {
+  .popup-window-lg > .popup-container .popup-content {
     margin-right: -40px;
     padding-right: 40px;
   }

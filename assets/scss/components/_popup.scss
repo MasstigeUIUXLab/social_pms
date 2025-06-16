@@ -910,7 +910,7 @@
     }
 
     &-lg {
-        .popup-container {
+        & > .popup-container {
             display: flex;
             flex-direction: column;
             overflow: hidden;
