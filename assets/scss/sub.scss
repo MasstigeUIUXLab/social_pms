@@ -2193,6 +2193,7 @@
 
         .sub-content-title{
             font-size: 22px;
+            color: #615A5A;
         }
 
         .tab-bx {
@@ -2228,13 +2229,17 @@
                             background: #F1F8FF;
                             padding: 7.5px 16px;
                             font-weight: 500;
-                            color: #2D78E8;
+                            color: #727272;
                             line-height: 1.42857;
 
                             span{
-                                min-height: 40px;
                                 white-space: nowrap;
                             }
+                        }
+
+                        &.pa8, 
+                        &.pa16 {
+                            padding: 8px !important;
                         }
                     }
 
@@ -2256,19 +2261,24 @@
                     select,
                     textarea {
                         height: 40px;
-                        padding: 11px 8px;
+                        padding: 9px 7px;
                         font-size: 12px;
                         border-color: #C6C6C6;
 
                         &:disabled, &[readonly] {
-                            background-color: #E4E4E4 !important;
-                            border: 1px solid #C6C6C6 !important;
-                            color: #555 !important;
+                            background-color: #E0EBF5 !important;
+                            border: 1px solid #D3E2F2 !important;
+                            color: #717171 !important;
                         } 
 
                         &:focus-visible{
                             border: 1px solid #2D78E8;
                         }
+                    }
+
+                    select,
+                    input.input-date, input.input-type-date{
+                        padding-left: 7px !important;
                     }
 
                     textarea{
@@ -2288,23 +2298,58 @@
         }
 
         .icon_required {
-            position: absolute;
-            top: 50%;
-            margin-top: -3px;
             color: #E71825;
-            transform: translateY(-50%);
         }
 
         .content-bx > .half.on{
             .table-bx > table tr > *.subject-name span {
                 white-space: normal;
             }
+
+            .table-bx {
+                & > table {
+
+                    tr {
+                        & > * {
+                            &.subject-name {
+                                padding: 17px 23px;
+                            }
+
+                            .icon_required {
+                                left: -12px;
+                            }
+                        }
+
+                        // form
+                        .table-btn-01,
+                        input[type='file'],
+                        input[type='date'],
+                        input[type='datetime-local'],
+                        input[type='email'],
+                        input[type='month'],
+                        input[type='number'],
+                        input[type='password'],
+                        input[type='search'],
+                        input[type='tel'],
+                        input[type='text'],
+                        input[type='time'],
+                        input[type='url'],
+                        input[type='week'],
+                        select,
+                        textarea {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
         }
 
         // sbGrid
         .sbgrid_fixed_cell_st, .sbgrid_data_cell_st{
             border-bottom: 1px solid #D3E2F2;
         }
+
         .sbgrid_fixed_cell_st{
             border-width: 0px 1px 3px;
             border-color: #D3E2F2;
