@@ -100,8 +100,7 @@
 	* main을 제외한 나머지 페이지 : .sub-body 
 -->
 
-<!-- [D] 06-19 type2 적용원하는 페이지에는 sub-body에 .type2 추가 -->
-<body class="sub-body type2">
+<body class="sub-body">
     <main class="main">
         <!-- header -->
         <header class="header">
@@ -544,14 +543,26 @@
                                                     <h3 class="d-block">기업명</h3>
                                                     <input type="text" placeholder="기업명" />
                                                 </div>
+                                                
+                                                <!-- [D] 06-13 추가 -->
                                                 <div class="input-bx">
+                                                    <div class="input-area flex-wrap">
+                                                        <button class="btn-1 w-auto fill-blue" id="brRprtRange1WeekBtn" data-period="7">일주일</button>
+                                                        <button class="btn-1 w-auto fill-blue" id="brRprtRange1MBtn" data-period="30">1개월</button>
+                                                        <button class="btn-1 w-auto fill-blue" id="brRprtRange3MBtn" data-period="90">3개월</button>
+                                                        <button class="btn-1 w-auto fill-blue" id="brRprtRange6MBtn" data-period="180">6개월</button>
+                                                    </div>
+								                </div>
+                                                <!-- // -->
+
+                                                <!-- <div class="input-bx">
                                                     <h3 class="d-block">진행상태</h3>
                                                     <select name="" id="">
-                                                        <option value="">전체</option>
-                                                        <option value="">1차 승인</option>
+                                                        <option value="">1차승인</option>
+                                                        <option value="">선택</option>
                                                         <option value="">선택</option>
                                                     </select>
-                                                </div>
+                                                </div> -->
                                                 <div class="input-bx divide-2">
                                                     <h3 class="d-block">관할고용노동관서</h3>
                                                     <div class="input-area">
@@ -654,8 +665,15 @@
                                 <!-- S:목록 -->
                                 <div class="list">
                                     <div class="list-info">
-                                        <p><strong></strong> (총 <span>345</span>건)</p>
+                                        <p><strong>사업보고서 검토 목록</strong> (총 <span>345</span>건)</p>
                                         
+                                        <!-- [D] 06-13 추가 -->
+                                        <div class="input-bx">
+                                            <label><span>조회일자</span></label>
+                                            <input type="text" name="clsInqYmd" id="clsInqYmd" readonly="">
+                                        </div>
+                                        <!-- // -->
+
                                         <div class="btn-bx">
                                             <!-- [D] 06-02 목록영역 내 기본 버튼 -->
                                             <button type="button" class="btn-1 fill-blue">신규</button>
@@ -765,28 +783,33 @@
                                             <div class="table-bx">
                                                 <table>
                                                     <colgroup>
-                                                        <col style="width: 13%" class="col100"/>
+                                                        <!-- 
+                                                            [D] 06-02 페이지 확장 전/후 반응형을 위해 기존에 px로 들어가있던 width값을 %로 변경 
+
+                                                            ** table 안쪽의 table은 눈대중 수치로 맞춰주세요. 
+                                                            - 제일 바깥 쪽 table과는 부모가 달라 %수치가 다릅니다.
+
+                                                            * 120px => 16%  / .col120
+                                                            * 150px => 20%  / .col160
+                                                            * 160px => 22%  / .col160
+                                                            * 180px => 24%  / .col180
+                                                            * 196px => 26%  / .col196
+                                                        -->
+                                                        <col style="width: 22%" class="col160"/>
                                                         <col style="width: auto" />
-                                                        <col style="width: 13%" class="col100"/>
+                                                        <col style="width: 22%" class="col160"/>
                                                         <col style="width: auto" />
-                                                        <col style="width: 13%" class="col100"/>
-                                                        <col style="width: auto" />
+                                                        <!-- // -->
                                                     </colgroup>
-                                                    <tbody>
+                                                    <tbody class="border-top">
                                                         <tr>
-                                                            <td class="subject-name">
+                                                            <td class="subject-name fw-600">
                                                                 <span> 진행상태 </span>
                                                             </td>
                                                             <td class="pa8">
-                                                                <input type="text" class="form-control style01" value="진행중" />
+                                                                <input type="text" class="form-control style01" placeholder="내용을 입력하세요." />
                                                             </td>
-                                                            <td class="subject-name">
-                                                                <span> 신청일시 </span>
-                                                            </td>
-                                                            <td class="pa8">
-                                                                <input type="text" class="form-control style01 input-type-date" value="2025-04-18 10:30:45" />
-                                                            </td>
-                                                            <td class="subject-name">
+                                                            <td class="subject-name fw-600">
                                                                 <span> 신청일시 </span>
                                                             </td>
                                                             <td class="pa8">
@@ -794,44 +817,28 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="subject-name">
+                                                            <td class="subject-name fw-600">
                                                                 <span> 접수번호 </span>
                                                             </td>
                                                             <td class="pa8">
                                                                 <input type="text" class="form-control style01" placeholder="내용을 입력하세요." />
                                                             </td>
-                                                            <td class="subject-name">
-                                                                <span> 접수일시 </span>
-                                                            </td>
-                                                            <td class="pa8">
-                                                                <input type="text" class="form-control style01" placeholder="내용을 입력하세요." />
-                                                            </td>
-                                                            <td class="subject-name">
+                                                            <td class="subject-name fw-600">
                                                                 <span> 접수일시 </span>
                                                             </td>
                                                             <td class="pa8">
                                                                 <input type="text" class="form-control style01" placeholder="내용을 입력하세요." />
                                                             </td>
                                                         </tr>
-                                                    </tbody>
-                                                </table>
-                                                <table class="border-top-0">
-                                                    <colgroup>
-                                                        <col style="width: 13%" class="col100"/>
-                                                        <col style="width: auto" />
-                                                        <col style="width: 13%" class="col100"/>
-                                                        <col style="width: auto" />
-                                                    </colgroup>
-                                                    <tbody>
                                                         <tr>
-                                                            <td class="subject-name">
+                                                            <td class="subject-name fw-600">
                                                                 <!-- subject-name 안쪽 span에 <i class="icon_required">*</i> 추가 -->
                                                                 <span> <i class="icon_required">*</i>참가 부문 </span>
                                                             </td>
                                                             <td class="pa8">
                                                                 <input type="text" class="form-control style01" placeholder="내용을 입력하세요." />
                                                             </td>
-                                                            <td class="subject-name">
+                                                            <td class="subject-name fw-600">
                                                                 <span> <i class="icon_required">*</i>상세 부문 </span>
                                                             </td>
                                                             <td class="pa8">
@@ -848,77 +855,35 @@
                                                             </td>
                                                         </tr> 
                                                         <tr>
-                                                            <td class="subject-name">
-                                                                <span> <i class="icon_required">*</i>조직형태 </span>
-                                                            </td>
-                                                            <td class="pa8">
-                                                                <input type="text" class="form-control style01" readonly value="DEV001" />
-                                                            </td>
-                                                            <td class="subject-name">
-                                                                <span> <i class="icon_required">*</i>유급근로자 수 </span>
-                                                            </td>
-                                                            <td class="pa8">
-                                                                <input type="text" class="form-control style01" readonly value="텍스트" />
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="subject-name">
-                                                                <span> <i class="icon_required">*</i>관할관청 </span>
-                                                            </td>
-                                                            <td class="pa8">
-                                                                <input type="text" class="form-control style01" readonly value="DEV001" />
-                                                            </td>
-                                                            <td class="subject-name">
-                                                                <span> <i class="icon_required">*</i>지원기관 명 </span>
-                                                            </td>
-                                                            <td class="pa8">
-                                                                <input type="text" class="form-control style01" readonly value="텍스트" />
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="subject-name">
-                                                                <span> <i class="icon_required">*</i>관할시 <br>담당자 이름 </span>
-                                                            </td>
-                                                            <td class="pa8">
-                                                                <input type="text" class="form-control style01" readonly value="DEV001" />
-                                                            </td>
-                                                            <td class="subject-name">
-                                                                <span> <i class="icon_required">*</i>처리자 성명 </span>
-                                                            </td>
-                                                            <td class="pa8">
-                                                                <input type="text" class="form-control style01" readonly value="텍스트" />
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="subject-name">
+                                                            <td class="subject-name fw-600">
                                                                 <span> <i class="icon_required">*</i>참가 권역 </span>
                                                             </td>
                                                             <td class="pa8">
                                                                 <input type="text" class="form-control style01" readonly value="DEV001" />
                                                             </td>
-                                                            <td class="subject-name">
-                                                                <span> <i class="icon_required">*</i>사업분야 </span>
+                                                            <td class="subject-name fw-600">
+                                                                <span> <i class="icon_required">*</i>팀명(개인도 작성) </span>
                                                             </td>
                                                             <td class="pa8">
                                                                 <input type="text" class="form-control style01" readonly value="텍스트" />
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="subject-name">
-                                                                <span> <i class="icon_required">*</i>인원수<br>(팀장 포함) </span>
-                                                            </td>
-                                                            <td class="pa8">
-                                                                <input type="text" class="form-control style01" placeholder="인원수를 입력하세요." />
-                                                            </td>
-                                                            <td class="subject-name">
-                                                                <span> <i class="icon_required">*</i>참가 부문 </span>
+                                                            <td class="subject-name fw-600">
+                                                                <span> <i class="icon_required">*</i>인원수(팀장 포함) </span>
                                                             </td>
                                                             <td class="pa8">
                                                                 <input type="text" class="form-control style01" value="" />
                                                             </td>
+                                                            <td class="subject-name fw-600">
+                                                                <span> <i class="icon_required">*</i>참가 부문 </span>
+                                                            </td>
+                                                            <td class="pa8">
+                                                                <input type="text" class="form-control style01" readonly value="텍스트" />
+                                                            </td>
                                                         </tr>
                                                         <tr>
-                                                            <td class="subject-name">
+                                                            <td class="subject-name fw-600">
                                                                 <span> <i class="icon_required">*</i>아이디어 개요 <br>(100자 이내) </span>
                                                             </td>
                                                             <td class="pa8" colspan="3">
@@ -936,12 +901,8 @@
 
                             <!-- S:하단 버튼 영역 -->
                             <div class="button-bx">
-                                <button type="button" class="btn-1 fill-red">제출취소</button>
-                                <button type="button" class="btn-1 fill-blue">점검결과 저장</button>
-                                <button type="button" class="btn-1 fill-orange">점검결과 수정</button>
-                                <button type="button" class="btn-1 fill-blue">조치사항 저장</button>
-                                <button type="button" class="btn-1 fill-orange">조치사항 수정</button>
-                                <button type="button" class="btn-1 fill-black">조사표 출력</button>
+                                <button type="button" class="btn-1 fill-blue">저장</button>
+                                <button type="button" class="btn-1 fill-red">삭제</button>
                             </div>
                             <!-- E:하단 버튼 영역 -->
 
@@ -1117,5 +1078,82 @@
             csvDispCount: 4
         })
     </script>
+
+    <script>
+			/* 드래그 앤 드롭 형식 첨부파일 스크립트 */
+			var dropArea = $('.drop-area');
+			var fileList = dropArea.find('.file-list');
+
+			// 드래그 앤 드롭 이벤트 처리
+			dropArea.on('dragenter', handleDragEnter, false);
+			dropArea.on('dragover', handleDragOver, false);
+			dropArea.on('dragleave', handleDragLeave, false);
+			dropArea.on('drop', handleDrop, false);
+
+			function handleDragEnter(e) {
+				e.stopPropagation(); // 상위 요소로 이벤트 전파 되는것을 방지
+				e.preventDefault(); // 이벤트의 기본 동작을 중단
+			}
+
+			function handleDragOver(e) {
+				e.stopPropagation();
+				e.preventDefault();
+			}
+
+			function handleDragLeave(e) {
+				e.stopPropagation();
+				e.preventDefault();
+			}
+
+			function handleDrop(e) {
+				e.stopPropagation();
+				e.preventDefault();
+
+				var files = e.dataTransfer.files; // 드래그 앤 드롭으로 선택한 파일들의 목록
+
+				for (var i = 0; i < files.length; i++) {
+					var file = files[i]; // 각 파일들에 대해서
+					addFileItem(file); // 파일 항목 추가
+				}
+			}
+
+			// 파일 선택 버튼 클릭 이벤트 처리
+			var fileSelect = document.getElementById('fileSelect');
+			fileSelect.addEventListener('click', function (e) {
+				e.preventDefault();
+				document.getElementById('fileElem').click();
+			});
+
+			// 파일 선택 이벤트 처리
+			var fileElem = document.getElementById('fileElem');
+			fileElem.addEventListener('change', function (e) {
+				var files = e.target.files;
+
+				for (var i = 0; i < files.length; i++) {
+					var file = files[i];
+					addFileItem(file);
+				}
+
+			});
+
+			// 파일 항목과 삭제 버튼 추가
+			function addFileItem(file) {
+                dropArea.closest('.drop-box').addClass('dropped');
+				var fileItem;
+                fileItem = `<li class="d-flex">`
+                // 파일 이름 영역 
+                fileItem += `<div class="file-name"><span>`+file.name+`</span></div>`;
+                // 버튼 영역
+                fileItem += `<div class="btn-flex">
+                                <button type="button" class="btn-1 fill-blue">파일다운</button>
+                                <button type="button" class="btn-1 fill-red">파일삭제</button>
+                                <button type="button" class="btn-1 fill-red">PDF보기</button>
+                            </div>`
+                fileItem += `</li>`
+
+				fileList.append(fileItem); // 파일 목록에 파일 항목 추가
+			}
+		</script>
+
 </body>
 </html>

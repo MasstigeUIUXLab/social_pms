@@ -861,9 +861,9 @@ $(document).ready(function () {
     }, 300);
 
     /* 콘텐츠 영역 좌우 확대 */
-    $(document).on("click", ".toggle-btn", function () {
+    /*$(document).on("click", ".toggle-btn", function () {
         toggleBtn($(this));
-    });
+    });*/
 
     $(document).on("click", "[data-toggle='toggle-btn']", function () {
         toggleBtn($(this));
@@ -1048,7 +1048,7 @@ $(document).ready(function(){
     
     $(".fixable").on("propertychange change keyup paste input", function() {
         $(this).css('height', 'auto');
-        $(this).height( $(this).prop('scrollHeight') - 10 );
+        $(this).height( $(this).prop('scrollHeight') - parseInt($(this).css('padding-top')) * 2 );
     });
 
     // collapse
@@ -1065,7 +1065,7 @@ $(document).ready(function(){
 
 $(document).on('propertychange change keyup paste input','.fixable',function () {
     $(this).css('height', 'auto');
-    $(this).height( $(this).prop('scrollHeight') - 10 );
+    $(this).height( $(this).prop('scrollHeight') - parseInt($(this).css('padding-top')) * 2 );
 })
 
 /* 데이트피커 */
