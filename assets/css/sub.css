@@ -2293,9 +2293,9 @@
 .sub-body.type2 .table-bx > table tr select[readonly],
 .sub-body.type2 .table-bx > table tr textarea:disabled,
 .sub-body.type2 .table-bx > table tr textarea[readonly] {
-  background-color: #E0EBF5 !important;
-  border: 1px solid #D3E2F2 !important;
-  color: #717171 !important;
+  background-color: #E4E4E4 !important;
+  border: 1px solid #C6C6C6 !important;
+  color: #555 !important;
 }
 .sub-body.type2 .table-bx > table tr .table-btn-01:focus-visible,
 .sub-body.type2 .table-bx > table tr input[type=file]:focus-visible,
