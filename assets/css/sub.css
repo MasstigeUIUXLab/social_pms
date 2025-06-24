@@ -669,6 +669,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2234,9 +2237,7 @@
   font-weight: 500;
   color: #727272;
   line-height: 1.42857;
-}
-.sub-body.type2 .table-bx > table tr > *.subject-name span {
-  white-space: nowrap;
+  word-break: keep-all;
 }
 .sub-body.type2 .table-bx > table tr > *.pa8, .sub-body.type2 .table-bx > table tr > *.pa16 {
   padding: 8px !important;
@@ -2315,6 +2316,26 @@
 .sub-body.type2 .table-bx > table tr textarea:focus-visible {
   border: 1px solid #2D78E8;
 }
+.sub-body.type2 .table-bx > table tr .btn-1 {
+  height: 40px;
+}
+.sub-body.type2 .table-bx > table tr .btn-file label {
+  min-height: 40px;
+}
+.sub-body.type2 .table-bx > table tr .btn-file .btn-1 {
+  height: auto;
+}
+.sub-body.type2 .table-bx > table tr input[type=checkbox],
+.sub-body.type2 .table-bx > table tr input[type=radio] {
+  border-color: #c6c6c6;
+}
+.sub-body.type2 .table-bx > table tr input[type=checkbox]:disabled, .sub-body.type2 .table-bx > table tr input[type=checkbox][readonly],
+.sub-body.type2 .table-bx > table tr input[type=radio]:disabled,
+.sub-body.type2 .table-bx > table tr input[type=radio][readonly] {
+  background-color: #E4E4E4 !important;
+  border: 1px solid #C6C6C6 !important;
+  color: #555;
+}
 .sub-body.type2 .table-bx > table tr select,
 .sub-body.type2 .table-bx > table tr input.input-date, .sub-body.type2 .table-bx > table tr input.input-type-date {
   padding-left: 7px !important;
@@ -2363,10 +2384,8 @@
   border-bottom: 1px solid #D3E2F2;
 }
 .sub-body.type2 .sbgrid_fixed_cell_st {
-  border-width: 0px 1px 3px;
-  border-color: #D3E2F2;
-  border-right-color: #fff;
-  border-left-color: #fff;
+  border-width: 0px 1px 1px;
+  border-color: #fff;
 }
 .sub-body.type2 .sbgrid_focus_st {
   border-bottom-color: transparent !important;
@@ -2632,6 +2651,9 @@
       -ms-flex-positive: 1;
           flex-grow: 1;
   overflow: hidden;
+}
+.tab-bx .tab-body > * {
+  height: 100%;
 }
 .tab-bx .tab-body .tab-content {
   height: 100%;

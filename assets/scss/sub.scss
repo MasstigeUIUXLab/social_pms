@@ -661,6 +661,7 @@
 
         &-info {
             display: flex;
+            align-items: flex-end;
             justify-content: space-between;
             gap: 4px;
             margin-bottom: 6px;
@@ -2231,10 +2232,11 @@
                             font-weight: 500;
                             color: #727272;
                             line-height: 1.42857;
+                            word-break: keep-all;
 
-                            span{
-                                white-space: nowrap;
-                            }
+                            // span{
+                            //     white-space: nowrap;
+                            // }
                         }
 
                         &.pa8, 
@@ -2274,6 +2276,31 @@
                         &:focus-visible{
                             border: 1px solid #2D78E8;
                         }
+                    }
+                    
+                    .btn-1{
+                        height: 40px;
+                    }
+
+                    .btn-file {
+                        label {
+                            min-height: 40px;
+                        }
+
+                        .btn-1{
+                            height: auto;
+                        }
+                    }
+
+                    input[type="checkbox"],
+                    input[type="radio"] {
+                        border-color: #c6c6c6;
+
+                        &:disabled, &[readonly] {
+                            background-color: #E4E4E4 !important;
+                            border: 1px solid #C6C6C6 !important;
+                            color: #555;
+                        } 
                     }
 
                     select,
@@ -2351,10 +2378,8 @@
         }
 
         .sbgrid_fixed_cell_st{
-            border-width: 0px 1px 3px;
-            border-color: #D3E2F2;
-            border-right-color: #fff;
-            border-left-color: #fff;
+            border-width: 0px 1px 1px;
+            border-color: #fff;
         }
 
         .sbgrid_focus_st{
@@ -2576,6 +2601,10 @@
     .tab-body {
         flex-grow: 1;
         overflow: hidden;
+
+        & > *{
+            height: 100%;
+        }
 
         .tab-content {
             height: 100%;

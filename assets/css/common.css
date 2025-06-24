@@ -48483,12 +48483,8 @@ input[type=radio][readonly] {
   background-color: #f0f0f0 !important;
   border: 1px solid #8E8E8E !important;
   color: #1d1d1d;
-  opacity: 1;
-  pointer-events: none;
-}
-input[type=checkbox][readonly],
-input[type=radio][readonly] {
-  color: #717171;
+  opacity: 1 !important;
+  pointer-events: none !important;
 }
 
 input[type=radio][readonly] {
