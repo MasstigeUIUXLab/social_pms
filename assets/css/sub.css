@@ -2410,7 +2410,9 @@
   background-color: transparent;
 }
 .type2 .sbgrid_fixed_table_nohover_st .sbgrid_fixed_cell_st {
+  border-width: 0 0 1px;
   border-bottom: 1px solid #D3E2F2;
+  background: #F7FAFE;
 }
 .type2 .sbgrid_fixed_cell_st {
   border-width: 0px 1px 1px;
