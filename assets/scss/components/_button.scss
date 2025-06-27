@@ -131,20 +131,54 @@
     }
   }
   
-  &-sm{
-    height: 44px;
-    font-size: 17px;
+  &-xxs{
+    min-height: 24px !important;
+    height: auto !important;
+    min-width: 40px !important;
+    padding: 5px 6px !important;
+    font-size: 12px !important;
     letter-spacing: -0.04em;
   }
 
-  &-xl{
+  &-xs{
+    min-height: 0 !important;
     height: 30px !important;
-    padding: 0 12px !important;
-    border-radius: 2px !important;
-    font-size: 13px !important;
-    letter-spacing: -0.02em;
+    border-radius: 4px !important;
+    padding: 0 10px !important;
+    font-size: 12px !important;
+    letter-spacing: -0.04em;
+  }
+
+  &-sm{
+    height: 36px !important;
+    min-width: 0 !important;
+    border-radius: 4px !important;
+    padding: 0 14px !important;
+    font-size: 14px !important;
+    letter-spacing: -0.04em;
+  }
+
+  &-md{
+      height: 45px !important;
+      border-radius: 8px !important;
+      font-size: 16px !important;
+      padding: 0 16px !important;
   }
   
+  &-lg{
+      height: 56px !important;
+      border-radius: 8px !important;
+      font-size: 18px !important;
+      padding: 0 20px !important;
+  }
+
+  &-xl{
+      height: 64px !important;
+      border-radius: 8px !important;
+      font-size: 19px !important;
+      padding: 0 24px !important;
+  }
+
   &-wide{
     min-width: 392px;
   }
@@ -166,11 +200,6 @@
     border-radius: 4px;
     padding: 14px 18px;
     font-size: 15px;
-
-    &-sm{
-      padding: 10px 14px;
-      font-size: 13px;
-    }
     
     &-wide{
       min-width: 0;

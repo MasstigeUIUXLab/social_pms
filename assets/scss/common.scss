@@ -840,41 +840,6 @@ input[type="checkbox"]:checked {
         }
     }
 
-    &.btn-xs{
-      height: 30px !important;
-      border-radius: 4px !important;
-      font-size: 12px !important;
-      padding: 0 12px !important;
-    }
-
-    &.btn-sm{
-        height: 36px !important;
-        border-radius: 5px !important;
-        font-size: 14px !important;
-        padding: 0 14px !important;
-    }
-
-    &.btn-md{
-        height: 45px !important;
-        border-radius: 6px !important;
-        font-size: 16px !important;
-        padding: 0 16px !important;
-    }
-    
-    &.btn-lg{
-        height: 56px !important;
-        border-radius: 7px !important;
-        font-size: 18px !important;
-        padding: 0 20px !important;
-    }
-
-    &.btn-xl{
-        height: 64px !important;
-        border-radius: 8px !important;
-        font-size: 19px !important;
-        padding: 0 24px !important;
-    }
-
     &.w-auto{
         white-space: nowrap;
     }
@@ -1046,6 +1011,10 @@ input[type="checkbox"]:checked {
     .btn-flex{
         display: flex;
         gap: 4px;
+
+        .btn, .btn-1{
+          height: auto;
+        }
     }
 }
 
@@ -1295,7 +1264,7 @@ input[type='number'] {
 
       &:before {
         counter-increment: number 1;
-        content: "0" counter(number) ;
+        content: counter(number) "." ;
         top: 0;
         width: auto;
         height: auto;
@@ -1409,13 +1378,13 @@ input[type='number'] {
   position: relative;
 
   .input-type-srch{
-    padding: 0 36px 0 10px!important;
+    padding: 0 28px 0 7px !important;
   }
 
   button{
       position: absolute;
       top: 50%;
-      right: 12px;
+      right: 7px;
       width: 14px;
       height: 14px;
       background: url(../images/sub/icon_form_srch.svg) no-repeat center / 100% auto;

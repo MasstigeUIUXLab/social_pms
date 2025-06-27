@@ -182,6 +182,11 @@
         .btn-bx {
             display: flex;
             gap: 4px;
+
+            .btn-1{
+                height: auto;
+                padding: 5px 6px;
+            }
         }
     }
 
@@ -396,7 +401,7 @@
     textarea,
     select{
         height: 30px;
-        font-size: 13px;
+        font-size: 12px;
         border-radius: 4px;
         border-color: #bebebe;
         background-color: #fff;
@@ -416,11 +421,12 @@
         border: 1px solid #e8eef4;
         background-color: #eff5fa;
         border-radius: 50px;
-        font-size: 13px;
+        font-size: 12px;
         color: #435C73;
         padding: 0 26px 0 10px !important;
         background-position: right 9px center;
         background-size: 14px;
+        text-align: left;
     }
     
     input[type='date']:not(.style01){
@@ -562,9 +568,9 @@
         }
         
         .tab-body > .tab-content{
-            height: auto;
-            padding: 0;
-            border: 0;
+            height: auto;    
+            padding: 0 !important;
+            border: 0 !important;
             border-radius: 0;
         }
     }
@@ -982,6 +988,52 @@
 
     .w800{
         width: 51.948% !important;
+    }
+    
+    &.type2{
+        .table-btn-01,
+        input[type='file'],
+        input[type='datetime-local'],
+        input[type='email'],
+        input[type='month'],
+        input[type='number'],
+        input[type='password'],
+        input[type='search'],
+        input[type='tel'],
+        input[type='text'],
+        input[type='time'],
+        input[type='url'],
+        input[type='week'],
+        textarea,
+        select{
+            height: 40px;
+            padding: 11px 7px;
+            font-size: 14px;
+            border-radius: 4px;
+            border-color: #bebebe;
+            background-color: #fff;
+            line-height: 1.5;
+            color: #1d1d1d;
+        }
+
+        textarea.fixable{
+            height: auto;
+        }
+        
+        select:not(.style01),
+        input[type='date']:not(.style01), 
+        .input-date:not(.style01), 
+        .input-type-date:not(.style01){
+            height: 40px;
+            border: 1px solid #e8eef4;
+            background-color: #eff5fa;
+            border-radius: 50px;
+            font-size: 14px;
+            color: #435C73;
+            padding: 0 26px 0 10px !important;
+            background-position: right 9px center;
+            background-size: 14px;
+        }
     }
 }
 

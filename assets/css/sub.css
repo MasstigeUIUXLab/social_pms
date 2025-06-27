@@ -873,11 +873,8 @@
   min-height: 32px;
   height: 32px;
 }
-.sub-body .button-bx .btn {
-  padding: 6px 12px;
-  min-height: 30px;
-}
-.sub-body .button-bx .btn-1 {
+.sub-body .button-bx .btn, .sub-body .button-bx .btn-1 {
+  height: auto;
   padding: 5px 12px;
   min-width: 45px;
   min-height: 30px;
@@ -961,13 +958,23 @@
   color: #fff;
   border-radius: 4px;
   gap: 5px;
-  padding: 5px 6px;
+  padding: 0 10px !important;
   font-size: 12px;
   min-width: 40px;
   min-height: 24px;
+  height: 30px !important;
+  font-size: 12px !important;
+  letter-spacing: -0.04em;
   line-height: 1;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+.sub-body .btn-file label .btn, .sub-body .btn-file label .btn-1 {
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  padding: 0 !important;
+  font-size: inherit;
 }
 .sub-body .btn-file label::after {
   content: "";
@@ -1003,6 +1010,130 @@
 }
 .sub-body .btn-file.fill-blue label {
   background: #2d78e8;
+}
+.sub-body .file-td > *:not(:first-child) {
+  margin-top: 0.5rem;
+}
+.sub-body .file-td > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sub-body .file-td .file-button-bx {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  gap: 8px;
+}
+.sub-body .file-td .file-button-bx label {
+  width: 90px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  background: #e71825;
+  border-radius: 2px;
+  gap: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.sub-body .file-td .file-button-bx label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.sub-body .file-td .file-button-bx label:hover {
+  background: #d70f1e;
+}
+.sub-body .file-td .file-button-bx label img {
+  -webkit-filter: brightness(0) saturate(100%) invert(96%) sepia(0%) saturate(0%) hue-rotate(127deg) brightness(104%) contrast(104%);
+          filter: brightness(0) saturate(100%) invert(96%) sepia(0%) saturate(0%) hue-rotate(127deg) brightness(104%) contrast(104%);
+}
+.sub-body .file-td .file-button-bx label span {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 13px;
+  color: #fff;
+}
+.sub-body .file-td .file-button-bx label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.sub-body .file-td .file-button-bx button {
+  width: 90px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  background: #1d1d1d;
+  border-radius: 2px;
+  gap: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.sub-body .file-td .file-button-bx button:hover {
+  background: #fff;
+  border: 1px solid #1d1d1d;
+}
+.sub-body .file-td .file-button-bx button:hover span {
+  color: #1d1d1d;
+}
+.sub-body .file-td .file-button-bx button:hover img {
+  -webkit-filter: none;
+          filter: none;
+}
+.sub-body .file-td .file-button-bx button img {
+  -webkit-filter: brightness(0) saturate(100%) invert(96%) sepia(0%) saturate(0%) hue-rotate(127deg) brightness(104%) contrast(104%);
+          filter: brightness(0) saturate(100%) invert(96%) sepia(0%) saturate(0%) hue-rotate(127deg) brightness(104%) contrast(104%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.sub-body .file-td .file-button-bx button span {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 13px;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.sub-body .file-td * + .btn-file {
+  margin-top: 0.5rem;
 }
 .sub-body .table-bx table {
   width: 100%;
@@ -1085,7 +1216,7 @@
   position: relative;
   background: #f7faff;
   padding: 8px 16px;
-  font-weight: 400;
+  font-weight: 600;
   color: #2779c6;
   line-height: 1.2;
 }
@@ -1172,124 +1303,6 @@
 }
 .sub-body .table-bx > table tbody tr td.p-0 table tr:last-child {
   border-bottom: 0;
-}
-.sub-body .table-bx > table tbody tr td.file-td > div {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.sub-body .table-bx > table tbody tr td.file-td .file-button-bx {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-  gap: 8px;
-}
-.sub-body .table-bx > table tbody tr td.file-td .file-button-bx label {
-  width: 90px;
-  height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  background: #e71825;
-  border-radius: 2px;
-  gap: 5px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.sub-body .table-bx > table tbody tr td.file-td .file-button-bx label::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-.sub-body .table-bx > table tbody tr td.file-td .file-button-bx label:hover {
-  background: #d70f1e;
-}
-.sub-body .table-bx > table tbody tr td.file-td .file-button-bx label img {
-  -webkit-filter: brightness(0) saturate(100%) invert(96%) sepia(0%) saturate(0%) hue-rotate(127deg) brightness(104%) contrast(104%);
-          filter: brightness(0) saturate(100%) invert(96%) sepia(0%) saturate(0%) hue-rotate(127deg) brightness(104%) contrast(104%);
-}
-.sub-body .table-bx > table tbody tr td.file-td .file-button-bx label span {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 13px;
-  color: #fff;
-}
-.sub-body .table-bx > table tbody tr td.file-td .file-button-bx label input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-.sub-body .table-bx > table tbody tr td.file-td .file-button-bx button {
-  width: 90px;
-  height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  background: #1d1d1d;
-  border-radius: 2px;
-  gap: 5px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.sub-body .table-bx > table tbody tr td.file-td .file-button-bx button:hover {
-  background: #fff;
-  border: 1px solid #1d1d1d;
-}
-.sub-body .table-bx > table tbody tr td.file-td .file-button-bx button:hover span {
-  color: #1d1d1d;
-}
-.sub-body .table-bx > table tbody tr td.file-td .file-button-bx button:hover img {
-  -webkit-filter: none;
-          filter: none;
-}
-.sub-body .table-bx > table tbody tr td.file-td .file-button-bx button img {
-  -webkit-filter: brightness(0) saturate(100%) invert(96%) sepia(0%) saturate(0%) hue-rotate(127deg) brightness(104%) contrast(104%);
-          filter: brightness(0) saturate(100%) invert(96%) sepia(0%) saturate(0%) hue-rotate(127deg) brightness(104%) contrast(104%);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.sub-body .table-bx > table tbody tr td.file-td .file-button-bx button span {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 13px;
-  color: #fff;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 .sub-body .table-bx > table tbody tr td .select-field {
   display: -webkit-box;
@@ -2196,198 +2209,208 @@
 .sub-body .content-bx > .half .list-bx .pagination-bx {
   padding-bottom: 24px;
 }
-.sub-body.type2 .table-group:not(:first-child),
-.sub-body.type2 .cont-group:not(:first-child),
-.sub-body.type2 .txt-group:not(:first-child) {
+
+.type2 .table-group:not(:first-child),
+.type2 .cont-group:not(:first-child),
+.type2 .txt-group:not(:first-child) {
   margin-top: 24px;
 }
-.sub-body.type2 .table-bx + .table-bx {
+.type2 .table-bx + .table-bx {
   margin-top: 24px;
 }
-.sub-body.type2 .sub-content-title {
+.type2 .sub-content-title {
   font-size: 22px;
   color: #615A5A;
 }
-.sub-body.type2 .tab-bx .tab-body .tab-content {
+.type2 .tab-bx .tab-body .tab-content {
   padding: 24px 20px;
   border: 1px solid #CED6DF;
 }
-.sub-body.type2 .tab-bx .tab-header ul li a {
+.type2 .tab-bx .tab-header ul li a {
   font-weight: 500;
 }
-.sub-body.type2 .tab-bx .tab-header ul li a.active, .sub-body.type2 .tab-bx .tab-header ul li a:active {
+.type2 .tab-bx .tab-header ul li a.active, .type2 .tab-bx .tab-header ul li a:active {
   border-bottom: 3px solid #2D78E8;
   font-weight: 600;
   color: #2D78E8;
 }
-.sub-body.type2 .table-bx > table {
+.type2 .table-bx > table {
   border: 1px solid #D3E2F2;
 }
-.sub-body.type2 .table-bx > table tr {
+.type2 .table-bx > table + table {
+  border-top: 0;
+}
+.type2 .table-bx > table tr {
   border-bottom: 1px solid #D3E2F2;
 }
-.sub-body.type2 .table-bx > table tr > * {
+.type2 .table-bx > table tr > * {
   padding: 8px;
   border-right: 1px solid #D3E2F2;
   font-size: 14px;
 }
-.sub-body.type2 .table-bx > table tr > *.subject-name {
+.type2 .table-bx > table tr > *.subject-name {
   background: #F1F8FF;
   padding: 7.5px 16px;
-  font-weight: 500;
+  font-weight: 500 !important;
   color: #727272;
   line-height: 1.42857;
-  word-break: keep-all;
 }
-.sub-body.type2 .table-bx > table tr > *.pa8, .sub-body.type2 .table-bx > table tr > *.pa16 {
+.type2 .table-bx > table tr > *.pa8, .type2 .table-bx > table tr > *.pa16 {
   padding: 8px !important;
 }
-.sub-body.type2 .table-bx > table tr .table-btn-01,
-.sub-body.type2 .table-bx > table tr input[type=file],
-.sub-body.type2 .table-bx > table tr input[type=date],
-.sub-body.type2 .table-bx > table tr input[type=datetime-local],
-.sub-body.type2 .table-bx > table tr input[type=email],
-.sub-body.type2 .table-bx > table tr input[type=month],
-.sub-body.type2 .table-bx > table tr input[type=number],
-.sub-body.type2 .table-bx > table tr input[type=password],
-.sub-body.type2 .table-bx > table tr input[type=search],
-.sub-body.type2 .table-bx > table tr input[type=tel],
-.sub-body.type2 .table-bx > table tr input[type=text],
-.sub-body.type2 .table-bx > table tr input[type=time],
-.sub-body.type2 .table-bx > table tr input[type=url],
-.sub-body.type2 .table-bx > table tr input[type=week],
-.sub-body.type2 .table-bx > table tr select,
-.sub-body.type2 .table-bx > table tr textarea {
-  height: 40px;
+.type2 .table-bx > table tr .table-btn-01,
+.type2 .table-bx > table tr input[type=file],
+.type2 .table-bx > table tr input[type=date],
+.type2 .table-bx > table tr input[type=datetime-local],
+.type2 .table-bx > table tr input[type=email],
+.type2 .table-bx > table tr input[type=month],
+.type2 .table-bx > table tr input[type=number],
+.type2 .table-bx > table tr input[type=password],
+.type2 .table-bx > table tr input[type=search],
+.type2 .table-bx > table tr input[type=tel],
+.type2 .table-bx > table tr input[type=text],
+.type2 .table-bx > table tr input[type=time],
+.type2 .table-bx > table tr input[type=url],
+.type2 .table-bx > table tr input[type=week],
+.type2 .table-bx > table tr select,
+.type2 .table-bx > table tr textarea {
+  height: 32px;
   padding: 9px 7px;
   font-size: 12px;
   border-color: #C6C6C6;
 }
-.sub-body.type2 .table-bx > table tr .table-btn-01:disabled, .sub-body.type2 .table-bx > table tr .table-btn-01[readonly],
-.sub-body.type2 .table-bx > table tr input[type=file]:disabled,
-.sub-body.type2 .table-bx > table tr input[type=file][readonly],
-.sub-body.type2 .table-bx > table tr input[type=date]:disabled,
-.sub-body.type2 .table-bx > table tr input[type=date][readonly],
-.sub-body.type2 .table-bx > table tr input[type=datetime-local]:disabled,
-.sub-body.type2 .table-bx > table tr input[type=datetime-local][readonly],
-.sub-body.type2 .table-bx > table tr input[type=email]:disabled,
-.sub-body.type2 .table-bx > table tr input[type=email][readonly],
-.sub-body.type2 .table-bx > table tr input[type=month]:disabled,
-.sub-body.type2 .table-bx > table tr input[type=month][readonly],
-.sub-body.type2 .table-bx > table tr input[type=number]:disabled,
-.sub-body.type2 .table-bx > table tr input[type=number][readonly],
-.sub-body.type2 .table-bx > table tr input[type=password]:disabled,
-.sub-body.type2 .table-bx > table tr input[type=password][readonly],
-.sub-body.type2 .table-bx > table tr input[type=search]:disabled,
-.sub-body.type2 .table-bx > table tr input[type=search][readonly],
-.sub-body.type2 .table-bx > table tr input[type=tel]:disabled,
-.sub-body.type2 .table-bx > table tr input[type=tel][readonly],
-.sub-body.type2 .table-bx > table tr input[type=text]:disabled,
-.sub-body.type2 .table-bx > table tr input[type=text][readonly],
-.sub-body.type2 .table-bx > table tr input[type=time]:disabled,
-.sub-body.type2 .table-bx > table tr input[type=time][readonly],
-.sub-body.type2 .table-bx > table tr input[type=url]:disabled,
-.sub-body.type2 .table-bx > table tr input[type=url][readonly],
-.sub-body.type2 .table-bx > table tr input[type=week]:disabled,
-.sub-body.type2 .table-bx > table tr input[type=week][readonly],
-.sub-body.type2 .table-bx > table tr select:disabled,
-.sub-body.type2 .table-bx > table tr select[readonly],
-.sub-body.type2 .table-bx > table tr textarea:disabled,
-.sub-body.type2 .table-bx > table tr textarea[readonly] {
+.type2 .table-bx > table tr .table-btn-01:disabled, .type2 .table-bx > table tr .table-btn-01[readonly],
+.type2 .table-bx > table tr input[type=file]:disabled,
+.type2 .table-bx > table tr input[type=file][readonly],
+.type2 .table-bx > table tr input[type=date]:disabled,
+.type2 .table-bx > table tr input[type=date][readonly],
+.type2 .table-bx > table tr input[type=datetime-local]:disabled,
+.type2 .table-bx > table tr input[type=datetime-local][readonly],
+.type2 .table-bx > table tr input[type=email]:disabled,
+.type2 .table-bx > table tr input[type=email][readonly],
+.type2 .table-bx > table tr input[type=month]:disabled,
+.type2 .table-bx > table tr input[type=month][readonly],
+.type2 .table-bx > table tr input[type=number]:disabled,
+.type2 .table-bx > table tr input[type=number][readonly],
+.type2 .table-bx > table tr input[type=password]:disabled,
+.type2 .table-bx > table tr input[type=password][readonly],
+.type2 .table-bx > table tr input[type=search]:disabled,
+.type2 .table-bx > table tr input[type=search][readonly],
+.type2 .table-bx > table tr input[type=tel]:disabled,
+.type2 .table-bx > table tr input[type=tel][readonly],
+.type2 .table-bx > table tr input[type=text]:disabled,
+.type2 .table-bx > table tr input[type=text][readonly],
+.type2 .table-bx > table tr input[type=time]:disabled,
+.type2 .table-bx > table tr input[type=time][readonly],
+.type2 .table-bx > table tr input[type=url]:disabled,
+.type2 .table-bx > table tr input[type=url][readonly],
+.type2 .table-bx > table tr input[type=week]:disabled,
+.type2 .table-bx > table tr input[type=week][readonly],
+.type2 .table-bx > table tr select:disabled,
+.type2 .table-bx > table tr select[readonly],
+.type2 .table-bx > table tr textarea:disabled,
+.type2 .table-bx > table tr textarea[readonly] {
   background-color: #E4E4E4 !important;
   border: 1px solid #C6C6C6 !important;
   color: #555 !important;
 }
-.sub-body.type2 .table-bx > table tr .table-btn-01:focus-visible,
-.sub-body.type2 .table-bx > table tr input[type=file]:focus-visible,
-.sub-body.type2 .table-bx > table tr input[type=date]:focus-visible,
-.sub-body.type2 .table-bx > table tr input[type=datetime-local]:focus-visible,
-.sub-body.type2 .table-bx > table tr input[type=email]:focus-visible,
-.sub-body.type2 .table-bx > table tr input[type=month]:focus-visible,
-.sub-body.type2 .table-bx > table tr input[type=number]:focus-visible,
-.sub-body.type2 .table-bx > table tr input[type=password]:focus-visible,
-.sub-body.type2 .table-bx > table tr input[type=search]:focus-visible,
-.sub-body.type2 .table-bx > table tr input[type=tel]:focus-visible,
-.sub-body.type2 .table-bx > table tr input[type=text]:focus-visible,
-.sub-body.type2 .table-bx > table tr input[type=time]:focus-visible,
-.sub-body.type2 .table-bx > table tr input[type=url]:focus-visible,
-.sub-body.type2 .table-bx > table tr input[type=week]:focus-visible,
-.sub-body.type2 .table-bx > table tr select:focus-visible,
-.sub-body.type2 .table-bx > table tr textarea:focus-visible {
+.type2 .table-bx > table tr .table-btn-01:focus-visible,
+.type2 .table-bx > table tr input[type=file]:focus-visible,
+.type2 .table-bx > table tr input[type=date]:focus-visible,
+.type2 .table-bx > table tr input[type=datetime-local]:focus-visible,
+.type2 .table-bx > table tr input[type=email]:focus-visible,
+.type2 .table-bx > table tr input[type=month]:focus-visible,
+.type2 .table-bx > table tr input[type=number]:focus-visible,
+.type2 .table-bx > table tr input[type=password]:focus-visible,
+.type2 .table-bx > table tr input[type=search]:focus-visible,
+.type2 .table-bx > table tr input[type=tel]:focus-visible,
+.type2 .table-bx > table tr input[type=text]:focus-visible,
+.type2 .table-bx > table tr input[type=time]:focus-visible,
+.type2 .table-bx > table tr input[type=url]:focus-visible,
+.type2 .table-bx > table tr input[type=week]:focus-visible,
+.type2 .table-bx > table tr select:focus-visible,
+.type2 .table-bx > table tr textarea:focus-visible {
   border: 1px solid #2D78E8;
 }
-.sub-body.type2 .table-bx > table tr .btn-1 {
-  height: 40px;
-}
-.sub-body.type2 .table-bx > table tr .btn-file label {
-  min-height: 40px;
-}
-.sub-body.type2 .table-bx > table tr .btn-file .btn-1 {
-  height: auto;
-}
-.sub-body.type2 .table-bx > table tr input[type=checkbox],
-.sub-body.type2 .table-bx > table tr input[type=radio] {
+.type2 .table-bx > table tr input[type=checkbox],
+.type2 .table-bx > table tr input[type=radio] {
   border-color: #c6c6c6;
 }
-.sub-body.type2 .table-bx > table tr input[type=checkbox]:disabled, .sub-body.type2 .table-bx > table tr input[type=checkbox][readonly],
-.sub-body.type2 .table-bx > table tr input[type=radio]:disabled,
-.sub-body.type2 .table-bx > table tr input[type=radio][readonly] {
+.type2 .table-bx > table tr input[type=checkbox]:disabled, .type2 .table-bx > table tr input[type=checkbox][readonly],
+.type2 .table-bx > table tr input[type=radio]:disabled,
+.type2 .table-bx > table tr input[type=radio][readonly] {
   background-color: #E4E4E4 !important;
   border: 1px solid #C6C6C6 !important;
   color: #555;
 }
-.sub-body.type2 .table-bx > table tr select,
-.sub-body.type2 .table-bx > table tr input.input-date, .sub-body.type2 .table-bx > table tr input.input-type-date {
+.type2 .table-bx > table tr select,
+.type2 .table-bx > table tr input.input-date, .type2 .table-bx > table tr input.input-type-date {
   padding-left: 7px !important;
 }
-.sub-body.type2 .table-bx > table tr textarea {
+.type2 .table-bx > table tr textarea {
   height: auto;
 }
-.sub-body.type2 .table-bx > table tr textarea.fixable {
+.type2 .table-bx > table thead tr th {
+  background: #F1F8FF;
+  color: #727272;
+  font-weight: 500;
+}
+.type2 .table-bx > table tbody > tr:last-child {
+  border-bottom: 0;
+}
+.type2 .btn, .type2 .btn-1 {
+  min-width: 52px;
+  height: 32px;
+  padding: 0px 10px;
+  font-size: 12px;
+}
+.type2 .fixable {
   padding-top: 11px !important;
   padding-bottom: 11px !important;
 }
-.sub-body.type2 .table-bx > table tbody > tr:last-child {
-  border-bottom: 0;
-}
-.sub-body.type2 .icon_required {
+.type2 .icon_required {
   color: #E71825;
 }
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr > *.subject-name span {
+.type2 .content-bx > .half.on .table-bx > table tr > *.subject-name span {
   white-space: normal;
 }
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr > *.subject-name {
+.type2 .content-bx > .half.on .table-bx > table tr > *.subject-name {
   padding: 17px 23px;
 }
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr > * .icon_required {
+.type2 .content-bx > .half.on .table-bx > table tr > * .icon_required {
   left: -12px;
 }
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr .table-btn-01,
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr input[type=file],
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr input[type=date],
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr input[type=datetime-local],
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr input[type=email],
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr input[type=month],
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr input[type=number],
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr input[type=password],
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr input[type=search],
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr input[type=tel],
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr input[type=text],
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr input[type=time],
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr input[type=url],
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr input[type=week],
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr select,
-.sub-body.type2 .content-bx > .half.on .table-bx > table tr textarea {
+.type2 .content-bx > .half.on .table-bx > table tr .table-btn-01,
+.type2 .content-bx > .half.on .table-bx > table tr input[type=file],
+.type2 .content-bx > .half.on .table-bx > table tr input[type=date],
+.type2 .content-bx > .half.on .table-bx > table tr input[type=datetime-local],
+.type2 .content-bx > .half.on .table-bx > table tr input[type=email],
+.type2 .content-bx > .half.on .table-bx > table tr input[type=month],
+.type2 .content-bx > .half.on .table-bx > table tr input[type=number],
+.type2 .content-bx > .half.on .table-bx > table tr input[type=password],
+.type2 .content-bx > .half.on .table-bx > table tr input[type=search],
+.type2 .content-bx > .half.on .table-bx > table tr input[type=tel],
+.type2 .content-bx > .half.on .table-bx > table tr input[type=text],
+.type2 .content-bx > .half.on .table-bx > table tr input[type=time],
+.type2 .content-bx > .half.on .table-bx > table tr input[type=url],
+.type2 .content-bx > .half.on .table-bx > table tr input[type=week],
+.type2 .content-bx > .half.on .table-bx > table tr select,
+.type2 .content-bx > .half.on .table-bx > table tr textarea {
   font-size: 14px;
 }
-.sub-body.type2 .sbgrid_fixed_cell_st, .sub-body.type2 .sbgrid_data_cell_st {
+.type2 .file-name span {
+  padding: 0 7px;
+  height: 32px;
+  line-height: 32px;
+}
+.type2 .sbgrid_fixed_cell_st, .type2 .sbgrid_data_cell_st {
   border-bottom: 1px solid #D3E2F2;
 }
-.sub-body.type2 .sbgrid_fixed_cell_st {
+.type2 .sbgrid_fixed_cell_st {
   border-width: 0px 1px 1px;
   border-color: #fff;
 }
-.sub-body.type2 .sbgrid_focus_st {
+.type2 .sbgrid_focus_st {
   border-bottom-color: transparent !important;
 }
 

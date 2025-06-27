@@ -158,10 +158,10 @@ select{
 
 input.input-date, 
 input.input-type-date{
-    padding: 0 36px 0 4px!important;
+    padding: 0 28px 0 7px!important;
     background-image: url(../../assets/images/common/icon_date.svg);
     background-repeat: no-repeat;
-    background-position: calc(100% - 12px) center;
+    background-position: calc(100% - 7px) center;
     background-size: 13px;
 }
 
@@ -272,8 +272,8 @@ input[type='date'].input-type-date{
         max-width: 100%;
     }
 
-    & > *:not([class*=w]) {
-        flex: 0 1 100%;
+    & > *:not([class*=w], button) {
+        flex: 1;
         min-width: 0;
         max-width: 100%;
       }

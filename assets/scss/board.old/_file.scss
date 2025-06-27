@@ -205,23 +205,10 @@
 			}
 
 			&.d-flex{
-				gap: 8px;
+				gap: 4px;
 				
 				.file-name{
 					flex: 1;
-					overflow: hidden;
-					
-					span{
-						display: block;
-						padding: 2px 4px;
-						border-radius: 4px;
-						border: 1px solid #C6C6C6;
-						overflow: hidden;
-						text-overflow: ellipsis;
-						white-space: nowrap;
-						text-align: left;
-						line-height: 1.4;
-					}
 				}
 
 				.btn-flex{
@@ -251,6 +238,26 @@
 		}
 	}
 	
+	&-name{
+		overflow: hidden;
+		
+		span{
+			display: block;
+			padding: 2px 4px;
+			border-radius: 4px;
+			border: 1px solid #C6C6C6;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			text-align: left;
+			line-height: 1.4;
+		}
+	}
+
+	&-td .d-flex{
+		gap: 4px;
+	}
+
 	@include mdq-max(lg) {
 		&-control{
 			flex-direction: column;
