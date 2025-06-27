@@ -2361,7 +2361,7 @@
 .type2 .btn, .type2 .btn-1 {
   min-width: 52px;
   height: 32px;
-  padding: 0px 10px;
+  padding: 0px 8px;
   font-size: 12px;
 }
 .type2 .fixable {
@@ -2406,12 +2406,21 @@
 .type2 .sbgrid_fixed_cell_st, .type2 .sbgrid_data_cell_st {
   border-bottom: 1px solid #D3E2F2;
 }
+.type2 .sbgrid_fixed_table_nohover_st {
+  background-color: transparent;
+}
+.type2 .sbgrid_fixed_table_nohover_st .sbgrid_fixed_cell_st {
+  border-bottom: 1px solid #D3E2F2;
+}
 .type2 .sbgrid_fixed_cell_st {
   border-width: 0px 1px 1px;
   border-color: #fff;
 }
 .type2 .sbgrid_focus_st {
   border-bottom-color: transparent !important;
+}
+.type2 .sbgrid_FFRHA_st, .type2 .sbgrid_FHA_st {
+  border-bottom: 1px solid #D3E2F2;
 }
 
 .input-list {

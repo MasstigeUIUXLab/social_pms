@@ -2329,7 +2329,7 @@
     .btn, .btn-1{
         min-width: 52px;
         height: 32px;
-        padding: 0px 10px;
+        padding: 0px 8px;
         font-size: 12px;
     }
 
@@ -2396,6 +2396,14 @@
         border-bottom: 1px solid #D3E2F2;
     }
 
+    .sbgrid_fixed_table_nohover_st{
+        background-color: transparent;
+
+        .sbgrid_fixed_cell_st{
+            border-bottom: 1px solid #D3E2F2;
+        }
+    }
+
     .sbgrid_fixed_cell_st{
         border-width: 0px 1px 1px;
         border-color: #fff;
@@ -2403,6 +2411,10 @@
 
     .sbgrid_focus_st{
         border-bottom-color: transparent !important;
+    }
+
+    .sbgrid_FFRHA_st, .sbgrid_FHA_st{
+        border-bottom: 1px solid #D3E2F2;
     }
 }
 
