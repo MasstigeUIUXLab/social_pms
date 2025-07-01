@@ -2248,7 +2248,7 @@
 
                     &.subject-name {
                         background: #F1F8FF;
-                        padding: 7.5px 16px;
+                        padding: 4.5px 4px 4.5px 14px;
                         font-weight: 500 !important;
                         color: #727272;
                         line-height: 1.42857;
@@ -2353,7 +2353,7 @@
                 tr {
                     & > * {
                         &.subject-name {
-                            padding: 17px 23px;
+                            padding: 14px 23px;
                         }
 
                         .icon_required {
@@ -2390,7 +2390,7 @@
         height: 32px;
         line-height: 32px;
     }
-
+    
     // sbGrid
     .sbgrid_fixed_cell_st, .sbgrid_data_cell_st{
         border-bottom: 1px solid #D3E2F2;
@@ -2418,6 +2418,7 @@
     .sbgrid_FFRHA_st, .sbgrid_FHA_st{
         border-bottom: 1px solid #D3E2F2;
     }
+
 }
 
 .input-list {

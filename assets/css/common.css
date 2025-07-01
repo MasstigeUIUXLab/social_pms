@@ -52618,6 +52618,10 @@ input[type=number] {
   }
 }
 
+.subject-name {
+  position: relative;
+}
+
 .icon_required {
   position: absolute;
   top: -1px;
@@ -52819,4 +52823,62 @@ input[type=number] {
 
 .tb-scroll {
   overflow-x: auto;
+}
+
+.btn-icon {
+  min-width: 32px !important;
+  padding: 0 4px !important;
+  border: 1px solid transparent !important;
+}
+.btn-icon:hover {
+  border: 1px solid !important;
+}
+.btn-icon [class*=grid_] {
+  width: 24px !important;
+  height: 24px !important;
+  margin: 0;
+}
+
+.grid_file_up {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background: url(../images/common/grid_file_up_new.png) center center no-repeat;
+  cursor: pointer;
+  vertical-align: middle;
+  background-size: cover;
+}
+
+.grid_file_down {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background: url(../images/common/grid_file_down_new.png) center center no-repeat;
+  cursor: pointer;
+  vertical-align: middle;
+  background-size: cover;
+}
+
+.grid_delete_file {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background: url(../images/common/grid_delete_file_new.png) center center no-repeat;
+  cursor: pointer;
+  vertical-align: middle;
+  background-size: cover;
+}
+
+.grid_pdf_file {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background: url(../images/common/grid_pdf.png) center center no-repeat;
+  cursor: pointer;
+  vertical-align: middle;
+  background-size: cover;
 }
