@@ -2609,11 +2609,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  height: calc(100% - 58px);
-  overflow-y: auto;
 }
 .tab-bx .tab-header .half-tit {
   display: -webkit-box;
@@ -2836,6 +2831,14 @@
   display: block;
 }
 
+.half > .tab-bx {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: calc(100% - 58px);
+  overflow-y: auto;
+}
+
 .page-mgmt .scrollable {
   overflow-y: auto;
   -webkit-box-flex: 1;
@@ -2967,25 +2970,25 @@
   font-weight: 600;
   font-size: 32px;
 }
-.page-board .tab-bx {
+.page-board .half > .tab-bx {
   height: calc(100% - 82px);
   padding: 0 16px;
 }
-.page-board .tab-bx .tab-header ul {
+.page-board .half > .tab-bx .tab-header ul {
   margin-bottom: 0;
 }
-.page-board .tab-bx .tab-header ul li a {
+.page-board .half > .tab-bx .tab-header ul li a {
   color: #727272;
   border-color: #DADADA;
 }
-.page-board .tab-bx .tab-header ul li a.active {
+.page-board .half > .tab-bx .tab-header ul li a.active {
   color: #0D63E3;
   border-color: #0D63E3;
 }
-.page-board .tab-bx .tab-body .tab-content .list {
+.page-board .half > .tab-bx .tab-body .tab-content .list {
   padding: 16px;
 }
-.page-board .tab-bx .tab-body .tab-content {
+.page-board .half > .tab-bx .tab-body .tab-content {
   padding: 0;
   border: 0;
   border-radius: 0;

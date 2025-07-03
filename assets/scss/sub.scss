@@ -2567,9 +2567,9 @@
 .tab-bx {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    height: calc(100% - 58px);    
-    overflow-y: auto;
+    // flex: 1;
+    // height: calc(100% - 58px);    
+    // overflow-y: auto;
 
     .tab-header {
         .half-tit{
@@ -2808,6 +2808,13 @@
     }
 }
 
+// 07-03 추가
+.half > .tab-bx{
+    flex: 1;
+    height: calc(100% - 58px);    
+    overflow-y: auto;
+}
+
 .page-mgmt{
     .scrollable{
         overflow-y: auto;
@@ -2965,7 +2972,7 @@
         font-size: 32px;
     }
 
-    .tab-bx{
+    .half > .tab-bx{
         height: calc( 100% - 82px );
         padding: 0 16px;
 
