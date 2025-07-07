@@ -911,11 +911,11 @@
             transition: 0.3s;
 
             .btn, .btn-1{
-                min-width: 0;
-                min-height: 0;
-                height: auto;
+                min-width: 0 !important;
+                min-height: 0 !important;
+                height: auto !important;
                 padding: 0 !important;
-                font-size: inherit;
+                font-size: inherit !important;
             }
 
             &::after {
@@ -2323,14 +2323,23 @@
             tbody > tr:last-child{
                 border-bottom: 0;
             }
+            
+            .btn, .btn-1{
+                min-width: 52px;
+                height: 32px;
+                padding: 0px 8px;
+                font-size: 12px;
+            }
         }
     }
 
-    .btn, .btn-1{
-        min-width: 52px;
-        height: 32px;
-        padding: 0px 8px;
-        font-size: 12px;
+    .file-list {
+        .btn, .btn-1 {
+            min-width: 52px;
+            height: 32px;
+            padding: 0px 8px;
+            font-size: 12px;
+        }
     }
 
     .fixable{

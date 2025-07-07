@@ -52853,9 +52853,9 @@ input[type=number] {
 
 .grid_file_up {
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
   background: url(../images/common/grid_file_up_new.png) center center no-repeat;
   cursor: pointer;
   vertical-align: middle;
@@ -52864,9 +52864,9 @@ input[type=number] {
 
 .grid_file_down {
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
   background: url(../images/common/grid_file_down_new.png) center center no-repeat;
   cursor: pointer;
   vertical-align: middle;
@@ -52875,9 +52875,9 @@ input[type=number] {
 
 .grid_delete_file {
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
   background: url(../images/common/grid_delete_file_new.png) center center no-repeat;
   cursor: pointer;
   vertical-align: middle;
@@ -52886,9 +52886,9 @@ input[type=number] {
 
 .grid_pdf_file {
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
   background: url(../images/common/grid_pdf.png) center center no-repeat;
   cursor: pointer;
   vertical-align: middle;
