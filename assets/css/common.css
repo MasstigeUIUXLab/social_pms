@@ -44294,11 +44294,11 @@ header .side-nav .open-page {
 .popup-window .cont-group + .cont-group, .popup-window .table-bx + .table-bx, .popup-window .table-group + .table-group {
   margin-top: 30px;
 }
-.popup-window .w800 {
-  width: 51.948% !important;
-}
 .popup-window .confirm-popup {
   position: fixed;
+}
+.popup-window .w800 {
+  width: 51.948% !important;
 }
 .popup-window.type2 .table-btn-01,
 .popup-window.type2 input[type=file],
@@ -44528,6 +44528,182 @@ header .side-nav .open-page {
 
 .popup-fix {
   position: fixed !important;
+}
+
+.popup-find-address {
+  min-width: 0 !important;
+  padding: 0 20px;
+  background: #F2F5F8;
+}
+.popup-find-address .popup-container {
+  min-width: 0;
+  padding: 0;
+}
+.popup-find-address .juso_box {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.srch_wrp {
+  height: 256px;
+  margin: 0 -20px -120px;
+  padding: 24px 20px;
+  background: #3F476E;
+  color: #fff;
+}
+
+.srch_bx {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.srch_cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #fff;
+}
+.srch_cover .form-control {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 48px !important;
+  padding: 10px 16px !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #D1D92E !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 28px !important;
+}
+.srch_cover .srch_btns {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.srch_cover .srch_btns > * + * {
+  position: relative;
+  margin-left: 8px;
+  padding-left: 8px;
+}
+.srch_cover .srch_btns > * + *:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 16px;
+  background-color: #222;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.srch_cover .srch_btns [class^=icon] {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.srch_cover .srch_btns .icon_srch_wh {
+  background-image: url(../images/icon/icon_srch_wh.svg);
+}
+.srch_cover .srch_btns .icon_reset_wh {
+  background-image: url(../images/icon/icon_reset_wh.svg);
+}
+
+.srch_ex {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.result_wrp {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.result_wrp > span {
+  font-weight: 700;
+  color: #2779C6;
+}
+
+.popup_paging {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 24px;
+  gap: 8px;
+}
+.popup_paging a {
+  color: #A1A1A1;
+  float: left;
+  text-decoration: none;
+  cursor: Pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  font-size: 12px;
+}
+.popup_paging a.on {
+  color: #fff;
+  background: #2E77E6;
+  font-weight: 600;
+}
+.popup_paging > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.popup_paging > span a {
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18px auto;
+  color: #555;
+}
+.popup_paging > span a.btn_next, .popup_paging > span a.btn_last {
+  padding-right: 18px;
+  background-position: right;
+}
+.popup_paging > span a.btn_next {
+  padding-left: 6px;
+  background-image: url(../images/paging/next_new.png);
+}
+.popup_paging > span a.btn_last {
+  background-image: url(../images/paging/last_new.png);
+}
+.popup_paging > span a.btn_prev, .popup_paging > span a.btn_first {
+  padding-left: 18px;
+  background-position: left;
+}
+.popup_paging > span a.btn_prev {
+  padding-right: 6px;
+  background-image: url(../images/paging/prev_new.png);
+}
+.popup_paging > span a.btn_first {
+  background-image: url(../images/paging/first_new.png);
 }
 
 .tab--box > .tab-header {
