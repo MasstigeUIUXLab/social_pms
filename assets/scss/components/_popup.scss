@@ -267,7 +267,7 @@
 
             tbody {
                 tr {
-                    td {
+                    td:not([class^=sbgrid]) {
                         padding: 8px;
 
 
@@ -294,7 +294,7 @@
                 }
             }
 
-            tr > *{
+            tr > *:not([class^=sbgrid]){
                 &.fs-12 {
                     font-size: 12px !important;
                 }

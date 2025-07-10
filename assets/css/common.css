@@ -43660,10 +43660,10 @@ header .side-nav .open-page {
 .popup-container .table-bx table:not(.sbgrid_table) thead.border-top-none {
   border-top: none;
 }
-.popup-container .table-bx table:not(.sbgrid_table) tbody tr td {
+.popup-container .table-bx table:not(.sbgrid_table) tbody tr td:not([class^=sbgrid]) {
   padding: 8px;
 }
-.popup-container .table-bx table:not(.sbgrid_table) tbody tr td .radio-field {
+.popup-container .table-bx table:not(.sbgrid_table) tbody tr td:not([class^=sbgrid]) .radio-field {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -43672,7 +43672,7 @@ header .side-nav .open-page {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.popup-container .table-bx table:not(.sbgrid_table) tbody tr td .radio-field label {
+.popup-container .table-bx table:not(.sbgrid_table) tbody tr td:not([class^=sbgrid]) .radio-field label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43684,45 +43684,45 @@ header .side-nav .open-page {
           justify-content: center;
   gap: 8px;
 }
-.popup-container .table-bx table:not(.sbgrid_table) tbody tr td.p-0 table {
+.popup-container .table-bx table:not(.sbgrid_table) tbody tr td:not([class^=sbgrid]).p-0 table {
   border: 0;
 }
-.popup-container .table-bx table:not(.sbgrid_table) tbody tr td.p-0 table tbody tr:last-child {
+.popup-container .table-bx table:not(.sbgrid_table) tbody tr td:not([class^=sbgrid]).p-0 table tbody tr:last-child {
   border-bottom: 0;
 }
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.fs-12 {
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).fs-12 {
   font-size: 12px !important;
 }
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.w-fit select,
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.w-fit input {
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).w-fit select,
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).w-fit input {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   min-width: 80px;
   margin: 0;
 }
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-center input[type=text],
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-center input[type=password],
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-center input[type=number],
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-center input[type=email],
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-center input[type=date],
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-center input[type=tel] {
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-center input[type=text],
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-center input[type=password],
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-center input[type=number],
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-center input[type=email],
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-center input[type=date],
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-center input[type=tel] {
   text-align: center;
 }
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-left input[type=text],
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-left input[type=password],
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-left input[type=number],
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-left input[type=email],
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-left input[type=date],
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-left input[type=tel] {
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-left input[type=text],
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-left input[type=password],
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-left input[type=number],
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-left input[type=email],
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-left input[type=date],
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-left input[type=tel] {
   text-align: left;
 }
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-right input[type=text],
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-right input[type=password],
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-right input[type=number],
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-right input[type=email],
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-right input[type=date],
-.popup-container .table-bx table:not(.sbgrid_table) tr > *.text-right input[type=tel] {
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-right input[type=text],
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-right input[type=password],
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-right input[type=number],
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-right input[type=email],
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-right input[type=date],
+.popup-container .table-bx table:not(.sbgrid_table) tr > *:not([class^=sbgrid]).text-right input[type=tel] {
   text-align: right;
 }
 .popup-container .table-btn-01,
@@ -53031,7 +53031,7 @@ input[type=number] {
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin-right: 3px;
+  margin-right: 5px;
   background: url(../images/common/grid_file_up_new.png) center center no-repeat;
   cursor: pointer;
   vertical-align: middle;
@@ -53042,7 +53042,7 @@ input[type=number] {
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin-right: 3px;
+  margin-right: 5px;
   background: url(../images/common/grid_file_down_new.png) center center no-repeat;
   cursor: pointer;
   vertical-align: middle;
@@ -53053,7 +53053,7 @@ input[type=number] {
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin-right: 3px;
+  margin-right: 5px;
   background: url(../images/common/grid_delete_file_new.png) center center no-repeat;
   cursor: pointer;
   vertical-align: middle;
@@ -53064,7 +53064,7 @@ input[type=number] {
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin-right: 3px;
+  margin-right: 5px;
   background: url(../images/common/grid_pdf.png) center center no-repeat;
   cursor: pointer;
   vertical-align: middle;

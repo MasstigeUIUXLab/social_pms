@@ -1141,7 +1141,7 @@
             table-layout: fixed;
             border: 1px solid #e4e4e4;
 
-            tr > *{
+            tr > *:not([class^=sbgrid]){
                 padding: 4px;
                 color: #555;
                 font-size: 13px;
@@ -1184,15 +1184,15 @@
                 }
             }
 
-            thead {
+            thead:not([class^=sbgrid]) {
                 width: 100%;
                 border-top: 1px solid #2779c6;
 
-                tr {
+                tr:not([class^=sbgrid]) {
                     width: 100%;
                     // height: 52px;
 
-                    th {
+                    th:not([class^=sbgrid]) {
                         padding: 8px;
                         background: #f7faff;
                         color: #2779c6;
@@ -1207,17 +1207,17 @@
                 }
             }
 
-            tbody {
+            tbody:not([class^=sbgrid]) {
                 &.border-top {
                     border-top: 1px solid #e4e4e4;
                 }
 
-                tr {
+                tr:not([class^=sbgrid]) {
                     width: 100%;
                     min-height: 36px;
                     border-bottom: 1px solid #e4e4e4;
 
-                    td {
+                    td:not([class^=sbgrid]) {
                         word-break: break-all;
 
                         &.p-0{
@@ -1313,7 +1313,7 @@
                 border-collapse: separate;
                 border-spacing: 0;
 
-                thead {
+                thead:not([class^=sbgrid]) {
                     border-top: none !important;
                 }
             }
@@ -2238,10 +2238,10 @@
                 border-top: 0;
             }
 
-            tr {
+            tr:not([class^=sbgrid]) {
                 border-bottom: 1px solid #D3E2F2;
 
-                & > * {
+                & > *:not([class^=sbgrid]) {
                     padding: 8px;
                     border-right: 1px solid #D3E2F2;
                     font-size: 14px;
@@ -2314,7 +2314,7 @@
                 }
             }
 
-            thead tr th {
+            thead tr th:not([class^=sbgrid]) {
                 background: #F1F8FF;
                 color: #727272;
                 font-weight: 500;

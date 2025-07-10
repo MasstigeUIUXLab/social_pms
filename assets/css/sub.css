@@ -1207,12 +1207,12 @@
   table-layout: fixed;
   border: 1px solid #e4e4e4;
 }
-.sub-body .table-bx > table tr > * {
+.sub-body .table-bx > table tr > *:not([class^=sbgrid]) {
   padding: 4px;
   color: #555;
   font-size: 13px;
 }
-.sub-body .table-bx > table tr > *.subject-name {
+.sub-body .table-bx > table tr > *:not([class^=sbgrid]).subject-name {
   position: relative;
   background: #f7faff;
   padding: 8px 16px;
@@ -1220,12 +1220,12 @@
   color: #2779c6;
   line-height: 1.2;
 }
-.sub-body .table-bx > table tr > *.subject-name .subject-name-add {
+.sub-body .table-bx > table tr > *:not([class^=sbgrid]).subject-name .subject-name-add {
   font-size: 12px;
   color: #555;
   letter-spacing: -0.48px;
 }
-.sub-body .table-bx > table tr > *.subject-name span {
+.sub-body .table-bx > table tr > *:not([class^=sbgrid]).subject-name span {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -1236,36 +1236,36 @@
           align-items: center;
   position: relative;
 }
-.sub-body .table-bx > table tr > *.subject-name span.thin {
+.sub-body .table-bx > table tr > *:not([class^=sbgrid]).subject-name span.thin {
   font-size: 12px;
   font-weight: 400;
   color: #555555;
 }
-.sub-body .table-bx > table tr > *.subject-name span.fs14 {
+.sub-body .table-bx > table tr > *:not([class^=sbgrid]).subject-name span.fs14 {
   font-size: 13px !important;
 }
-.sub-body .table-bx > table tr > *.pa8, .sub-body .table-bx > table tr > *.pa16 {
+.sub-body .table-bx > table tr > *:not([class^=sbgrid]).pa8, .sub-body .table-bx > table tr > *:not([class^=sbgrid]).pa16 {
   padding: 4px !important;
 }
-.sub-body .table-bx > table thead {
+.sub-body .table-bx > table thead:not([class^=sbgrid]) {
   width: 100%;
   border-top: 1px solid #2779c6;
 }
-.sub-body .table-bx > table thead tr {
+.sub-body .table-bx > table thead:not([class^=sbgrid]) tr:not([class^=sbgrid]) {
   width: 100%;
 }
-.sub-body .table-bx > table thead tr th {
+.sub-body .table-bx > table thead:not([class^=sbgrid]) tr:not([class^=sbgrid]) th:not([class^=sbgrid]) {
   padding: 8px;
   background: #f7faff;
   color: #2779c6;
   font-weight: 600;
 }
-.sub-body .table-bx > table thead tr th.subject-name span {
+.sub-body .table-bx > table thead:not([class^=sbgrid]) tr:not([class^=sbgrid]) th:not([class^=sbgrid]).subject-name span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-.sub-body .table-bx > table tbody {
+.sub-body .table-bx > table tbody:not([class^=sbgrid]) {
   /* &.padding-both-8 {
   tr {
   td {
@@ -1275,36 +1275,36 @@
   }
   } */
 }
-.sub-body .table-bx > table tbody.border-top {
+.sub-body .table-bx > table tbody:not([class^=sbgrid]).border-top {
   border-top: 1px solid #e4e4e4;
 }
-.sub-body .table-bx > table tbody tr {
+.sub-body .table-bx > table tbody:not([class^=sbgrid]) tr:not([class^=sbgrid]) {
   width: 100%;
   min-height: 36px;
   border-bottom: 1px solid #e4e4e4;
 }
-.sub-body .table-bx > table tbody tr td {
+.sub-body .table-bx > table tbody:not([class^=sbgrid]) tr:not([class^=sbgrid]) td:not([class^=sbgrid]) {
   word-break: break-all;
 }
-.sub-body .table-bx > table tbody tr td.p-0 table {
+.sub-body .table-bx > table tbody:not([class^=sbgrid]) tr:not([class^=sbgrid]) td:not([class^=sbgrid]).p-0 table {
   border: 0;
 }
-.sub-body .table-bx > table tbody tr td.p-0 table tr > * {
+.sub-body .table-bx > table tbody:not([class^=sbgrid]) tr:not([class^=sbgrid]) td:not([class^=sbgrid]).p-0 table tr > * {
   padding-top: 7px;
   padding-bottom: 7px;
 }
-.sub-body .table-bx > table tbody tr td.p-0 table tr > * .space {
+.sub-body .table-bx > table tbody:not([class^=sbgrid]) tr:not([class^=sbgrid]) td:not([class^=sbgrid]).p-0 table tr > * .space {
   display: inline-block;
   padding-top: 7px;
   padding-bottom: 7px;
 }
-.sub-body .table-bx > table tbody tr td.p-0 table tr td:not(:last-child) {
+.sub-body .table-bx > table tbody:not([class^=sbgrid]) tr:not([class^=sbgrid]) td:not([class^=sbgrid]).p-0 table tr td:not(:last-child) {
   border-right: 1px solid #e4e4e4;
 }
-.sub-body .table-bx > table tbody tr td.p-0 table tr:last-child {
+.sub-body .table-bx > table tbody:not([class^=sbgrid]) tr:not([class^=sbgrid]) td:not([class^=sbgrid]).p-0 table tr:last-child {
   border-bottom: 0;
 }
-.sub-body .table-bx > table tbody tr td .select-field {
+.sub-body .table-bx > table tbody:not([class^=sbgrid]) tr:not([class^=sbgrid]) td:not([class^=sbgrid]) .select-field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1313,10 +1313,10 @@
           align-items: center;
   gap: 4px;
 }
-.sub-body .table-bx > table tbody tr td .select-field select {
+.sub-body .table-bx > table tbody:not([class^=sbgrid]) tr:not([class^=sbgrid]) td:not([class^=sbgrid]) .select-field select {
   width: auto;
 }
-.sub-body .table-bx > table tbody tr td .note {
+.sub-body .table-bx > table tbody:not([class^=sbgrid]) tr:not([class^=sbgrid]) td:not([class^=sbgrid]) .note {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1326,7 +1326,7 @@
   line-height: 18px;
   color: #e71825;
 }
-.sub-body .table-bx > table tbody tr td .more-btn {
+.sub-body .table-bx > table tbody:not([class^=sbgrid]) tr:not([class^=sbgrid]) td:not([class^=sbgrid]) .more-btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1348,11 +1348,11 @@
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.sub-body .table-bx > table tbody tr td .more-btn:hover {
+.sub-body .table-bx > table tbody:not([class^=sbgrid]) tr:not([class^=sbgrid]) td:not([class^=sbgrid]) .more-btn:hover {
   background: #fff;
   color: #02602e;
 }
-.sub-body .table-bx > table tbody tr td b {
+.sub-body .table-bx > table tbody:not([class^=sbgrid]) tr:not([class^=sbgrid]) td:not([class^=sbgrid]) b {
   color: #1d1d1d;
   font-weight: 600;
 }
@@ -1363,7 +1363,7 @@
   border-collapse: separate;
   border-spacing: 0;
 }
-.sub-body .table-bx > table.border-radius thead {
+.sub-body .table-bx > table.border-radius thead:not([class^=sbgrid]) {
   border-top: none !important;
 }
 .sub-body .table-bx > table.w-fit {
@@ -2240,117 +2240,117 @@
 .type2 .table-bx > table + table {
   border-top: 0;
 }
-.type2 .table-bx > table tr {
+.type2 .table-bx > table tr:not([class^=sbgrid]) {
   border-bottom: 1px solid #D3E2F2;
 }
-.type2 .table-bx > table tr > * {
+.type2 .table-bx > table tr:not([class^=sbgrid]) > *:not([class^=sbgrid]) {
   padding: 8px;
   border-right: 1px solid #D3E2F2;
   font-size: 14px;
 }
-.type2 .table-bx > table tr > *.subject-name {
+.type2 .table-bx > table tr:not([class^=sbgrid]) > *:not([class^=sbgrid]).subject-name {
   background: #F1F8FF;
   padding: 4.5px 4px 4.5px 14px;
   font-weight: 500 !important;
   color: #727272;
   line-height: 1.42857;
 }
-.type2 .table-bx > table tr > *.pa8, .type2 .table-bx > table tr > *.pa16 {
+.type2 .table-bx > table tr:not([class^=sbgrid]) > *:not([class^=sbgrid]).pa8, .type2 .table-bx > table tr:not([class^=sbgrid]) > *:not([class^=sbgrid]).pa16 {
   padding: 8px !important;
 }
-.type2 .table-bx > table tr .table-btn-01,
-.type2 .table-bx > table tr input[type=file],
-.type2 .table-bx > table tr input[type=date],
-.type2 .table-bx > table tr input[type=datetime-local],
-.type2 .table-bx > table tr input[type=email],
-.type2 .table-bx > table tr input[type=month],
-.type2 .table-bx > table tr input[type=number],
-.type2 .table-bx > table tr input[type=password],
-.type2 .table-bx > table tr input[type=search],
-.type2 .table-bx > table tr input[type=tel],
-.type2 .table-bx > table tr input[type=text],
-.type2 .table-bx > table tr input[type=time],
-.type2 .table-bx > table tr input[type=url],
-.type2 .table-bx > table tr input[type=week],
-.type2 .table-bx > table tr select,
-.type2 .table-bx > table tr textarea {
+.type2 .table-bx > table tr:not([class^=sbgrid]) .table-btn-01,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=file],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=date],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=datetime-local],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=email],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=month],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=number],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=password],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=search],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=tel],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=text],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=time],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=url],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=week],
+.type2 .table-bx > table tr:not([class^=sbgrid]) select,
+.type2 .table-bx > table tr:not([class^=sbgrid]) textarea {
   height: 32px;
   padding: 9px 7px;
   font-size: 12px;
   border-color: #C6C6C6;
 }
-.type2 .table-bx > table tr .table-btn-01:disabled, .type2 .table-bx > table tr .table-btn-01[readonly],
-.type2 .table-bx > table tr input[type=file]:disabled,
-.type2 .table-bx > table tr input[type=file][readonly],
-.type2 .table-bx > table tr input[type=date]:disabled,
-.type2 .table-bx > table tr input[type=date][readonly],
-.type2 .table-bx > table tr input[type=datetime-local]:disabled,
-.type2 .table-bx > table tr input[type=datetime-local][readonly],
-.type2 .table-bx > table tr input[type=email]:disabled,
-.type2 .table-bx > table tr input[type=email][readonly],
-.type2 .table-bx > table tr input[type=month]:disabled,
-.type2 .table-bx > table tr input[type=month][readonly],
-.type2 .table-bx > table tr input[type=number]:disabled,
-.type2 .table-bx > table tr input[type=number][readonly],
-.type2 .table-bx > table tr input[type=password]:disabled,
-.type2 .table-bx > table tr input[type=password][readonly],
-.type2 .table-bx > table tr input[type=search]:disabled,
-.type2 .table-bx > table tr input[type=search][readonly],
-.type2 .table-bx > table tr input[type=tel]:disabled,
-.type2 .table-bx > table tr input[type=tel][readonly],
-.type2 .table-bx > table tr input[type=text]:disabled,
-.type2 .table-bx > table tr input[type=text][readonly],
-.type2 .table-bx > table tr input[type=time]:disabled,
-.type2 .table-bx > table tr input[type=time][readonly],
-.type2 .table-bx > table tr input[type=url]:disabled,
-.type2 .table-bx > table tr input[type=url][readonly],
-.type2 .table-bx > table tr input[type=week]:disabled,
-.type2 .table-bx > table tr input[type=week][readonly],
-.type2 .table-bx > table tr select:disabled,
-.type2 .table-bx > table tr select[readonly],
-.type2 .table-bx > table tr textarea:disabled,
-.type2 .table-bx > table tr textarea[readonly] {
+.type2 .table-bx > table tr:not([class^=sbgrid]) .table-btn-01:disabled, .type2 .table-bx > table tr:not([class^=sbgrid]) .table-btn-01[readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=file]:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=file][readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=date]:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=date][readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=datetime-local]:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=datetime-local][readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=email]:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=email][readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=month]:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=month][readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=number]:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=number][readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=password]:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=password][readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=search]:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=search][readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=tel]:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=tel][readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=text]:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=text][readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=time]:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=time][readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=url]:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=url][readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=week]:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=week][readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) select:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) select[readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) textarea:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) textarea[readonly] {
   background-color: #E4E4E4 !important;
   border: 1px solid #C6C6C6 !important;
   color: #555 !important;
 }
-.type2 .table-bx > table tr .table-btn-01:focus-visible,
-.type2 .table-bx > table tr input[type=file]:focus-visible,
-.type2 .table-bx > table tr input[type=date]:focus-visible,
-.type2 .table-bx > table tr input[type=datetime-local]:focus-visible,
-.type2 .table-bx > table tr input[type=email]:focus-visible,
-.type2 .table-bx > table tr input[type=month]:focus-visible,
-.type2 .table-bx > table tr input[type=number]:focus-visible,
-.type2 .table-bx > table tr input[type=password]:focus-visible,
-.type2 .table-bx > table tr input[type=search]:focus-visible,
-.type2 .table-bx > table tr input[type=tel]:focus-visible,
-.type2 .table-bx > table tr input[type=text]:focus-visible,
-.type2 .table-bx > table tr input[type=time]:focus-visible,
-.type2 .table-bx > table tr input[type=url]:focus-visible,
-.type2 .table-bx > table tr input[type=week]:focus-visible,
-.type2 .table-bx > table tr select:focus-visible,
-.type2 .table-bx > table tr textarea:focus-visible {
+.type2 .table-bx > table tr:not([class^=sbgrid]) .table-btn-01:focus-visible,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=file]:focus-visible,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=date]:focus-visible,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=datetime-local]:focus-visible,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=email]:focus-visible,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=month]:focus-visible,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=number]:focus-visible,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=password]:focus-visible,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=search]:focus-visible,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=tel]:focus-visible,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=text]:focus-visible,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=time]:focus-visible,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=url]:focus-visible,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=week]:focus-visible,
+.type2 .table-bx > table tr:not([class^=sbgrid]) select:focus-visible,
+.type2 .table-bx > table tr:not([class^=sbgrid]) textarea:focus-visible {
   border: 1px solid #2D78E8;
 }
-.type2 .table-bx > table tr input[type=checkbox],
-.type2 .table-bx > table tr input[type=radio] {
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=checkbox],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=radio] {
   border-color: #c6c6c6;
 }
-.type2 .table-bx > table tr input[type=checkbox]:disabled, .type2 .table-bx > table tr input[type=checkbox][readonly],
-.type2 .table-bx > table tr input[type=radio]:disabled,
-.type2 .table-bx > table tr input[type=radio][readonly] {
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=checkbox]:disabled, .type2 .table-bx > table tr:not([class^=sbgrid]) input[type=checkbox][readonly],
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=radio]:disabled,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input[type=radio][readonly] {
   background-color: #E4E4E4 !important;
   border: 1px solid #C6C6C6 !important;
   color: #555;
 }
-.type2 .table-bx > table tr select,
-.type2 .table-bx > table tr input.input-date, .type2 .table-bx > table tr input.input-type-date {
+.type2 .table-bx > table tr:not([class^=sbgrid]) select,
+.type2 .table-bx > table tr:not([class^=sbgrid]) input.input-date, .type2 .table-bx > table tr:not([class^=sbgrid]) input.input-type-date {
   padding-left: 7px !important;
 }
-.type2 .table-bx > table tr textarea {
+.type2 .table-bx > table tr:not([class^=sbgrid]) textarea {
   height: auto;
 }
-.type2 .table-bx > table thead tr th {
+.type2 .table-bx > table thead tr th:not([class^=sbgrid]) {
   background: #F1F8FF;
   color: #727272;
   font-weight: 500;
