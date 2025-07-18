@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+// 8월 pms 메인
+
+$dashboard-general-radius: 16px; // 둥글기
+$dashboard-radius2: 8px; // 둥글기
+$dashboard-background-primary: #1F78FF; // 
+$dashboard-background-secondary: #F6FAFF; // 배경컬러
+$dashboard-background-blue: #AACDFF; // 배경컬러
+$dashboard-border-color: #D9E5F1; // 선컬러
+$dashboard-text-body: #222; // 텍스트컬러 1
+$dashboard-text-primary: #1F78FF; // 텍스트컬러 2
+$dashboard-text-secondary: #666; // 텍스트컬러 3
+
+
+.text-body{
+    color: $dashboard-text-body !important;
+}
+
+.text-primary{
+    color: $dashboard-text-primary !important;
+}
+
+.text-secondary{
+    color: $dashboard-text-secondary !important;
+}
+
+.bg-primary{
+    background-color: $dashboard-background-primary !important;
+}
+
+.bg-secondary{
+    background-color: $dashboard-background-secondary !important;
+}
+
+.bg-blue{
+    background-color: $dashboard-background-blue !important;
+}
+
+.data-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 16px;
+    transition: 0.25s;
+    color: $dashboard-text-secondary;
+
+    & > *{
+        transition: 0.25s;
+    }
+}
+
+.data-name{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.375;
+}
+
+.data-value{
+    display: flex;
+    gap: 4px;
+    align-items: flex-end;
+
+    strong{
+        display: inline-block;
+        font-family: "GmarketSans";
+        padding-top: 0.1em;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 1;
+        color: $dashboard-text-body;
+    }
+
+    span{
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857;
+    }
+}
+
+.dashboard{
+    color: $dashboard-text-body;
+
+    .header > .container{
+        border-bottom: 1px solid #D9E5F1;
+    }
+
+    &-wrap{
+        position: relative;
+        height: calc(100% - 80px);
+    }
+
+    &-container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 12px 32px;
+        background: #E9F2FF;
+    }
+}
+
+// management
+.management-wrap{
+    display: flex;
+    height: 46px;
+    background-color: #fff;
+}
+
+.management-title-block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 178px;
+    border-right: 1px solid $dashboard-border-color;
+
+    h2{
+        font-size: 20px;
+        font-weight: 600;
+        color: #222;
+        line-height: 1.4;
+    }
+}
+
+.btn-tooltip{
+    display: inline-flex;
+}
+
+.icon-tooltip{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/dashboard/icon_tooltip.svg) no-repeat center / cover;
+}
+
+.management-list{
+    display: flex;
+    flex: 1;
+
+    .data-wrap{
+        height: 46px;
+    }
+
+    .data-value{
+        border-bottom: 1px solid transparent;
+    }
+}
+
+.management-item{
+    flex: 1;
+
+    &:not(:last-child){
+        border-right: 1px solid $dashboard-border-color;
+    }
+}
+
+.management-item-link{
+    display: block;
+
+    &:hover{
+        .data-wrap{
+            color: $dashboard-text-primary;
+        }
+
+        .data-value{
+            border-color: $dashboard-background-primary;
+            color: $dashboard-text-primary;
+
+            strong{
+                color: $dashboard-text-primary;
+            }
+        }
+    }
+}
+
+// to-do
+.todolist-title-block{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    gap: 8px;
+    
+    h2{
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.143;
+    }
+
+    .icon-todolist{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: url(../images/dashboard/icon_todolist.svg) no-repeat center / cover;
+    }
+}
+
+.todolist-item-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .data-wrap{
+        position: relative;
+
+        &:after{
+            content:'';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(../images/dashboard/icon_arr.svg) no-repeat center / cover;
+        }
+    }
+}
+
+.todolist-list{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

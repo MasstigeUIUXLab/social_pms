@@ -1,0 +1,233 @@
+.text-body {
+  color: #222 !important;
+}
+
+.text-primary {
+  color: #1F78FF !important;
+}
+
+.text-secondary {
+  color: #666 !important;
+}
+
+.bg-primary {
+  background-color: #1F78FF !important;
+}
+
+.bg-secondary {
+  background-color: #F6FAFF !important;
+}
+
+.bg-blue {
+  background-color: #AACDFF !important;
+}
+
+.data-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 8px;
+  padding: 0 16px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  color: #666;
+}
+.data-wrap > * {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.data-name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.375;
+}
+
+.data-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.data-value strong {
+  display: inline-block;
+  font-family: "GmarketSans";
+  padding-top: 0.1em;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  color: #222;
+}
+.data-value span {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857;
+}
+
+.dashboard {
+  color: #222;
+}
+.dashboard .header > .container {
+  border-bottom: 1px solid #D9E5F1;
+}
+.dashboard-wrap {
+  position: relative;
+  height: calc(100% - 80px);
+}
+.dashboard-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 12px 32px;
+  background: #E9F2FF;
+}
+
+.management-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 46px;
+  background-color: #fff;
+}
+
+.management-title-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4px;
+  width: 178px;
+  border-right: 1px solid #D9E5F1;
+}
+.management-title-block h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.4;
+}
+
+.btn-tooltip {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.icon-tooltip {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/dashboard/icon_tooltip.svg) no-repeat center/cover;
+}
+
+.management-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.management-list .data-wrap {
+  height: 46px;
+}
+.management-list .data-value {
+  border-bottom: 1px solid transparent;
+}
+
+.management-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.management-item:not(:last-child) {
+  border-right: 1px solid #D9E5F1;
+}
+
+.management-item-link {
+  display: block;
+}
+.management-item-link:hover .data-wrap {
+  color: #1F78FF;
+}
+.management-item-link:hover .data-value {
+  border-color: #1F78FF;
+  color: #1F78FF;
+}
+.management-item-link:hover .data-value strong {
+  color: #1F78FF;
+}
+
+.todolist-title-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  gap: 8px;
+}
+.todolist-title-block h2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.143;
+}
+.todolist-title-block .icon-todolist {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url(../images/dashboard/icon_todolist.svg) no-repeat center/cover;
+}
+
+.todolist-item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.todolist-item-link .data-wrap {
+  position: relative;
+}
+.todolist-item-link .data-wrap:after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../images/dashboard/icon_arr.svg) no-repeat center/cover;
+}
+
+.todolist-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
