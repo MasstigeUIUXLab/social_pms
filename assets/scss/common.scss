@@ -35,13 +35,13 @@
 // @import "board";
 
 body{
-  min-width:1920px;
+  min-width:1800px;
   height:100vh;
-  min-height:890px;
+  min-height:870px;
   max-height:1080px;
 
-  @media screen and (max-height:890px){
-    height:890px
+  @media screen and (max-height:870px){
+    height:870px;
   }
 }
 
@@ -739,7 +739,7 @@ input[type="checkbox"]:checked {
     font-size: 12px;
     min-width: 40px;
     min-height: 24px;
-    line-height: 1;
+    line-height: 1 !important;
 
     &.fill-black {
         color: #fff;
@@ -842,6 +842,11 @@ input[type="checkbox"]:checked {
 
     &.w-auto{
         white-space: nowrap;
+    }
+
+    &:disabled,
+    &.disabled {
+      pointer-events: none;
     }
 }
 
@@ -947,6 +952,11 @@ input[type="checkbox"]:checked {
         &:hover {
             background: #ff7a2d;
         }
+    }
+
+    &:disabled,
+    &.disabled {
+      pointer-events: none;
     }
 }
                 
@@ -1445,3 +1455,21 @@ input[type='number'] {
 .grid_file_down {display:inline-block; width:20px; height:20px; margin-right:5px; background:url(../images/common/grid_file_down_new.png) center center no-repeat; cursor:pointer; vertical-align:middle;background-size: cover;}
 .grid_delete_file {display:inline-block; width:20px; height:20px; margin-right:5px; background:url(../images/common/grid_delete_file_new.png) center center no-repeat; cursor:pointer; vertical-align:middle;background-size: cover;}
 .grid_pdf_file {display:inline-block; width:20px; height:20px; margin-right:5px; background:url(../images/common/grid_pdf.png) center center no-repeat; cursor:pointer; vertical-align:middle;background-size: cover;}
+
+
+ul{
+  &::-webkit-scrollbar {
+      width: 4px !important;
+      height: 4px !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      width: 4px !important;
+      height: 4px !important;
+  }
+
+  &::-webkit-scrollbar-track {
+      width: 4px !important;
+      height: 4px !important;
+  }
+}

@@ -212,7 +212,7 @@
                 li{
                     flex: 1 0 auto;
                     width: auto;
-                    min-width: 80px;
+                    min-width: 60px;
 
                     &:after{
                         top: 12px;
@@ -1797,26 +1797,29 @@
                     gap: 32px;
                     
                     li {
+                        flex: 1;
+
                         &:after{
-                            top: 15px;
-                            right: -24px;
-                            width: 8px;
+                            top: 13px;
+                            right: -22px;
+                            width: 6px;
                         }
 
                         .process-main, 
                         .process-sub{
-                            height: 32px;
+                            // height: 32px;
                             padding: 0 12px;
                         }
                         
                         span{
                             &:nth-child(1){
-                                font-size: 14px;
+                                font-size: 13px;
                             }
 
                             &:nth-child(2){
-                                font-size: 15px;
+                                font-size: 14px;
                                 line-height: 1;
+                                padding-top: 1px;
                             }
                         }
                     }
@@ -2251,7 +2254,7 @@
                         padding: 4.5px 4px 4.5px 14px;
                         font-weight: 500 !important;
                         color: #727272;
-                        line-height: 1.42857;
+                        line-height: 1.334;
                     }
 
                     &.pa8, 
