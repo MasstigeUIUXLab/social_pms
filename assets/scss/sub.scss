@@ -248,7 +248,7 @@
 
     .filter-bx {
         position: relative;
-        height: 75px;
+        // height: 75px;
         /* overflow: hidden; */
 
         form{
@@ -776,7 +776,7 @@
             > ul {
                 display: flex;
                 align-items: center;
-                gap: 10px;
+                gap: 16px;
                 overflow-x: auto;
 
                 li {
@@ -786,7 +786,7 @@
                     letter-spacing: calc(12px * -0.02);
 
                     &:last-child {
-                        font-size: 12px;
+                        // font-size: 12px;
                         &::after {
                             display: none;
                         }
@@ -796,7 +796,7 @@
                         content: "";
                         position: absolute;
                         top: 50%;
-                        right: -6px;
+                        right: -8px;
                         transform: translateY(-50%) translateX(0);
                         width: 1px;
                         height: 60%;
@@ -1594,23 +1594,26 @@
 
                     a {
                         display: inline-block;
-                        height: 28px;
+                        // height: 28px;
+                        height: 40px;
                         background-color: #e8e8e8;
                         padding: 0 28px 0 12px;
                         border-radius: 4px 4px 0 0;
                         font-weight: 400;
-                        font-size: 12px;
-                        line-height: 28px;
+                        // font-size: 12px;
+                        font-size: 16px;
+                        // line-height: 28px;
+                        line-height: 40px;
                         letter-spacing: -0.32px;
                         color: #191919;
                         white-space: nowrap;
 
                         &.active{
-                            height: 40px;
+                            // height: 40px;
                             background-color: #2D78E8;
                             font-weight: 600;
-                            font-size: 16px;
-                            line-height: 40px;
+                            // font-size: 16px;
+                            // line-height: 40px;
                             color: #fff;
 
                             & + button{

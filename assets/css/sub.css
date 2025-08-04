@@ -246,7 +246,6 @@
 }
 .sub-body .filter-bx {
   position: relative;
-  height: 75px;
   /* overflow: hidden; */
 }
 .sub-body .filter-bx form {
@@ -808,7 +807,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  gap: 16px;
   overflow-x: auto;
 }
 .sub-body .inner-banner > div > ul li {
@@ -818,9 +817,6 @@
   position: relative;
   letter-spacing: -0.24px;
 }
-.sub-body .inner-banner > div > ul li:last-child {
-  font-size: 12px;
-}
 .sub-body .inner-banner > div > ul li:last-child::after {
   display: none;
 }
@@ -828,7 +824,7 @@
   content: "";
   position: absolute;
   top: 50%;
-  right: -6px;
+  right: -8px;
   -webkit-transform: translateY(-50%) translateX(0);
           transform: translateY(-50%) translateX(0);
   width: 1px;
@@ -1637,23 +1633,20 @@
 }
 .sub-body .open-page .container .open-page-list li a {
   display: inline-block;
-  height: 28px;
+  height: 40px;
   background-color: #e8e8e8;
   padding: 0 28px 0 12px;
   border-radius: 4px 4px 0 0;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 40px;
   letter-spacing: -0.32px;
   color: #191919;
   white-space: nowrap;
 }
 .sub-body .open-page .container .open-page-list li a.active {
-  height: 40px;
   background-color: #2D78E8;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 40px;
   color: #fff;
 }
 .sub-body .open-page .container .open-page-list li a.active + button {
