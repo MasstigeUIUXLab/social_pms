@@ -3154,3 +3154,37 @@
   background-position: center;
   background-size: 16px;
 }
+
+/* 250822 폰트 사이즈 전체적으로 키움 */
+.font-scaleUp .process-bx.v2 ul li span:nth-child(1) {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.font-scaleUp .content-bx > .half.on .process-bx.v2 ul li span:nth-child(1) {
+  font-size: 14px;
+}
+.font-scaleUp .tab-bx .tab-header ul li a {
+  font-size: 17px;
+}
+.font-scaleUp .table-bx > table tr:not([class^=sbgrid]) .table-btn-01 {
+  font-size: 13px;
+}
+.font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=file], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=date], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=datetime-local], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=email], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=month], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=number], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=password], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=search], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=tel], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=text], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=time], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=url], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=week] {
+  font-size: 13px;
+}
+.font-scaleUp .table-bx > table tr:not([class^=sbgrid]) select, .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) textarea {
+  font-size: 13px;
+}
+.font-scaleUp .table-bx > table tr:not([class^=sbgrid]) > *:not([class^=sbgrid]) {
+  font-size: 15px;
+}
+.font-scaleUp .content-bx > .half.on .tab-bx .tab-header ul li a {
+  font-size: 18px;
+}
+.font-scaleUp .content-bx > .half.on .table-bx > table tr:not([class^=sbgrid]) > *:not([class^=sbgrid]) {
+  font-size: 16px;
+}
+.font-scaleUp .sbgrid_common {
+  font-size: 13px;
+}
