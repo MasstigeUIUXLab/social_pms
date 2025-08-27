@@ -553,6 +553,32 @@
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+.sub-body input[type=date][data-placeholder] {
+  position: relative;
+  background-color: transparent;
+}
+.sub-body input[type=date][data-placeholder]::before {
+  content: attr(data-placeholder);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 40px);
+  height: 100%;
+  padding-left: 11px;
+  background: #eff5fa;
+}
+.sub-body input[type=date][data-placeholder]:focus::before, .sub-body input[type=date][data-placeholder]:valid::before {
+  display: none;
+}
+.sub-body input[type=date][data-placeholder]:disabled:before, .sub-body input[type=date][data-placeholder].disabled:before {
+  background: #f0f0f0 !important;
+}
 .sub-body .input-bx input[type=file],
 .sub-body .input-bx input[type=date],
 .sub-body .input-bx input[type=datetime-local],
@@ -586,6 +612,14 @@
 .sub-body .input-bx .input-area {
   gap: 4px;
   min-height: 34px;
+}
+.sub-body .input-bx .SumoSelect.disabled {
+  opacity: 1;
+}
+.sub-body .input-bx .SumoSelect.disabled .SelectBox {
+  background-color: #f0f0f0 !important;
+  border: 1px solid #8E8E8E !important;
+  color: #1D1D1D !important;
 }
 .sub-body .filter-control-bx {
   display: -webkit-box;
@@ -717,6 +751,12 @@
   color: #435C73;
   line-height: 1.375;
 }
+.sub-body .list-info .btn-bx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+}
 .sub-body .list-info .btn-bx a, .sub-body .list-info .btn-bx button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -731,6 +771,10 @@
   border: 1px solid #97A4B0;
   font-size: 14px;
   min-width: 72px;
+}
+.sub-body .list-info .btn-bx .download-excel-btn {
+  min-width: 0;
+  padding: 0 7px;
 }
 .sub-body .list-info .btn-bx .download-excel-btn img {
   -webkit-filter: brightness(0) saturate(100%) invert(25%) sepia(93%) saturate(4425%) hue-rotate(147deg) brightness(86%) contrast(87%);
@@ -1828,6 +1872,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background: #f3f7fd;
+  border-right: 1px dashed #cad6ea;
+  border-top: 1px solid transparent;
 }
 .sub-body .content-bx > .half.off {
   display: none;
@@ -1880,7 +1927,6 @@
           flex-direction: row !important;
 }
 .sub-body .content-bx > .half.on .input-list {
-  gap: 24px 0;
   margin-right: -12px;
   margin-left: -12px;
 }
@@ -1933,7 +1979,7 @@
   border-right: 0;
   border-top: 1px dashed #cad6ea;
 }
-.sub-body .content-bx > .half.half_right {
+.sub-body .content-bx > .half.half_right, .sub-body .content-bx > .half + .half:not(.half_left) {
   background: #f9fbfd !important;
   border-right: 0 !important;
   border-top: 1px dashed #cad6ea !important;
@@ -2228,9 +2274,11 @@
   font-weight: 500;
 }
 .type2 .tab-bx .tab-header ul li a.active, .type2 .tab-bx .tab-header ul li a:active {
-  border-bottom: 3px solid #2D78E8;
   font-weight: 600;
   color: #2D78E8;
+}
+.type2 .tab-bx .tab-header ul li a.active:after, .type2 .tab-bx .tab-header ul li a:active:after {
+  background: #2D78E8;
 }
 .type2 .table-bx > table {
   border: 1px solid #D3E2F2;
@@ -2648,11 +2696,13 @@
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
+  border-bottom: 3px solid #c5d2e0;
 }
 .tab-bx .tab-header ul li {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  padding: 0 10px;
 }
 .tab-bx .tab-header ul li a {
   display: -webkit-box;
@@ -2664,20 +2714,32 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
   height: 43px;
-  border-bottom: 3px solid #c5d2e0;
   font-size: 16px;
   font-weight: 800;
   color: #7b8d9f;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+.tab-bx .tab-header ul li a:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: 3px;
+  background: #5d81a9;
+  opacity: 0;
+}
 .tab-bx .tab-header ul li a:hover {
   color: #30485f;
 }
 .tab-bx .tab-header ul li a.active {
-  border-bottom: 3px solid #5d81a9;
   color: #30485f;
+}
+.tab-bx .tab-header ul li a.active:after {
+  opacity: 1;
 }
 .tab-bx .tab-body {
   -webkit-box-flex: 1;
@@ -3155,36 +3217,108 @@
   background-size: 16px;
 }
 
-/* 250822 폰트 사이즈 전체적으로 키움 */
-.font-scaleUp .process-bx.v2 ul li span:nth-child(1) {
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
+.SumoSelect > select:disabled {
+  overflow: hidden;
 }
-.font-scaleUp .content-bx > .half.on .process-bx.v2 ul li span:nth-child(1) {
-  font-size: 14px;
+.SumoSelect > select:disabled .SelectBox {
+  background-color: #f0f0f0 !important;
+  border: 1px solid #8E8E8E !important;
+  color: #1D1D1D !important;
+  opacity: 1;
+  pointer-events: none;
 }
-.font-scaleUp .tab-bx .tab-header ul li a {
+
+.test header .side-nav .side-container .side-nav-list > li .depth3 li > .link {
+  color: #555;
+}
+.test header > .container .control-bx {
+  display: none;
+}
+.test header > .container .nav {
+  gap: 24px;
+}
+.test header > .container .nav li .link {
   font-size: 17px;
 }
-.font-scaleUp .table-bx > table tr:not([class^=sbgrid]) .table-btn-01 {
-  font-size: 13px;
+.test header > .container .nav .btn_gnb_toggle {
+  padding-right: 0;
+  background: none;
+  font-size: 17px;
 }
-.font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=file], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=date], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=datetime-local], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=email], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=month], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=number], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=password], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=search], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=tel], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=text], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=time], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=url], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=week] {
-  font-size: 13px;
+.test header > .container .nav .menu-box {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-left: 13px;
 }
-.font-scaleUp .table-bx > table tr:not([class^=sbgrid]) select, .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) textarea {
-  font-size: 13px;
+.test .filter-bx .form-inner {
+  padding-right: 20px;
 }
-.font-scaleUp .table-bx > table tr:not([class^=sbgrid]) > *:not([class^=sbgrid]) {
-  font-size: 15px;
+.test .input-bx input[type=file], .test .input-bx input[type=date], .test .input-bx input[type=datetime-local], .test .input-bx input[type=email], .test .input-bx input[type=month], .test .input-bx input[type=number], .test .input-bx input[type=password], .test .input-bx input[type=search], .test .input-bx input[type=tel], .test .input-bx input[type=text], .test .input-bx input[type=time], .test .input-bx input[type=url], .test .input-bx input[type=week], .test .input-bx select {
+  border-color: #c6c6c6;
+  background-color: #fff;
+  background-size: 20px;
+  border-radius: 4px;
 }
-.font-scaleUp .content-bx > .half.on .tab-bx .tab-header ul li a {
-  font-size: 18px;
+.test .input-bx input[type=file]:disabled, .test .input-bx input[type=file][readonly], .test .input-bx input[type=date]:disabled, .test .input-bx input[type=date][readonly], .test .input-bx input[type=datetime-local]:disabled, .test .input-bx input[type=datetime-local][readonly], .test .input-bx input[type=email]:disabled, .test .input-bx input[type=email][readonly], .test .input-bx input[type=month]:disabled, .test .input-bx input[type=month][readonly], .test .input-bx input[type=number]:disabled, .test .input-bx input[type=number][readonly], .test .input-bx input[type=password]:disabled, .test .input-bx input[type=password][readonly], .test .input-bx input[type=search]:disabled, .test .input-bx input[type=search][readonly], .test .input-bx input[type=tel]:disabled, .test .input-bx input[type=tel][readonly], .test .input-bx input[type=text]:disabled, .test .input-bx input[type=text][readonly], .test .input-bx input[type=time]:disabled, .test .input-bx input[type=time][readonly], .test .input-bx input[type=url]:disabled, .test .input-bx input[type=url][readonly], .test .input-bx input[type=week]:disabled, .test .input-bx input[type=week][readonly], .test .input-bx select:disabled, .test .input-bx select[readonly] {
+  pointer-events: none;
+  background-color: #E4E4E4 !important;
+  border: 1px solid #C6C6C6 !important;
+  color: #555 !important;
 }
-.font-scaleUp .content-bx > .half.on .table-bx > table tr:not([class^=sbgrid]) > *:not([class^=sbgrid]) {
-  font-size: 16px;
+.test .input-bx select {
+  padding: 0 20px 0 10px !important;
+  background-image: url(../images/common/icon_select_arr.svg);
+  background-position: right center;
 }
-.font-scaleUp .sbgrid_common {
-  font-size: 13px;
+.test .input-bx .SumoSelect.disabled {
+  opacity: 1;
+}
+.test .input-bx .SumoSelect.disabled .SelectBox {
+  background-color: #E4E4E4 !important;
+  border: 1px solid #C6C6C6 !important;
+  color: #555 !important;
+  opacity: 1;
+  pointer-events: none;
+}
+.test .input-bx .SumoSelect > .CaptionCont {
+  padding: 5px 20px 5px 10px !important;
+  border-color: #c6c6c6;
+  background-color: #fff;
+  background-size: 20px;
+  border-radius: 4px;
+}
+.test .input-bx .SumoSelect > .CaptionCont input {
+  border: 0;
+  background: transparent;
+  height: 100%;
+}
+.test .input-bx .SumoSelect > .CaptionCont > label > i {
+  background-image: url(../images/common/icon_select_arr.svg);
+  background-position: right center;
+  background-size: 20px;
+  margin-right: 0;
+  opacity: 1;
+}
+.test input[type=date][data-placeholder]::before {
+  background: #fff;
+}
+.test input[type=date][data-placeholder]:disabled:before, .test input[type=date][data-placeholder].disabled:before {
+  background: #E4E4E4 !important;
+}
+.test .list-info {
+  position: relative;
+}
+.test .list-info .filter-control-bx {
+  position: relative;
+  right: 0;
+  top: -1px;
+  gap: 6px;
+  margin-left: 2px;
+}
+
+.icon-excel {
+  width: 18px;
+  height: 18px;
+  background: url(../images/sub/icon_excel.svg) no-repeat center/cover;
 }

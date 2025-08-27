@@ -823,8 +823,27 @@ input[type="checkbox"]:checked {
         transition: 0.3s;
 
         &:hover {
-            border: 1px solid #000 !important;
-            color: #000;
+            background: #EFF5FF !important;
+        }
+    }
+
+    &.border-green {
+        background: #fff;
+        color: #107C41 !important;
+        border: 1px solid #107C41 !important;
+
+        &:hover {
+            background: #f2fff7 !important;
+        }
+    }
+    
+    &.border-red {
+        background: #fff;
+        color: #FF3E3E !important;
+        border: 1px solid #FF3E3E;
+
+        &:hover {
+            background: #ffeff2 !important;
         }
     }
 
@@ -835,8 +854,7 @@ input[type="checkbox"]:checked {
         transition: 0.3s;
 
         &:hover {
-            border: 1px solid #000 !important;
-            color: #000;
+            background: #f8f8f8 !important;
         }
     }
 
@@ -847,6 +865,11 @@ input[type="checkbox"]:checked {
     &:disabled,
     &.disabled {
       pointer-events: none;
+      border-color: #c3ccd4 !important;
+      background: #eef3f7;
+      color: #adb3b9 !important;
+      font-weight: normal;
+      cursor: default;
     }
 }
 
@@ -918,8 +941,27 @@ input[type="checkbox"]:checked {
         transition: 0.3s;
 
         &:hover {
-            border: 1px solid #000 !important;
-            color: #000;
+            background: #EFF5FF !important;
+        }
+    }
+
+    &.border-green {
+        background: #fff;
+        color: #107C41 !important;
+        border: 1px solid #107C41 !important;
+
+        &:hover {
+            background: #f2fff7 !important;
+        }
+    }
+
+    &.border-red {
+        background: #fff;
+        color: #FF3E3E !important;
+        border: 1px solid #FF3E3E;
+
+        &:hover {
+            background: #ffeff2 !important;
         }
     }
 
@@ -930,7 +972,7 @@ input[type="checkbox"]:checked {
         transition: 0.3s;
 
         &:hover {
-            background: #ddd;
+            background: #f8f8f8 !important;
         }
     }
 
@@ -957,6 +999,11 @@ input[type="checkbox"]:checked {
     &:disabled,
     &.disabled {
       pointer-events: none;
+      border-color: #c3ccd4 !important;
+      background: #eef3f7;
+      color: #adb3b9 !important;
+      font-weight: normal;
+      cursor: default;
     }
 }
                 

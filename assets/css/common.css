@@ -52421,8 +52421,23 @@ input[type=checkbox]:checked:disabled {
   transition: 0.3s;
 }
 .btn-1.border-blue:hover {
-  border: 1px solid #000 !important;
-  color: #000;
+  background: #EFF5FF !important;
+}
+.btn-1.border-green {
+  background: #fff;
+  color: #107C41 !important;
+  border: 1px solid #107C41 !important;
+}
+.btn-1.border-green:hover {
+  background: #f2fff7 !important;
+}
+.btn-1.border-red {
+  background: #fff;
+  color: #FF3E3E !important;
+  border: 1px solid #FF3E3E;
+}
+.btn-1.border-red:hover {
+  background: #ffeff2 !important;
 }
 .btn-1.border-black {
   background: #fff;
@@ -52432,14 +52447,18 @@ input[type=checkbox]:checked:disabled {
   transition: 0.3s;
 }
 .btn-1.border-black:hover {
-  border: 1px solid #000 !important;
-  color: #000;
+  background: #f8f8f8 !important;
 }
 .btn-1.w-auto {
   white-space: nowrap;
 }
 .btn-1:disabled, .btn-1.disabled {
   pointer-events: none;
+  border-color: #c3ccd4 !important;
+  background: #eef3f7;
+  color: #adb3b9 !important;
+  font-weight: normal;
+  cursor: default;
 }
 
 .btn-2 {
@@ -52512,8 +52531,23 @@ input[type=checkbox]:checked:disabled {
   transition: 0.3s;
 }
 .btn-2.border-blue:hover {
-  border: 1px solid #000 !important;
-  color: #000;
+  background: #EFF5FF !important;
+}
+.btn-2.border-green {
+  background: #fff;
+  color: #107C41 !important;
+  border: 1px solid #107C41 !important;
+}
+.btn-2.border-green:hover {
+  background: #f2fff7 !important;
+}
+.btn-2.border-red {
+  background: #fff;
+  color: #FF3E3E !important;
+  border: 1px solid #FF3E3E;
+}
+.btn-2.border-red:hover {
+  background: #ffeff2 !important;
 }
 .btn-2.border-black {
   background: #fff;
@@ -52523,7 +52557,7 @@ input[type=checkbox]:checked:disabled {
   transition: 0.3s;
 }
 .btn-2.border-black:hover {
-  background: #ddd;
+  background: #f8f8f8 !important;
 }
 .btn-2.fill-lightBlue {
   background: #73abff;
@@ -52545,6 +52579,11 @@ input[type=checkbox]:checked:disabled {
 }
 .btn-2:disabled, .btn-2.disabled {
   pointer-events: none;
+  border-color: #c3ccd4 !important;
+  background: #eef3f7;
+  color: #adb3b9 !important;
+  font-weight: normal;
+  cursor: default;
 }
 
 .table-header, .cont-header {

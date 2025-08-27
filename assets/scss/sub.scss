@@ -264,7 +264,6 @@
             visibility: visible !important;
             display: block;
         }
-
         .form-inner {
             position: absolute;
             top: 0;
@@ -561,6 +560,33 @@
             }
         }      
     }
+        
+    input[type='date'][data-placeholder]{
+        position: relative;
+        background-color: transparent;
+
+        &::before {
+            content: attr(data-placeholder);
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc( 100% - 40px );
+            height: 100%;
+            padding-left: 11px;
+            background: #eff5fa;
+        }
+                
+        &:focus::before,
+        &:valid::before {
+            display: none;
+        }
+
+        &:disabled:before, &.disabled:before{
+            background: #f0f0f0 !important;
+        }
+    }
 
     .input-bx {
         input[type='file'],
@@ -599,6 +625,19 @@
         .input-area{
             gap: 4px;
             min-height: 34px;
+        }
+
+        
+        .SumoSelect{
+            &.disabled{
+                opacity: 1;
+                
+                .SelectBox {
+                    background-color: #f0f0f0 !important;
+                    border: 1px solid #8E8E8E !important;
+                    color: #1D1D1D !important;
+                }
+            }
         }
     }
 
@@ -705,6 +744,9 @@
             }
 
             .btn-bx {
+                display: flex;
+                gap: 4px;
+
                 a, button{
                     display: inline-flex;
                     align-items: center;
@@ -718,6 +760,9 @@
                 }
 
                 .download-excel-btn {
+                    min-width: 0;
+                    padding: 0 7px;
+
                     img {
                         filter: brightness(0) saturate(100%) invert(25%) sepia(93%) saturate(4425%) hue-rotate(147deg) brightness(86%) contrast(87%);
                     }
@@ -1766,6 +1811,9 @@
             position: relative;
             display: flex;
             flex-direction: column;
+            background: #f3f7fd;
+            border-right: 1px dashed #cad6ea;
+            border-top: 1px solid transparent;
 
             &.off {
                 display: none;
@@ -1833,7 +1881,7 @@
                 }
 
                 .input-list {
-                    gap: 24px 0;
+                    // gap: 24px 0;
                     margin-right: -12px;
                     margin-left: -12px;
 
@@ -1900,7 +1948,7 @@
                 border-top: 1px dashed #cad6ea;
             }
 
-            &.half_right{
+            &.half_right, & + .half:not(.half_left){
                 background: #f9fbfd !important;
                 border-right: 0 !important;
                 border-top: 1px dashed #cad6ea !important;
@@ -2229,9 +2277,12 @@
             font-weight: 500;
 
             &.active, &:active{
-                border-bottom: 3px solid #2D78E8;
                 font-weight: 600;
                 color: #2D78E8;
+
+                &:after{
+                    background:#2D78E8;
+                }
             }
         }
     }
@@ -2618,28 +2669,44 @@
         ul {
             display: flex;
             margin-bottom: 10px;
+            border-bottom: 3px solid #c5d2e0;
 
             li {
                 flex: 1;
+                padding: 0 10px;
 
                 a {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    position: relative;
                     height: 43px;
-                    border-bottom: 3px solid #c5d2e0;
                     font-size: 16px;
                     font-weight: 800;
                     color: #7b8d9f;
                     transition: 0.3s;
+
+                    &:after{
+                        content:'';
+                        position: absolute;
+                        top: 100%;
+                        left: -10px;
+                        width: calc( 100% + 20px );
+                        height: 3px;
+                        background: #5d81a9;
+                        opacity: 0;
+                    }
 
                     &:hover {
                         color: #30485f;
                     }
 
                     &.active {
-                        border-bottom: 3px solid #5d81a9;
                         color: #30485f;
+
+                        &:after {
+                            opacity: 1;
+                        }
                     }
                 }
             }
@@ -3181,4 +3248,136 @@
             background-size: 16px;
         }
     }
+}
+
+.SumoSelect > select:disabled {
+    overflow: hidden;
+    
+    .SelectBox {
+        background-color: #f0f0f0 !important;
+        border: 1px solid #8E8E8E !important;
+        color: #1D1D1D !important;
+        opacity: 1;
+        pointer-events: none;
+    }
+}
+
+.test {
+    header .side-nav .side-container .side-nav-list > li .depth3 li > .link{
+        color: #555;
+    }
+
+    header > .container .control-bx{
+        display: none;
+    }
+
+    header > .container .nav{
+        gap: 24px;
+
+        li .link{
+            font-size: 17px;
+        }
+    }
+
+    header > .container .nav .btn_gnb_toggle{
+        padding-right: 0;
+        background: none;
+        font-size: 17px;
+    }
+
+    header > .container .nav .menu-box{
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 13px;
+    }
+
+    .filter-bx .form-inner{
+        padding-right: 20px;
+    }
+
+    .input-bx {
+        input[type=file], input[type=date], input[type=datetime-local], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select{
+            border-color: #c6c6c6;
+            background-color: #fff;
+            background-size: 20px;
+            border-radius: 4px;
+
+            &:disabled, &[readonly]{
+                pointer-events: none;
+                background-color: #E4E4E4 !important;
+                border: 1px solid #C6C6C6 !important;
+                color: #555 !important;
+            }
+        }
+
+        select{
+            padding: 0 20px 0 10px !important;
+            background-image: url(../images/common/icon_select_arr.svg);
+            background-position: right center;
+        }
+
+        .SumoSelect{
+            &.disabled{
+                opacity: 1;
+                
+                .SelectBox {
+                    background-color: #E4E4E4 !important;
+                    border: 1px solid #C6C6C6 !important;
+                    color: #555 !important;
+                    opacity: 1;
+                    pointer-events: none;
+                }
+            }
+
+            & >.CaptionCont{
+                padding: 5px 20px 5px 10px !important;
+                border-color: #c6c6c6;
+                background-color: #fff;
+                background-size: 20px;
+                border-radius: 4px;
+
+                input{
+                    border: 0;
+                    background: transparent;
+                    height: 100%;
+                }
+            
+                & > label > i {
+                    background-image: url(../images/common/icon_select_arr.svg);
+                    background-position: right center;
+                    background-size: 20px;
+                    margin-right: 0;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    input[type='date'][data-placeholder]{
+        &::before {
+            background: #fff;
+        }
+
+        &:disabled:before, &.disabled:before{
+            background: #E4E4E4 !important;
+        }
+    }
+
+    .list-info{
+        position: relative;
+
+        .filter-control-bx {
+            position: relative;
+            right: 0;
+            top: -1px;
+            gap: 6px;
+            margin-left: 2px;
+        }
+    }
+}
+
+.icon-excel {
+    width: 18px;
+    height: 18px;
+    background: url(../images/sub/icon_excel.svg) no-repeat center / cover;
 }
