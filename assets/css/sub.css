@@ -2605,7 +2605,7 @@
 
 .circle-open-btn {
   position: absolute;
-  bottom: 0;
+  bottom: 2px;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(50%);
           transform: translateX(-50%) translateY(50%);
@@ -2923,6 +2923,9 @@
 }
 .page-mgmt .tab-content .half .tree-container {
   overflow-y: auto;
+}
+.page-mgmt .circle-open-btn {
+  bottom: 2px;
 }
 .page-mgmt .tree-container {
   width: 100%;
@@ -3308,13 +3311,37 @@
 }
 .test .list-info {
   position: relative;
+  gap: 4px;
 }
 .test .list-info .filter-control-bx {
   position: relative;
   right: 0;
-  top: -1px;
-  gap: 6px;
+  top: 0;
+  gap: 4px;
   margin-left: 2px;
+}
+.test .list-info .filter-control-bx .type-circle-btn {
+  width: 30px;
+  height: 30px;
+}
+.test .list-info .filter-control-bx .type-circle-btn img {
+  width: 16px;
+}
+.test .list-info .btn-bx select {
+  font-family: "Pretendard GOV" !important;
+  font-size: 12px;
+  height: 30px;
+  padding: 0 24px 0 8px !important;
+}
+.test .list-info .btn-bx a, .test .list-info .btn-bx button {
+  font-size: 12px;
+  min-width: 0;
+  padding: 0 10px;
+  height: 30px;
+}
+.test .list-info .btn-bx .download-excel-btn {
+  min-width: 0;
+  padding: 0 5px;
 }
 
 .icon-excel {
