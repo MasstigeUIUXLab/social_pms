@@ -42485,9 +42485,10 @@ header .side-nav .open-page {
   min-width: 392px;
 }
 .btn:disabled, .btn.disabled {
-  background: #747474 !important;
-  border-color: #747474 !important;
+  background: #eef3f7 !important;
+  border-color: #c3ccd4 !important;
   pointer-events: none;
+  color: #adb3b9 !important;
 }
 .btn-full {
   width: 100%;
@@ -48501,7 +48502,8 @@ select::-ms-expand {
 }
 
 input.input-date,
-input.input-type-date {
+input.input-type-date,
+input.datepicker {
   padding: 0 28px 0 7px !important;
   background-image: url(../../assets/images/common/icon_date.svg);
   background-repeat: no-repeat;

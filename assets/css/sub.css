@@ -1999,6 +1999,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
+  height: 100%;
   /* .filter-bx {
     .form-inner {
       display: flex;
@@ -2250,6 +2251,9 @@
   margin-top: 20px;
   padding: 0;
 }
+.sub-body .content-bx > .half .list-bx.tab-content {
+  padding: 0;
+}
 .sub-body .content-bx > .half .list-bx .pagination-bx {
   padding-bottom: 24px;
 }
@@ -2269,6 +2273,10 @@
 .type2 .tab-bx .tab-body .tab-content {
   padding: 24px 20px;
   border: 1px solid #CED6DF;
+}
+.type2 .tab-bx .tab-body .tab-content > .list-bx {
+  height: calc(100% + 48px);
+  margin: -24px -20px;
 }
 .type2 .tab-bx .tab-header ul li a {
   font-weight: 500;
@@ -2462,12 +2470,12 @@
   background-color: transparent;
 }
 .type2 .sbgrid_fixed_table_nohover_st .sbgrid_fixed_cell_st {
-  border-width: 0 0 1px;
+  border-width: 0 0 1px 0px;
   border-bottom: 1px solid #D3E2F2;
   background: #F7FAFE;
 }
 .type2 .sbgrid_fixed_cell_st {
-  border-width: 0px 1px 1px;
+  border-width: 0px 1px 1px 0px;
   border-color: #fff;
 }
 .type2 .sbgrid_focus_st {
@@ -2764,6 +2772,14 @@
 .tab-bx .tab-body .tab-content .list {
   padding: 0;
 }
+.tab-bx .tab-body .tab-content > .list-bx {
+  height: calc(100% + 32px);
+  border: 0;
+  margin: -16px;
+}
+.tab-bx .tab-body .tab-content > .list-bx .list {
+  padding: 20px 20px 24px;
+}
 .tab-bx .tab-body .tab-content.active {
   display: block;
 }
@@ -2911,11 +2927,7 @@
       -ms-flex: 1;
           flex: 1;
 }
-.page-mgmt .list {
-  padding: 24px 20px;
-}
 .page-mgmt .list-info {
-  margin-top: -10px;
   margin-bottom: 12px;
 }
 .page-mgmt .tab-content {
@@ -3220,6 +3232,40 @@
   background-size: 16px;
 }
 
+/* 250822 폰트 사이즈 전체적으로 키움 */
+.font-scaleUp .process-bx.v2 ul li span:nth-child(1) {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.font-scaleUp .content-bx > .half.on .process-bx.v2 ul li span:nth-child(1) {
+  font-size: 14px;
+}
+.font-scaleUp .tab-bx .tab-header ul li a {
+  font-size: 17px;
+}
+.font-scaleUp .table-bx > table tr:not([class^=sbgrid]) .table-btn-01 {
+  font-size: 13px;
+}
+.font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=file], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=date], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=datetime-local], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=email], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=month], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=number], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=password], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=search], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=tel], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=text], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=time], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=url], .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) input[type=week] {
+  font-size: 13px;
+}
+.font-scaleUp .table-bx > table tr:not([class^=sbgrid]) select, .font-scaleUp .table-bx > table tr:not([class^=sbgrid]) textarea {
+  font-size: 13px;
+}
+.font-scaleUp .table-bx > table tr:not([class^=sbgrid]) > *:not([class^=sbgrid]) {
+  font-size: 15px;
+}
+.font-scaleUp .content-bx > .half.on .tab-bx .tab-header ul li a {
+  font-size: 17px;
+}
+.font-scaleUp .content-bx > .half.on .table-bx > table tr:not([class^=sbgrid]) > *:not([class^=sbgrid]) {
+  font-size: 15px;
+}
+.font-scaleUp .sbgrid_common {
+  font-size: 13px;
+}
+
 .SumoSelect > select:disabled {
   overflow: hidden;
 }
@@ -3232,7 +3278,25 @@
 }
 
 .test header .side-nav .side-container .side-nav-list > li .depth3 li > .link {
+  font-size: 15px;
   color: #555;
+}
+.test header .side-nav .side-container .side-nav-list > li .depth3 li > .link.active {
+  color: #194FA4;
+  font-weight: 700;
+}
+.test header .side-nav .side-container .side-nav-list > li .depth2 {
+  padding: 7.5px 0 6.5px 25px;
+  font-size: 15px;
+  line-height: 1.25;
+}
+.test header .side-nav .side-container .side-nav-list > li:not(.none-depth3).active .depth2::before, .test header .side-nav .side-container .side-nav-list > li:not(.none-depth3).active .depth2::after {
+  top: 23px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.test header .side-nav .side-container .side-nav-list > li:not(.none-depth3).active .depth2 {
+  padding: 15px 22px 14px 25px;
 }
 .test header > .container .control-bx {
   display: none;
@@ -3260,7 +3324,6 @@
 .test .input-bx input[type=file], .test .input-bx input[type=date], .test .input-bx input[type=datetime-local], .test .input-bx input[type=email], .test .input-bx input[type=month], .test .input-bx input[type=number], .test .input-bx input[type=password], .test .input-bx input[type=search], .test .input-bx input[type=tel], .test .input-bx input[type=text], .test .input-bx input[type=time], .test .input-bx input[type=url], .test .input-bx input[type=week], .test .input-bx select {
   border-color: #c6c6c6;
   background-color: #fff;
-  background-size: 20px;
   border-radius: 4px;
 }
 .test .input-bx input[type=file]:disabled, .test .input-bx input[type=file][readonly], .test .input-bx input[type=date]:disabled, .test .input-bx input[type=date][readonly], .test .input-bx input[type=datetime-local]:disabled, .test .input-bx input[type=datetime-local][readonly], .test .input-bx input[type=email]:disabled, .test .input-bx input[type=email][readonly], .test .input-bx input[type=month]:disabled, .test .input-bx input[type=month][readonly], .test .input-bx input[type=number]:disabled, .test .input-bx input[type=number][readonly], .test .input-bx input[type=password]:disabled, .test .input-bx input[type=password][readonly], .test .input-bx input[type=search]:disabled, .test .input-bx input[type=search][readonly], .test .input-bx input[type=tel]:disabled, .test .input-bx input[type=tel][readonly], .test .input-bx input[type=text]:disabled, .test .input-bx input[type=text][readonly], .test .input-bx input[type=time]:disabled, .test .input-bx input[type=time][readonly], .test .input-bx input[type=url]:disabled, .test .input-bx input[type=url][readonly], .test .input-bx input[type=week]:disabled, .test .input-bx input[type=week][readonly], .test .input-bx select:disabled, .test .input-bx select[readonly] {
@@ -3273,6 +3336,7 @@
   padding: 0 20px 0 10px !important;
   background-image: url(../images/common/icon_select_arr.svg);
   background-position: right center;
+  background-size: 20px;
 }
 .test .input-bx .SumoSelect.disabled {
   opacity: 1;
@@ -3308,6 +3372,15 @@
 }
 .test input[type=date][data-placeholder]:disabled:before, .test input[type=date][data-placeholder].disabled:before {
   background: #E4E4E4 !important;
+}
+.test .sbgrid_fixed_cell_st {
+  border-color: #D3E2F2;
+}
+.test .sbgrid_data_cell_st {
+  border-color: #d3e2f2 !important;
+}
+.test .sbgrid_fixed_table_nohover_st .sbgrid_fixed_cell_st {
+  border-width: 0 1px 1px 0px;
 }
 .test .list-info {
   position: relative;
@@ -3348,4 +3421,8 @@
   width: 18px;
   height: 18px;
   background: url(../images/sub/icon_excel.svg) no-repeat center/cover;
+}
+
+.daterangepicker:not(.single) .drp-calendar.left .next span {
+  display: none;
 }

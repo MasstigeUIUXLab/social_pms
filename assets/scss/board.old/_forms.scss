@@ -157,7 +157,8 @@ select{
 }
 
 input.input-date, 
-input.input-type-date{
+input.input-type-date,
+input.datepicker{
     padding: 0 28px 0 7px!important;
     background-image: url(../../assets/images/common/icon_date.svg);
     background-repeat: no-repeat;

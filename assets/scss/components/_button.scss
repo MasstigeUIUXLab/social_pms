@@ -185,9 +185,10 @@
 
   &:disabled,
   &.disabled {
-    background: #747474 !important;
-    border-color: #747474 !important;
+    background: #eef3f7 !important;
+    border-color: #c3ccd4 !important;
     pointer-events: none;
+    color: #adb3b9 !important;
   }
 
   &-full{

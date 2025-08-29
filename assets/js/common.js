@@ -1070,15 +1070,17 @@ $(document).on('propertychange change keyup paste input','.fixable',function () 
 
 /* 데이트피커 */
 function makeDatepicker() {
-  $('.input-date').daterangepicker({
-    autoApply: true,
-    startDate: moment().startOf("day"),
-    endDate: moment().startOf("day"),
-    locale: {
-      format: "YY-MM-DD",
-    },
-    timePicker: false,
-  });
+  if($('.input-date').length){
+    $('.input-date').daterangepicker({
+      autoApply: true,
+      startDate: moment().startOf("day"),
+      endDate: moment().startOf("day"),
+      locale: {
+        format: "YY-MM-DD",
+      },
+      timePicker: false,
+    });
+  }
 
   if($('[data-type="ym"]').length){
     $('[data-type="ym"]').monthpicker({
@@ -1092,10 +1094,62 @@ function makeDatepicker() {
       dateFormat: 'yy-mm'
     });
   }
+
+  if($('.datepicker:not([data-type="single"])').length){
+    $('.datepicker:not([data-type="single"])').daterangepicker({
+      alwaysShowCalendars: true,
+      autoUpdateInput: false,
+      locale: {
+        yearSuffix: "년",
+        applyLabel:"확인", 
+        cancelLabel: "초기화", 
+        format: 'YYYY-MM-DD',
+        daysOfWeek:["일", "월", "화", "수", "목", "금", "토" ], 
+        monthNames:["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"], 
+        showDropdowns: true,
+      },
+      changeMonth: true, 
+    }).on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('YYYY.MM.DD') + ' - ' + picker.endDate.format('YYYY.MM.DD'));
+    }).on('cancel.daterangepicker', function(ev, picker) {
+      $(ev.currentTarget).val('');
+      $(ev.currentTarget).attr('placeholder', $(ev.currentTarget).data('placeholder'));
+    })
+  }
+  
+  if($('[data-type="single"]').length){
+    $('[data-type="single"]').daterangepicker({
+      singleDatePicker: true,
+      alwaysShowCalendars: true,
+      autoUpdateInput: false,
+      locale: {
+        yearSuffix: "년",
+        applyLabel:"확인", 
+        cancelLabel: "초기화", 
+        format: 'YYYY-MM-DD',
+        daysOfWeek:["일", "월", "화", "수", "목", "금", "토" ],
+        monthNames:["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"], 
+        showDropdowns: true,
+      },
+      changeMonth: true, 
+    }).on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('YYYY.MM.DD'));
+    }).on('cancel.daterangepicker', function(ev, picker) {
+      $(ev.currentTarget).val('');
+      $(ev.currentTarget).attr('placeholder', $(ev.currentTarget).data('placeholder'));
+    })
+  }
+  
+  $('.datepicker').each(function(){
+    var $this = $(this);
+    var placeholderText = $this.data('placeholder');
+    if (placeholderText) {
+      $this.attr('placeholder', placeholderText);
+    }
+  });
 }
 
 $(function () {
-
   $(document).on('focus','.input-date',function () {
     $(this).daterangepicker({
       autoApply: true,
