@@ -3277,16 +3277,38 @@
   pointer-events: none;
 }
 
+.test header .side-nav {
+  width: 200px;
+}
+.test .page-container {
+  padding-left: 200px;
+}
+.test header .side-nav .side-container .side-nav-list > li {
+  padding-right: 4px;
+  padding-left: 4px;
+}
 .test header .side-nav .side-container .side-nav-list > li .depth3 li > .link {
   font-size: 15px;
-  color: #555;
+  color: #666;
 }
 .test header .side-nav .side-container .side-nav-list > li .depth3 li > .link.active {
   color: #194FA4;
   font-weight: 700;
 }
+.test header .side-nav .side-container .side-nav-list > li .depth2::before {
+  top: 16px;
+  left: 6px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.test header .side-nav .side-container .side-nav-list > li .depth2::after {
+  top: 16px;
+  right: 6px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
 .test header .side-nav .side-container .side-nav-list > li .depth2 {
-  padding: 7.5px 0 6.5px 25px;
+  padding: 7.5px 22px 6.5px 22px;
   font-size: 15px;
   line-height: 1.25;
 }
@@ -3296,21 +3318,45 @@
   transition: 0.3s;
 }
 .test header .side-nav .side-container .side-nav-list > li:not(.none-depth3).active .depth2 {
-  padding: 15px 22px 14px 25px;
+  padding: 15px 22px 14px 22px;
+}
+.test header > .container {
+  padding: 0 20px 0 10px;
 }
 .test header > .container .control-bx {
   display: none;
 }
+.test header > .container .info-bx {
+  margin-right: 0;
+}
 .test header > .container .nav {
-  gap: 24px;
+  gap: 32px;
 }
 .test header > .container .nav li .link {
   font-size: 17px;
+}
+.test header > .container .logo-bx {
+  width: 160px;
+  margin-right: 30px;
+}
+.test header > .container .nav {
+  padding-top: 14px;
 }
 .test header > .container .nav .btn_gnb_toggle {
   padding-right: 0;
   background: none;
   font-size: 17px;
+}
+.test header > .container .nav .btn_gnb_toggle span {
+  display: block;
+  margin-bottom: 1px;
+  line-height: 1;
+  font-size: inherit;
+  letter-spacing: -0.04em;
+}
+.test header .side-nav .side-container {
+  padding-right: 8px;
+  padding-left: 8px;
 }
 .test header > .container .nav .menu-box {
   left: 50%;
@@ -3318,8 +3364,86 @@
           transform: translateX(-50%);
   margin-left: 13px;
 }
+.test .open-page {
+  width: calc(100% - 200px);
+}
+.test .open-page .container .indicator {
+  margin-right: 24px;
+}
+.test .sub-content-title {
+  color: #222;
+}
+.test .input-list {
+  gap: 8px 0 !important;
+}
+.test .process-bx ul li span:nth-child(1) {
+  color: #222;
+}
+.test .process-bx ul li span:nth-child(2) {
+  color: #717171;
+}
+.test .tab-bx .tab-header ul {
+  border-bottom: 0;
+  margin-bottom: 16px;
+}
+.test .tab-bx .tab-header ul li {
+  padding: 0;
+}
+.test .tab-bx .tab-header ul li a {
+  padding: 0 10px;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #c5d2e0;
+}
+.test .tab-bx .tab-body .tab-content {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+.test .tab-bx .tab-header ul li a {
+  color: #555;
+}
+.test .tab-bx .tab-header ul li a.active {
+  border: 1px solid #2D78E8;
+  border-bottom-color: transparent;
+  border-radius: 4px 4px 0 0;
+}
+.test .tab-bx .tab-header ul li a:hover {
+  font-weight: 600;
+  color: #2D78E8;
+}
+.test .tab-bx .tab-header ul li a:after {
+  display: none !important;
+}
+.test .content-bx > .half.half_right, .test .content-bx > .half + .half:not(.half_left) {
+  background-color: #fff !important;
+}
 .test .filter-bx .form-inner {
-  padding-right: 20px;
+  padding-right: 100px;
+}
+.test textarea, .test .table-btn-01, .test input[type=file], .test input[type=date], .test input[type=datetime-local], .test input[type=email], .test input[type=month], .test input[type=number], .test input[type=password], .test input[type=search], .test input[type=tel], .test input[type=text], .test input[type=time], .test input[type=url], .test input[type=week], .test select {
+  color: #222;
+}
+.test textarea::-webkit-input-placeholder, .test .table-btn-01::-webkit-input-placeholder, .test input[type=file]::-webkit-input-placeholder, .test input[type=date]::-webkit-input-placeholder, .test input[type=datetime-local]::-webkit-input-placeholder, .test input[type=email]::-webkit-input-placeholder, .test input[type=month]::-webkit-input-placeholder, .test input[type=number]::-webkit-input-placeholder, .test input[type=password]::-webkit-input-placeholder, .test input[type=search]::-webkit-input-placeholder, .test input[type=tel]::-webkit-input-placeholder, .test input[type=text]::-webkit-input-placeholder, .test input[type=time]::-webkit-input-placeholder, .test input[type=url]::-webkit-input-placeholder, .test input[type=week]::-webkit-input-placeholder, .test select::-webkit-input-placeholder {
+  color: #ccc !important;
+}
+.test textarea::-moz-placeholder, .test .table-btn-01::-moz-placeholder, .test input[type=file]::-moz-placeholder, .test input[type=date]::-moz-placeholder, .test input[type=datetime-local]::-moz-placeholder, .test input[type=email]::-moz-placeholder, .test input[type=month]::-moz-placeholder, .test input[type=number]::-moz-placeholder, .test input[type=password]::-moz-placeholder, .test input[type=search]::-moz-placeholder, .test input[type=tel]::-moz-placeholder, .test input[type=text]::-moz-placeholder, .test input[type=time]::-moz-placeholder, .test input[type=url]::-moz-placeholder, .test input[type=week]::-moz-placeholder, .test select::-moz-placeholder {
+  color: #ccc !important;
+}
+.test textarea:-ms-input-placeholder, .test .table-btn-01:-ms-input-placeholder, .test input[type=file]:-ms-input-placeholder, .test input[type=date]:-ms-input-placeholder, .test input[type=datetime-local]:-ms-input-placeholder, .test input[type=email]:-ms-input-placeholder, .test input[type=month]:-ms-input-placeholder, .test input[type=number]:-ms-input-placeholder, .test input[type=password]:-ms-input-placeholder, .test input[type=search]:-ms-input-placeholder, .test input[type=tel]:-ms-input-placeholder, .test input[type=text]:-ms-input-placeholder, .test input[type=time]:-ms-input-placeholder, .test input[type=url]:-ms-input-placeholder, .test input[type=week]:-ms-input-placeholder, .test select:-ms-input-placeholder {
+  color: #ccc !important;
+}
+.test textarea::-ms-input-placeholder, .test .table-btn-01::-ms-input-placeholder, .test input[type=file]::-ms-input-placeholder, .test input[type=date]::-ms-input-placeholder, .test input[type=datetime-local]::-ms-input-placeholder, .test input[type=email]::-ms-input-placeholder, .test input[type=month]::-ms-input-placeholder, .test input[type=number]::-ms-input-placeholder, .test input[type=password]::-ms-input-placeholder, .test input[type=search]::-ms-input-placeholder, .test input[type=tel]::-ms-input-placeholder, .test input[type=text]::-ms-input-placeholder, .test input[type=time]::-ms-input-placeholder, .test input[type=url]::-ms-input-placeholder, .test input[type=week]::-ms-input-placeholder, .test select::-ms-input-placeholder {
+  color: #ccc !important;
+}
+.test textarea::placeholder, .test .table-btn-01::placeholder, .test input[type=file]::placeholder, .test input[type=date]::placeholder, .test input[type=datetime-local]::placeholder, .test input[type=email]::placeholder, .test input[type=month]::placeholder, .test input[type=number]::placeholder, .test input[type=password]::placeholder, .test input[type=search]::placeholder, .test input[type=tel]::placeholder, .test input[type=text]::placeholder, .test input[type=time]::placeholder, .test input[type=url]::placeholder, .test input[type=week]::placeholder, .test select::placeholder {
+  color: #ccc !important;
+}
+.test .SumoSelect {
+  color: #222;
+}
+.test .SumoSelect > .CaptionCont > span.placeholder {
+  color: #ccc;
 }
 .test .input-bx input[type=file], .test .input-bx input[type=date], .test .input-bx input[type=datetime-local], .test .input-bx input[type=email], .test .input-bx input[type=month], .test .input-bx input[type=number], .test .input-bx input[type=password], .test .input-bx input[type=search], .test .input-bx input[type=tel], .test .input-bx input[type=text], .test .input-bx input[type=time], .test .input-bx input[type=url], .test .input-bx input[type=week], .test .input-bx select {
   border-color: #c6c6c6;
@@ -3334,6 +3458,7 @@
 }
 .test .input-bx select {
   padding: 0 20px 0 10px !important;
+  background-color: transparent;
   background-image: url(../images/common/icon_select_arr.svg);
   background-position: right center;
   background-size: 20px;
@@ -3416,6 +3541,18 @@
   min-width: 0;
   padding: 0 5px;
 }
+.test .sbgrid_common {
+  font-size: 14px;
+}
+.test .sbgrid_GA_st, .test .sbgrid_common {
+  font-family: "Pretendard gov", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.test .table-bx > table tr:not([class^=sbgrid]) > *:not([class^=sbgrid]) {
+  color: #222;
+}
+.test .table-bx > table tr:not([class^=sbgrid]) > *:not([class^=sbgrid]).subject-name {
+  color: #222;
+}
 
 .icon-excel {
   width: 18px;
@@ -3425,4 +3562,101 @@
 
 .daterangepicker:not(.single) .drp-calendar.left .next span {
   display: none;
+}
+
+/* datepicker new */
+.ui-datepicker-trigger {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 32px;
+  height: 100%;
+  padding: 0;
+  background-image: url(../images/common/icon_date.svg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 7px) center;
+  background-size: 13px;
+  font-size: 0;
+}
+
+.ui-datepicker-header .ui-icon {
+  background-image: url(../images/icon/Icon_calendar.png);
+  background-position: center;
+  background-size: 16px;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-title select {
+  background-image: url(../images/common/icon_select_arr.svg);
+  background-size: 24px;
+  background-position: right center;
+  font-family: "Pretendard gov", sans-serif !important;
+  color: #435C73;
+  font-weight: 600;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-prev,
+#ui-datepicker-div.ui-datepicker .ui-datepicker-next {
+  position: absolute;
+  top: 50%;
+  width: 1.8em;
+  height: 1.8em;
+  background-image: url(../images/icon/Icon_calendar.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#ui-datepicker-div .ui-widget-header {
+  background: #fff;
+}
+
+#ui-datepicker-div .ui-state-default, #ui-datepicker-div .ui-widget-content .ui-state-default, #ui-datepicker-div .ui-widget-header .ui-state-default, #ui-datepicker-div .ui-button {
+  background: #fefefe;
+  border: 1px solid #d6dfed;
+  color: #555555;
+}
+
+#ui-datepicker-div .ui-state-highlight, #ui-datepicker-div .ui-widget-content .ui-state-highlight, #ui-datepicker-div .ui-widget-header .ui-state-highlight {
+  border: 1px solid #f7e04f;
+  background: #fdffe6;
+  color: #435C73;
+}
+
+#ui-datepicker-div .ui-widget-header {
+  border: 1px solid #aaaaaa;
+  position: relative;
+  padding: 10px 0;
+  background: #fff;
+  border: 1px solid #d6dfed;
+  padding: 5px 0;
+  color: #435C73;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-header {
+  padding: 10px 0;
+}
+
+#ui-datepicker-div .ui-state-active, #ui-datepicker-div .ui-widget-content .ui-state-active, #ui-datepicker-div .ui-widget-header .ui-state-active, #ui-datepicker-div a.ui-button:active {
+  border: 1px solid #2d78e8;
+  background: #eff5fa;
+  color: #435C73;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-prev {
+  left: 4px !important;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-next {
+  right: 4px !important;
 }
