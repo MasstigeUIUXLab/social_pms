@@ -650,23 +650,27 @@
             <tr>
                 <!-- subject-name 안쪽 span에 <i class="icon_required">*</i> 추가 -->
                 <td class="subject-name">
-                    <span> <i class="icon_required">*</i>타이틀 </span>
+                    <span> <i class="icon_required">*</i>항목명 </span>
                 </td>
+            </tr>
+            <tr>
+                <!-- [D] 250905 추가 / 필수 항목 관련 컴포넌트 업데이트 (label 태그로 감싸져있는 항목명의 경우 아래처럼 사용) -->
+                <td class="subject-name">
+                    <label><span><i class="icon_required">*</i>항목명</span></label>
+                </td>
+                <!-- // -->
             </tr>
         </tbody>
     </table>
 
     <!-- [D] 07-01 첨부파일 관련 아이콘 추가 -->
-    <div class="table-header">
-        <h4 class="tit">첨부파일</h4>
-    </div>
     <div class="table-bx">
         <table>
             <colgroup>
                 <col style="width: 140px">
                 <col style="width: calc(70% - 140px)">
             </colgroup>
-            <tbody class="border-top">
+            <tbody>
                 <tr>
                     <td class="subject-name fw-600"><span><i class="icon_required">*</i>국비 수령통장 사본</span></td>
                     <td>
@@ -704,6 +708,43 @@
         </table>
     </div>
     <!-- // 07-01 첨부파일 관련 아이콘 추가 -->
+     
+    <!-- [D] 250905 추가 / 첨부파일 관련 컴포넌트 업데이트 -->
+    <div class="table-bx">
+		<table>
+			<colgroup>
+				<col style="width: 28%">
+				<col style="width: 72%">
+			</colgroup>
+			<tbody>
+				<tr>
+					<td class="subject-name fw-600">
+						<span> <i class="icon_required">*</i>사업자등록증 </span>
+					</td>
+					<td>
+						<div class="input-area">
+							<div class="file-upload-group">
+								<input type="hidden" id="atchFl10Sn" name="atchFl10Sn" title="사업자등록증" class="req" value="78046341">
+								<input type="hidden" id="atchFl10Id" name="atchFl10Id" value="de1fadfc-69c2-4bfe-a256-fad064809be8">
+								<input type="text" id="file10Nm" name="atchFl10Nm" class="file_name" readonly="readonly" onclick="obSePrcoAtchFileLayer.downAtchFl('atchFl10Sn');">
+								<label for="obSePrcoAtchFileLayer_oneclickAtchFl10Sn">
+									<input type="file" id="obSePrcoAtchFileLayer_oneclickAtchFl10Sn" name="" class="upload_file" style="display:none;">
+								</label>
+							</div>
+							<div class="btn-flex flex-auto ml-1">
+								<button type="button" class="btn-1 border-blue file-upload-btn" onclick="obSePrcoAtchFileLayer.clickUploadFile('obSePrcoAtchFileLayer_oneclickAtchFl10Sn');">첨부</button> 
+								<button type="button" class="btn-1 border-blue" id="obSePrcoAtchFileLayer_btnDownAtchFl10" onclick="obSePrcoAtchFileLayer.downAtchFl('atchFl10Sn');">다운</button>
+								<button type="button" class="btn-1 border-red trgBtn" id="obSePrcoAtchFileLayer_btndeleteFl10" onclick="obSePrcoAtchFileLayer.deleteFl('atchFl10Sn');">삭제</button>
+								<button type="button" class="btn-1 border-blue" id="obSePrcoAtchFileLayer_btnviewPDF10" onclick="obSePrcoAtchFileLayer.viewPDF('atchFl10Sn');">PDF</button>
+							</div>
+						</div>
+					</td>
+				</tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- // -->
+
     <!-- // E : table -->
 
     <!-- S : tab -->

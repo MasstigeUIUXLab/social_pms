@@ -52878,7 +52878,7 @@ input[type=number] {
           align-items: center;
   gap: 8px;
 }
-.inner-input-bx > *:not(.w-auto) {
+.inner-input-bx > *:not([class*=w-]) {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;

@@ -81,7 +81,10 @@
 }
 .sub-body .process-bx {
   width: 100%;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+}
+.sub-body .process-bx > * + * {
+  margin-bottom: 10px;
 }
 .sub-body .process-bx ul {
   display: -webkit-box;
@@ -98,6 +101,7 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  margin-bottom: 10px;
 }
 .sub-body .process-bx ul li {
   position: relative;
@@ -195,6 +199,26 @@
 }
 .sub-body .process-bx ul li.process-ongoing > a span:nth-child(2) {
   color: #2d78e8;
+}
+.sub-body .process-bx ul li a.theme_blue {
+  border: 1px solid #2d78e8;
+  opacity: 1;
+}
+.sub-body .process-bx ul li a.theme_blue span:nth-child(1) {
+  color: #222;
+}
+.sub-body .process-bx ul li a.theme_blue span:nth-child(2) {
+  color: #2d78e8;
+}
+.sub-body .process-bx ul li a.theme_red {
+  border: 1px solid #e73639;
+  opacity: 1;
+}
+.sub-body .process-bx ul li a.theme_red span:nth-child(1) {
+  color: #222;
+}
+.sub-body .process-bx ul li a.theme_red span:nth-child(2) {
+  color: #e73639;
 }
 .sub-body .process-bx ul li span:nth-child(1) {
   font-size: 8px;
@@ -607,7 +631,7 @@
   background-size: 18px;
 }
 .sub-body .input-bx select.w-auto {
-  width: 40% !important;
+  max-width: 40% !important;
 }
 .sub-body .input-bx .input-area {
   gap: 4px;
@@ -3337,7 +3361,7 @@
 }
 .test header > .container .logo-bx {
   width: 160px;
-  margin-right: 30px;
+  margin-right: 56px;
 }
 .test header > .container .nav {
   padding-top: 14px;

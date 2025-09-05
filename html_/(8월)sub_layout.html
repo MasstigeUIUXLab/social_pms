@@ -435,6 +435,15 @@
 
                             <!-- S:진행단계 -->
                             <!-- [D] 06-02 항목 줄이고 숫자 옆으로 배치 / 기존 process-bx에 .v2 추가 -->
+
+                            <!-- [D] 250905 진행상태 항목 활성화 <li>태그가 아닌 <a>태그에 개별 처리
+
+                                .process-start / ongoing 등 li에 들어가있던 클래스 삭제 후 
+                                <a>태그(.process-main 또는 .process-sub)에 필요한 색상에 따라 .theme_red, .theme_blue 삽입
+
+                                * 색상 참고
+                                아무것도 넣지 않은 상태 => 회색 / .theme_red => 빨강 / .theme_blue => 파랑
+                            -->
                             <div class="process-bx v2">
                                 <ul>
                                     <!--
@@ -453,20 +462,20 @@
                                             <span>237</span>
                                         </a>
                                     </li>
-                                     <li class="process-ongoing">
-                                        <a href="javascript:void(0);" class="process-main">
+                                     <li>
+                                        <a href="javascript:void(0);" class="process-main theme_red">
                                             <span>서류검토중</span>
                                             <span>2,999</span>
                                         </a>
-                                        <a href="javascript:void(0);" class="process-sub">
+                                        <a href="javascript:void(0);" class="process-sub theme_red">
                                             <span>현장실사</span>
                                             <span>999</span>
                                         </a>
-                                        <a href="javascript:void(0);" class="process-sub">
+                                        <a href="javascript:void(0);" class="process-sub theme_red">
                                             <span>보완요청</span>
                                             <span>999</span>
                                         </a>
-                                        <a href="javascript:void(0);" class="process-sub">
+                                        <a href="javascript:void(0);" class="process-sub theme_blue">
                                             <span>보완제출</span>
                                             <span>999</span>
                                         </a>
