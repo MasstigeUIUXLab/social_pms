@@ -41006,7 +41006,7 @@ header {
 }
 header > .container {
   max-width: none;
-  padding: 0 20px;
+  padding: 0 20px 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41020,7 +41020,8 @@ header > .container {
   background: #fff;
 }
 header > .container .logo-bx {
-  margin-right: 24px;
+  width: 160px;
+  margin-right: 56px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -41037,7 +41038,8 @@ header > .container .nav {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  gap: 20px;
+  gap: 32px;
+  padding-top: 14px;
   margin-right: auto;
   height: 100%;
 }
@@ -41054,7 +41056,7 @@ header > .container .nav li .link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   color: #222;
   letter-spacing: -0.64px;
@@ -41082,12 +41084,19 @@ header > .container .nav li .link:hover::before, header > .container .nav li .li
 header > .container .nav .btn_gnb_toggle {
   display: block;
   height: 100%;
-  font-size: 15px;
-  padding-right: 32px;
+  font-size: 17px;
+  padding-right: 0;
   margin-right: auto;
-  background: url(../images/common/icon_menu_toggle.svg) no-repeat right center/24px;
+  background: none;
   font-weight: 500;
   color: #222;
+}
+header > .container .nav .btn_gnb_toggle span {
+  display: block;
+  margin-bottom: 1px;
+  line-height: 1;
+  font-size: inherit;
+  letter-spacing: -0.04em;
 }
 header > .container .nav .btn_gnb_toggle.active + .menu-box {
   display: block;
@@ -41096,7 +41105,10 @@ header > .container .nav .menu-box {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-left: 13px;
   margin-top: -21px;
   padding: 12px 20px;
   border-radius: 8px;
@@ -41162,7 +41174,6 @@ header > .container .info-bx {
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  margin-right: 16px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -41291,6 +41302,7 @@ header > .container .control-bx {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   overflow: hidden;
+  display: none;
 }
 header > .container .control-bx > div {
   width: 33.33%;
@@ -41322,7 +41334,7 @@ header .side-nav {
   position: absolute;
   top: 80px;
   left: 0;
-  width: 246px;
+  width: 200px;
   height: calc(100vh - 84px);
   max-height: 1004px;
   border-right: 1px solid #E4E4E4;
@@ -41331,7 +41343,7 @@ header .side-nav {
 header .side-nav .side-container {
   width: 100%;
   height: 100%;
-  padding: 30px 12.5px;
+  padding: 30px 8px;
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41359,7 +41371,7 @@ header .side-nav .side-container .side-nav-list {
 }
 header .side-nav .side-container .side-nav-list > li {
   margin-bottom: 24px;
-  padding: 0 12.5px;
+  padding: 0 4px;
   border: 1px solid transparent;
   border-radius: 8px;
 }
@@ -41369,11 +41381,11 @@ header .side-nav .side-container .side-nav-list > li:last-child {
 header .side-nav .side-container .side-nav-list > li .depth2 {
   display: block;
   position: relative;
-  padding: 6.5px 22px 6.5px 25px;
+  padding: 7.5px 22px 6.5px 22px;
   border-bottom: 1px solid #EBEBEB;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.25;
   color: #5A6A77;
   cursor: pointer;
   -webkit-transition: 0.3s;
@@ -41387,12 +41399,14 @@ header .side-nav .side-container .side-nav-list > li .depth2::before {
   width: 9px;
   aspect-ratio: 9/10;
   position: absolute;
-  top: 50%;
-  left: 8px;
+  top: 16px;
+  left: 6px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-filter: brightness(0) saturate(100%) invert(55%) sepia(7%) saturate(1963%) hue-rotate(171deg) brightness(92%) contrast(82%);
           filter: brightness(0) saturate(100%) invert(55%) sepia(7%) saturate(1963%) hue-rotate(171deg) brightness(92%) contrast(82%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 header .side-nav .side-container .side-nav-list > li .depth2::after {
   content: "";
@@ -41402,8 +41416,8 @@ header .side-nav .side-container .side-nav-list > li .depth2::after {
   width: 12px;
   aspect-ratio: 12/9;
   position: absolute;
-  top: 50%;
-  right: 8px;
+  top: 16px;
+  right: 6px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-filter: brightness(0) saturate(100%) invert(55%) sepia(7%) saturate(1963%) hue-rotate(171deg) brightness(92%) contrast(82%);
@@ -41428,11 +41442,11 @@ header .side-nav .side-container .side-nav-list > li .depth3 li {
   padding: 0 0 0 14px;
 }
 header .side-nav .side-container .side-nav-list > li .depth3 li > .link {
-  font-size: 14px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: normal;
-  color: #8597A6;
+  font-size: 15px;
+  color: #666;
   padding-left: 10px;
   position: relative;
   word-break: break-all;
@@ -41448,6 +41462,7 @@ header .side-nav .side-container .side-nav-list > li .depth3 li > .link:before {
 }
 header .side-nav .side-container .side-nav-list > li .depth3 li > .link.active {
   color: #194FA4;
+  font-weight: 700;
 }
 header .side-nav .side-container .side-nav-list > li .depth3 li > .link.active::before {
   background: #194FA4;
@@ -41462,10 +41477,13 @@ header .side-nav .side-container .side-nav-list > li:not(.none-depth3).active {
   transition: 0.6s;
 }
 header .side-nav .side-container .side-nav-list > li:not(.none-depth3).active .depth2 {
-  padding: 17.5px 22px 17.5px 25px;
+  padding: 15px 22px 14px 22px;
   color: #0F4372;
 }
 header .side-nav .side-container .side-nav-list > li:not(.none-depth3).active .depth2::before, header .side-nav .side-container .side-nav-list > li:not(.none-depth3).active .depth2::after {
+  top: 23px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   -webkit-filter: brightness(0) saturate(100%) invert(17%) sepia(86%) saturate(1201%) hue-rotate(185deg) brightness(96%) contrast(93%);
           filter: brightness(0) saturate(100%) invert(17%) sepia(86%) saturate(1201%) hue-rotate(185deg) brightness(96%) contrast(93%);
 }
@@ -44519,6 +44537,22 @@ header .side-nav .open-page {
 }
 .memo-popup .memo-list textarea {
   padding-right: 80px;
+  padding-top: 25px;
+  overflow: auto;
+  resize: vertical;
+  pointer-events: auto;
+}
+.memo-popup .memo-list textarea + span {
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: calc(100% - 14px);
+  font-size: 12px;
+  padding: 6px 0 4px 4px;
+  background: #fff;
+}
+.memo-popup .memo-list textarea:disabled + span {
+  background: #f0f0f0;
 }
 .memo-popup .memo-list .btns {
   position: absolute;
