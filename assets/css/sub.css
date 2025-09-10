@@ -577,6 +577,37 @@
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+.sub-body .filter-bx.h-auto .form-inner {
+  position: relative;
+  height: auto;
+  border: 0;
+  padding: 0 100px 0 0;
+  border: 0;
+  border-radius: 0;
+}
+.sub-body .filter-bx.h-auto .form-inner .input-bx:nth-child(1n+5) {
+  visibility: visible;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.sub-body .filter-bx.h-auto .form-inner .input-list {
+  position: unset;
+}
+.sub-body .filter-bx.h-auto .form-inner .input-list .input-bx:not(.type-circle-btn) {
+  width: 25%;
+  max-height: unset;
+}
+.sub-body .filter-bx.h-auto .form-inner .input-list .input-bx:not(.type-circle-btn) h3 {
+  font-size: 12px !important;
+  color: #1d1d1d;
+  display: block !important;
+  margin-bottom: 4px;
+}
+.sub-body .filter-bx.h-auto .form-inner .filter-control-bx.top_fix {
+  top: 0;
+  right: 0;
+}
 .sub-body input[type=date][data-placeholder] {
   position: relative;
   background-color: transparent;
@@ -617,14 +648,14 @@
 .sub-body .input-bx input[type=url],
 .sub-body .input-bx input[type=week],
 .sub-body .input-bx select {
-  height: 34px;
-  padding: 0 10px;
-  border-color: #c6c6c6;
-  background-color: #fff;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 500;
-  color: #222;
+  height: 34px !important;
+  padding: 0 10px !important;
+  border-color: #c6c6c6 !important;
+  background-color: #fff !important;
+  border-radius: 4px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #222 !important;
 }
 .sub-body .input-bx input[type=file]:disabled, .sub-body .input-bx input[type=file][readonly],
 .sub-body .input-bx input[type=date]:disabled,
@@ -660,13 +691,25 @@
 }
 .sub-body .input-bx select {
   padding: 0 20px 0 10px !important;
-  background-color: transparent;
+  background-color: transparent !important;
   background-image: url(../images/common/icon_select_arr.svg);
-  background-position: right center;
-  background-size: 20px;
+  background-position: right center !important;
+  background-size: 20px !important;
 }
 .sub-body .input-bx select.w-auto {
   max-width: 40% !important;
+}
+.sub-body .input-bx .SumoSelect {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #222 !important;
+}
+.sub-body .input-bx .SumoSelect > .CaptionCont input {
+  background: transparent !important;
+  border-color: transparent !important;
+  border: 0 !important;
+  height: 100% !important;
+  padding: 5px 20px 5px 10px !important;
 }
 .sub-body .input-bx .input-area {
   gap: 4px;

@@ -301,6 +301,7 @@
             visibility: visible !important;
             display: block;
         }
+        
         .form-inner {
             position: absolute;
             top: 0;
@@ -596,6 +597,45 @@
                 }
             }
         }      
+    
+        &.h-auto{
+            .form-inner {
+                position: relative;
+                height: auto;
+                border: 0;
+                padding: 0 100px 0 0;
+                border: 0;
+                border-radius: 0;
+
+                .input-bx{
+                    &:nth-child(1n+5){
+                        visibility: visible;
+                        display: flex;
+                    }
+                }
+
+                .input-list {
+                    position: unset;
+
+                    .input-bx:not(.type-circle-btn) {
+                        width: 25%;
+                        max-height: unset;
+    
+                        h3 {
+                            font-size: 12px !important;
+                            color: #1d1d1d;
+                            display: block !important;
+                            margin-bottom: 4px;
+                        }
+                    }
+                }
+
+                .filter-control-bx.top_fix{
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
     }
         
     input[type='date'][data-placeholder]{
@@ -642,17 +682,17 @@
         input[type='url'],
         input[type='week'],
         select{
-            height: 34px;
-            padding: 0 10px;
+            height: 34px !important;
+            padding: 0 10px !important;
             // border: 1px solid #e8eef4;
             // background-color: #eff5fa;
             // border-radius: 50px;
-            border-color: #c6c6c6;
-            background-color: #fff;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 500;
-            color: #222;
+            border-color: #c6c6c6 !important;
+            background-color: #fff !important;
+            border-radius: 4px !important;
+            font-size: 12px !important;
+            font-weight: 500 !important;
+            color: #222 !important;
 
              &:disabled, &[readonly]{
                 pointer-events: none;
@@ -664,13 +704,27 @@
         
         select{
             padding: 0 20px 0 10px !important;
-            background-color: transparent;
+            background-color: transparent !important;
             background-image: url(../images/common/icon_select_arr.svg);
-            background-position: right center;
-            background-size: 20px;
+            background-position: right center !important;
+            background-size: 20px !important;
 
             &.w-auto{
                 max-width: 40% !important;
+            }
+        }
+        
+        .SumoSelect {
+            font-size: 12px !important;
+            font-weight: 500 !important;
+            color: #222 !important;
+
+            & > .CaptionCont input{
+                background: transparent !important;
+                border-color: transparent !important;
+                border: 0 !important;
+                height: 100% !important;
+                padding: 5px 20px 5px 10px !important;
             }
         }
 
