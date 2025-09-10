@@ -604,7 +604,6 @@
                 height: auto;
                 border: 0;
                 padding: 0 100px 0 0;
-                border: 0;
                 border-radius: 0;
 
                 .input-bx{
@@ -883,6 +882,10 @@
                     font-weight: 500;
                     color: #435C73;
                     line-height: 1.375;
+                }
+
+                input{
+                    height: 30px !important;
                 }
             }
 
@@ -2191,16 +2194,6 @@
     }
 
     .tab-bx {
-        .tab-body .tab-content{
-            // padding: 24px 20px;
-            // border: 1px solid #CED6DF;
-
-            & > .list-bx {
-                height: calc(100% + 48px);
-                margin: -24px -20px;
-            }
-        }
-
         .tab-header ul li a{
             font-weight: 500;
 
@@ -2690,12 +2683,28 @@
             }
 
             & > .list-bx{
-                height: calc(100% + 32px);
                 border: 0;
-                margin: -16px;
+                border-radius: 0;
 
                 .list {
-                    padding: 20px 20px 24px;
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+
+                .filter-bx {
+                    .form-inner{
+                        height: 56px;
+                        padding: 0 100px 20px 0;
+                    
+                        .filter-control-bx{
+                            top: 0;
+                            right: 0;
+                        }
+                    }
+
+                    & + .list{
+                        padding-top: 20px;
+                    }
                 }
             }
 

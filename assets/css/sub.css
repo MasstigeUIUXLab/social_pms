@@ -582,7 +582,6 @@
   height: auto;
   border: 0;
   padding: 0 100px 0 0;
-  border: 0;
   border-radius: 0;
 }
 .sub-body .filter-bx.h-auto .form-inner .input-bx:nth-child(1n+5) {
@@ -882,6 +881,9 @@
   font-weight: 500;
   color: #435C73;
   line-height: 1.375;
+}
+.sub-body .list-info .input-bx input {
+  height: 30px !important;
 }
 .sub-body .list-info .btn-bx {
   display: -webkit-box;
@@ -2193,10 +2195,6 @@
 .type2 .sub-content-title {
   font-size: 22px;
 }
-.type2 .tab-bx .tab-body .tab-content > .list-bx {
-  height: calc(100% + 48px);
-  margin: -24px -20px;
-}
 .type2 .tab-bx .tab-header ul li a {
   font-weight: 500;
 }
@@ -2701,12 +2699,23 @@
   padding: 0;
 }
 .tab-bx .tab-body .tab-content > .list-bx {
-  height: calc(100% + 32px);
   border: 0;
-  margin: -16px;
+  border-radius: 0;
 }
 .tab-bx .tab-body .tab-content > .list-bx .list {
-  padding: 20px 20px 24px;
+  padding-right: 0;
+  padding-left: 0;
+}
+.tab-bx .tab-body .tab-content > .list-bx .filter-bx .form-inner {
+  height: 56px;
+  padding: 0 100px 20px 0;
+}
+.tab-bx .tab-body .tab-content > .list-bx .filter-bx .form-inner .filter-control-bx {
+  top: 0;
+  right: 0;
+}
+.tab-bx .tab-body .tab-content > .list-bx .filter-bx + .list {
+  padding-top: 20px;
 }
 .tab-bx .tab-body .tab-content.active {
   display: block;

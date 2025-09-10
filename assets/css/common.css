@@ -51633,7 +51633,6 @@ body {
   min-width: 1800px;
   height: 100vh;
   min-height: 870px;
-  max-height: 1080px;
 }
 @media screen and (max-height: 870px) {
   body {
