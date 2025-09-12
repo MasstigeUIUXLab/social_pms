@@ -44446,6 +44446,26 @@ header .side-nav .open-page {
   font-weight: 700;
 }
 
+.notice-popup .modal-body {
+  padding: 0;
+}
+.notice-popup .popup-container {
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-bottom: 30px;
+}
+.notice-popup .popup-container .popup-inner {
+  margin-right: -24px;
+  padding-right: 24px;
+}
+.notice-popup .popup-container .popup-inner > .popup-close {
+  right: 24px;
+}
+.notice-popup .popup-container .popup-btn-bx {
+  height: auto;
+  margin-top: 24px;
+}
+
 .memo-popup {
   position: absolute;
   width: 800px;
