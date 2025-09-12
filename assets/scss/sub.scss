@@ -2060,6 +2060,18 @@
                     .checkbox-field, .radio-field{
                         font-size: 16px;
                     }
+
+                    .inner-input-bx {
+                        gap: 24px;
+
+                        & > .w-auto{
+                            margin: 0 -16.5px !important;
+                        }
+
+                        .input-area .w-auto {
+                            margin: 0 -4.6px !important;
+                        }
+                    }
                 }
 
                 .filter-bx .form-inner {
@@ -2392,6 +2404,10 @@
     .sbgrid_data_cell_st{
         border-color: #d3e2f2 !important;
     }
+    
+    .sbgrid_tree_ui_data_cell{
+        border-bottom: 0;
+    }
 
     .sbgrid_fixed_table_nohover_st{
         background-color: transparent;
@@ -2412,18 +2428,32 @@
         border-bottom-color: transparent !important;
     }
 
+    .sbgrid_FFHA_st,
     .sbgrid_FFRHA_st, .sbgrid_FHA_st{
         border-bottom: 1px solid #D3E2F2;
     }
 
-    
     .sbgrid_common{
         font-size: 14px;
+    }
+
+    .sbgrid_button{
+        min-height: unset;
+        padding: 4px 6px !important;
+        font-size: 12px;
+        line-height: 1;
     }
 
    .sbgrid_GA_st, .sbgrid_common{
         font-family: "Pretendard gov", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     }
+}
+
+.sbgrid_datepicker_button_st{
+    margin-top: 3px;
+}
+.sbgrid_disabled_checkbox_radio_cell_st input {
+    margin-top: -2px
 }
 
 .input-list {
@@ -2473,6 +2503,20 @@
             width: 100%;
             color: #555;
             font-size: 14px;
+        }
+    }
+
+    .inner-input-bx {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        & > .w-auto{
+            margin: 0 -10px !important;
+        }
+
+        .input-area .w-auto {
+            margin: 0 -1.5px !important;
         }
     }
 
@@ -3318,18 +3362,30 @@
 /* datepicker new */
 .ui-datepicker-trigger{
     position: absolute;
-    top: 0;
-    right: 0px;
+    top: 2px;
+    right: 1px;
     width: 32px;
-    height: 100%;
+    height: calc(100% - 4px);
     padding: 0;
+    background-color: #fff;
     background-image: url(../images/common/icon_date.svg);
     background-repeat: no-repeat;
     background-position: calc(100% - 7px) center;
     background-size: 13px;
     font-size: 0;
     /* 250908 추가 */
+    // background-image: none;
+}
+
+.datepicker ~ .ui-datepicker-trigger,
+input[type="hidden"] ~ .ui-datepicker-trigger{
+    background-color: transparent;
     background-image: none;
+}
+
+input:disabled ~ .ui-datepicker-trigger,
+input[readonly] ~ .ui-datepicker-trigger{
+    background-color:#E4E4E4;
 }
 
 .ui-datepicker-header .ui-icon {

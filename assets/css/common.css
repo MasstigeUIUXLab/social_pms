@@ -48353,7 +48353,7 @@ select {
           box-shadow: none !important;
   font-size: 12px;
   font-weight: 400;
-  color: #435C73;
+  color: #222;
   text-align: left;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -48361,16 +48361,16 @@ select {
   font-family: "맑은 고딕", "Malgun Gothic" !important;
 }
 textarea::-webkit-input-placeholder, .table-btn-01::-webkit-input-placeholder, input[type=file]::-webkit-input-placeholder, input[type=date]::-webkit-input-placeholder, input[type=datetime-local]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=month]::-webkit-input-placeholder, input[type=number]::-webkit-input-placeholder, input[type=password]::-webkit-input-placeholder, input[type=search]::-webkit-input-placeholder, input[type=tel]::-webkit-input-placeholder, input[type=text]::-webkit-input-placeholder, input[type=time]::-webkit-input-placeholder, input[type=url]::-webkit-input-placeholder, input[type=week]::-webkit-input-placeholder, select::-webkit-input-placeholder {
-  color: #8e8e8e;
+  color: #ccc;
 }
 textarea::-moz-placeholder, .table-btn-01::-moz-placeholder, input[type=file]::-moz-placeholder, input[type=date]::-moz-placeholder, input[type=datetime-local]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=month]::-moz-placeholder, input[type=number]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=search]::-moz-placeholder, input[type=tel]::-moz-placeholder, input[type=text]::-moz-placeholder, input[type=time]::-moz-placeholder, input[type=url]::-moz-placeholder, input[type=week]::-moz-placeholder, select::-moz-placeholder {
-  color: #8e8e8e;
+  color: #ccc;
 }
 textarea:-ms-input-placeholder, .table-btn-01:-ms-input-placeholder, input[type=file]:-ms-input-placeholder, input[type=date]:-ms-input-placeholder, input[type=datetime-local]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=month]:-ms-input-placeholder, input[type=number]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, input[type=search]:-ms-input-placeholder, input[type=tel]:-ms-input-placeholder, input[type=text]:-ms-input-placeholder, input[type=time]:-ms-input-placeholder, input[type=url]:-ms-input-placeholder, input[type=week]:-ms-input-placeholder, select:-ms-input-placeholder {
-  color: #8e8e8e;
+  color: #ccc;
 }
 textarea::-ms-input-placeholder, .table-btn-01::-ms-input-placeholder, input[type=file]::-ms-input-placeholder, input[type=date]::-ms-input-placeholder, input[type=datetime-local]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder, input[type=month]::-ms-input-placeholder, input[type=number]::-ms-input-placeholder, input[type=password]::-ms-input-placeholder, input[type=search]::-ms-input-placeholder, input[type=tel]::-ms-input-placeholder, input[type=text]::-ms-input-placeholder, input[type=time]::-ms-input-placeholder, input[type=url]::-ms-input-placeholder, input[type=week]::-ms-input-placeholder, select::-ms-input-placeholder {
-  color: #8e8e8e;
+  color: #ccc;
 }
 textarea::placeholder, .table-btn-01::placeholder,
 input[type=file]::placeholder,
@@ -48387,7 +48387,7 @@ input[type=time]::placeholder,
 input[type=url]::placeholder,
 input[type=week]::placeholder,
 select::placeholder {
-  color: #8e8e8e;
+  color: #ccc;
 }
 textarea.style01, .style01.table-btn-01,
 input.style01[type=file],
@@ -48413,16 +48413,16 @@ select.style01 {
   color: #1d1d1d;
 }
 textarea.style01::-webkit-input-placeholder, .style01.table-btn-01::-webkit-input-placeholder, input.style01[type=file]::-webkit-input-placeholder, input.style01[type=date]::-webkit-input-placeholder, input.style01[type=datetime-local]::-webkit-input-placeholder, input.style01[type=email]::-webkit-input-placeholder, input.style01[type=month]::-webkit-input-placeholder, input.style01[type=number]::-webkit-input-placeholder, input.style01[type=password]::-webkit-input-placeholder, input.style01[type=search]::-webkit-input-placeholder, input.style01[type=tel]::-webkit-input-placeholder, input.style01[type=text]::-webkit-input-placeholder, input.style01[type=time]::-webkit-input-placeholder, input.style01[type=url]::-webkit-input-placeholder, input.style01[type=week]::-webkit-input-placeholder, select.style01::-webkit-input-placeholder {
-  color: #8e8e8e;
+  color: #ccc;
 }
 textarea.style01::-moz-placeholder, .style01.table-btn-01::-moz-placeholder, input.style01[type=file]::-moz-placeholder, input.style01[type=date]::-moz-placeholder, input.style01[type=datetime-local]::-moz-placeholder, input.style01[type=email]::-moz-placeholder, input.style01[type=month]::-moz-placeholder, input.style01[type=number]::-moz-placeholder, input.style01[type=password]::-moz-placeholder, input.style01[type=search]::-moz-placeholder, input.style01[type=tel]::-moz-placeholder, input.style01[type=text]::-moz-placeholder, input.style01[type=time]::-moz-placeholder, input.style01[type=url]::-moz-placeholder, input.style01[type=week]::-moz-placeholder, select.style01::-moz-placeholder {
-  color: #8e8e8e;
+  color: #ccc;
 }
 textarea.style01:-ms-input-placeholder, .style01.table-btn-01:-ms-input-placeholder, input.style01[type=file]:-ms-input-placeholder, input.style01[type=date]:-ms-input-placeholder, input.style01[type=datetime-local]:-ms-input-placeholder, input.style01[type=email]:-ms-input-placeholder, input.style01[type=month]:-ms-input-placeholder, input.style01[type=number]:-ms-input-placeholder, input.style01[type=password]:-ms-input-placeholder, input.style01[type=search]:-ms-input-placeholder, input.style01[type=tel]:-ms-input-placeholder, input.style01[type=text]:-ms-input-placeholder, input.style01[type=time]:-ms-input-placeholder, input.style01[type=url]:-ms-input-placeholder, input.style01[type=week]:-ms-input-placeholder, select.style01:-ms-input-placeholder {
-  color: #8e8e8e;
+  color: #ccc;
 }
 textarea.style01::-ms-input-placeholder, .style01.table-btn-01::-ms-input-placeholder, input.style01[type=file]::-ms-input-placeholder, input.style01[type=date]::-ms-input-placeholder, input.style01[type=datetime-local]::-ms-input-placeholder, input.style01[type=email]::-ms-input-placeholder, input.style01[type=month]::-ms-input-placeholder, input.style01[type=number]::-ms-input-placeholder, input.style01[type=password]::-ms-input-placeholder, input.style01[type=search]::-ms-input-placeholder, input.style01[type=tel]::-ms-input-placeholder, input.style01[type=text]::-ms-input-placeholder, input.style01[type=time]::-ms-input-placeholder, input.style01[type=url]::-ms-input-placeholder, input.style01[type=week]::-ms-input-placeholder, select.style01::-ms-input-placeholder {
-  color: #8e8e8e;
+  color: #ccc;
 }
 textarea.style01::placeholder, .style01.table-btn-01::placeholder,
 input.style01[type=file]::placeholder,
@@ -48439,7 +48439,7 @@ input.style01[type=time]::placeholder,
 input.style01[type=url]::placeholder,
 input.style01[type=week]::placeholder,
 select.style01::placeholder {
-  color: #8e8e8e;
+  color: #ccc;
 }
 textarea.no-style, .no-style.table-btn-01,
 input.no-style[type=file],
@@ -52518,7 +52518,7 @@ input[type=checkbox]:checked:disabled {
 
 .btn-2 {
   min-width: 156px;
-  height: 64px;
+  height: 56px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52724,6 +52724,9 @@ input[type=checkbox]:checked:disabled {
 }
 .table-header .btn-flex .btn, .table-header .btn-flex .btn-1, .cont-header .btn-flex .btn, .cont-header .btn-flex .btn-1 {
   height: auto;
+  padding: 5px 12px;
+  min-width: 45px;
+  min-height: 30px;
 }
 
 .half > .tab-bx > .table-header > .tit {
@@ -52936,6 +52939,9 @@ input[type=number] {
       -ms-flex: 1;
           flex: 1;
   min-width: 0;
+}
+.inner-input-bx.wide {
+  gap: 12px;
 }
 
 .cont-bx.bx {

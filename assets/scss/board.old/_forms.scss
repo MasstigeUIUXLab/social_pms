@@ -67,14 +67,15 @@ select {
     box-shadow: none !important;
     font-size: 12px;
     font-weight: 400;
-    color: #435C73;
+    // color: #435C73;
+    color: #222;
     text-align: left;
     appearance: none;
     font-family: '맑은 고딕', 'Malgun Gothic' !important;
 
 
     &::placeholder{
-        color: #8e8e8e;
+        color: #ccc;
     }
 
     &.style01{
@@ -87,7 +88,7 @@ select {
         color: #1d1d1d;
 
         &::placeholder{
-            color: #8e8e8e;
+            color: #ccc;
         }
 
         // &.sm{

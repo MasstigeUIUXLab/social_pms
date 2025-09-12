@@ -324,8 +324,9 @@ button.sbgrid-ui-button::-moz-focus-inner {
 .sbgrid-ui-datepicker .sbgrid-ui-datepicker-header {
 	position: relative;
 	padding: 0.2em 0;
-	background: #194fa4;
-	color: #fff;
+	background: #fff;
+    border: 1px solid #d6dfed;
+    color: #435C73;
 }
 .sbgrid-ui-datepicker .sbgrid-ui-datepicker-prev,
 .sbgrid-ui-datepicker .sbgrid-ui-datepicker-next {
@@ -334,22 +335,22 @@ button.sbgrid-ui-button::-moz-focus-inner {
 	width: 1.8em;
 	height: 1.8em;
 }
-.sbgrid-ui-datepicker .sbgrid-ui-datepicker-prev-hover,
+/* .sbgrid-ui-datepicker .sbgrid-ui-datepicker-prev-hover,
 .sbgrid-ui-datepicker .sbgrid-ui-datepicker-next-hover {
 	top: 1px;
-}
+} */
 .sbgrid-ui-datepicker .sbgrid-ui-datepicker-prev {
 	left: 2px;
 }
 .sbgrid-ui-datepicker .sbgrid-ui-datepicker-next {
 	right: 2px;
 }
-.sbgrid-ui-datepicker .sbgrid-ui-datepicker-prev-hover {
+/* .sbgrid-ui-datepicker .sbgrid-ui-datepicker-prev-hover {
 	left: 1px;
 }
 .sbgrid-ui-datepicker .sbgrid-ui-datepicker-next-hover {
 	right: 1px;
-}
+} */
 .sbgrid-ui-datepicker .sbgrid-ui-datepicker-prev span,
 .sbgrid-ui-datepicker .sbgrid-ui-datepicker-next span {
 	display: block;
@@ -362,11 +363,11 @@ button.sbgrid-ui-button::-moz-focus-inner {
 
 /*2018-03-15 (yeon3564): CSS 커스텀 적용 [테마 적용]  */
 .sbgrid-ui-datepicker .sbgrid-ui-datepicker-prev span.sbgrid-ui-icon.sbgrid-ui-icon-circle-triangle-w {
-	background: url(../../img/grid/arrow-l.png) center no-repeat;
+	background: url(../../img/grid/arrow-l_simple.png) center no-repeat;
 }
 
 .sbgrid-ui-datepicker .sbgrid-ui-datepicker-next span.sbgrid-ui-icon.sbgrid-ui-icon-circle-triangle-e {
-	background: url(../../img/grid/arrow-r.png) center no-repeat;
+	background: url(../../img/grid/arrow-r_simple.png) center no-repeat;
 }
 
 .sbgrid-ui-datepicker .sbgrid-ui-datepicker-title {
@@ -931,11 +932,11 @@ body .sbgrid-ui-tooltip {
 .sbgrid-ui-widget-content .sbgrid-ui-state-default,
 .sbgrid-ui-widget-header .sbgrid-ui-state-default {
 	font-weight: normal;
-	color: #454545;
+	color: #333;
 	/* background: #deeffd; */
-	/* border: 1px solid #caddec; */
-	background-color: #ebeef5;
-	border: 1px solid #d2d7e1;
+	/* border: 1px solid #caddec; */ 
+	background: #fefefe;
+    border: 1px solid #d6dfed;
 }
 .sbgrid-ui-state-default a,
 .sbgrid-ui-state-default a:link,
@@ -970,9 +971,9 @@ body .sbgrid-ui-tooltip {
 .sbgrid-ui-widget-content .sbgrid-ui-state-active,
 .sbgrid-ui-widget-header .sbgrid-ui-state-active {
 	font-weight: normal;
-    border: 1px solid #194fa4;
-    background: #deeffd;
-    color: #194fa4;
+	border: 1px solid #2d78e8;
+    background: #eff5fa;
+	color: #333;
 }
 .sbgrid-ui-state-active a,
 .sbgrid-ui-state-active a:link,
@@ -987,9 +988,9 @@ body .sbgrid-ui-tooltip {
 .sbgrid-ui-state-highlight,
 .sbgrid-ui-widget-content .sbgrid-ui-state-highlight,
 .sbgrid-ui-widget-header .sbgrid-ui-state-highlight {
-	border: 1px solid #dad55e;
-	background: #fffa90;
-	color: #777620;
+	border: 1px solid #f7e04f;
+    background: #fdffe6;
+	color: #333;
 }
 .sbgrid-ui-state-highlight a,
 .sbgrid-ui-widget-content .sbgrid-ui-state-highlight a,

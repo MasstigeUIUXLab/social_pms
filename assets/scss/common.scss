@@ -875,7 +875,7 @@ input[type="checkbox"]:checked {
 
 .btn-2 {
     min-width: 156px;
-    height: 64px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1071,6 +1071,9 @@ input[type="checkbox"]:checked {
 
         .btn, .btn-1{
           height: auto;
+          padding: 5px 12px;
+          min-width: 45px;
+          min-height: 30px;
         }
     }
 }
@@ -1268,6 +1271,10 @@ input[type='number'] {
     & > *:not([class*=w-]){
         flex: 1;
         min-width: 0;
+    }
+
+    &.wide{
+      gap: 12px;
     }
 }
 
